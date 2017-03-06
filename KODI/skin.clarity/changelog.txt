@@ -1,0 +1,14 @@
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+3.6.17 Version 0.1.0
+
+	3.6.17
+------------------------------------------------------------------------------
+		= intital git upload for KODI, ready to start digging in
+	
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+12.24.12 Version 3.2.5 (initial release by byron)
+--- initial release
