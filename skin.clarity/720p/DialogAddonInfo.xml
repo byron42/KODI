@@ -1,0 +1,843 @@
+<window id="10140">
+	<onload condition="Window.IsActive(ContextMenu)">Dialog.Close(ContextMenu)</onload>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(addonsettings) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(2002)">Conditional</animation>
+		
+	<!--(((BACKGROUNDS)))=========================================================================================================================-->
+			<control type="group">	
+				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<left>0</left>
+							<description>Universal Classic Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
+					</control>
+				<control type="group"> <!--UNIVERSAL CUSTOM BG-->
+					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+					<control type="image">
+						<left>0</left>
+						<description>Universal Classic Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+					</control>
+				</control>
+			
+				<!--*********************************** BackgroundSystem **********************************************-->
+				<control type="group">
+					<description>System Custom Background</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<description>Custom Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/images/backgrounds/background-system.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+						<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<!--BackgroundSystemDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Default Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<include>SystemBackground_And_Res</include>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<!--BackgroundSystemDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSVideo *********************************************-->
+				<control type="group">
+					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+					<control type="videowindow">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSViz ***********************************************-->
+				<control type="group">
+					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+					<control type="visualisation">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>	
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+				</control>
+				<!--***************************************************************************************************-->
+			
+				<!--******************************* FullControlAreaBackground *****************************************-->
+				<control type="group">	
+					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!--MediaViewOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<control type="group">	
+					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!--MediaViewOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--BackgroundDimAnim-->
+				<animation effect="fade" start="100" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+				<!--BackgroundOpenCloseAnim-->
+				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="0" delay="100" time="200">WindowClose</animation>
+			</control>
+			
+	<!--(((TOP BAR)))=============================================================================================================================-->		
+			<control type="group" id="505">	
+				<description>Top Bar Area</description>
+				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
+				<control type="group">	
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<height>53</height>
+						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+					</control>
+					
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<top>1</top>
+						<height>41</height>
+						<texture border="10">Glass/Glass/SquareThemeBorder.png</texture>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--************************************* (SystemTray) **********************************************-->
+				<include>SystemTray</include>
+				<!--*************************************************************************************************-->
+				
+				<!--******************************* (BreadCrumbPluginSettings) **************************************-->
+				<include>BreadCrumbButtonRight</include>
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>	
+				 <!--home icon-->
+					<control type="button" id="837">
+						<left>10</left>
+						<top>6</top>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<left>10</left>
+						<top>6</top>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** WeatherNotification *****************************************-->
+				<control type="group" id="456">
+					<left>950</left>
+					<top>4</top>
+					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
+					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+					<!--WeatherNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation> 
+					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+					<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+					<control type="button" id="458">
+						<width>100</width>
+						<height>35</height>
+						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
+						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<onclick>ActivateWindow(MyWeather)</onclick>
+						<ondown>505</ondown>
+						<onright>346</onright>
+						<onleft>837</onleft>
+					</control>
+					<control type="image" id="457">
+						<left>8</left>
+						<top>4</top>
+						<width>27</width>
+						<height>27</height>
+						<texture>$INFO[Weather.Conditions]</texture>
+					</control>
+					<control type="label">
+						<left>92</left>
+						<top>-2</top>
+						<width>55</width>
+						<height>35</height>
+						<font>font_20</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>!Control.HasFocus(458)</visible>
+					</control>
+					<control type="label">
+						<left>92</left>
+						<top>-2</top>
+						<width>55</width>
+						<height>35</height>
+						<font>font_20</font>
+						<textcolor>TopBarStatusColor2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>Control.HasFocus(458)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** MediaPlayingNotification ************************************-->
+				<control type="group">
+					<left>780</left>
+					<top>4</top>
+					<visible>Player.HasMedia</visible>
+					<!--MediaPlayingNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation>
+					<!--MediaPlayingNotificationShiftAnim3-->
+					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+					<control type="image">
+						<width>270</width>
+						<height>35</height>
+						<texture border="8">SystemTray/top-bar-status-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>5</top>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultaudio.png</texture>
+						<visible>Player.HasAudio</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>5</top>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultvideo.png</texture>
+						<visible>Player.HasVideo</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="group">
+						<left>40</left>
+						<top>3</top>
+						<width>224</width>
+						<height>36</height>
+						<visible>Player.HasAudio</visible>
+						<control type="fadelabel">
+							<description>Caption</description>
+							<left>0</left>
+							<top>-2</top>
+							<width>220</width>
+							<height>15</height>
+							<scrollout>false</scrollout>
+							<font>font_17_B</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<pauseatend>4000</pauseatend>
+							<info>MusicPlayer.Title</info>
+							<info>MusicPlayer.Artist</info>
+							<info>MusicPlayer.Album</info>
+							<info>MusicPlayer.Year</info>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<left>0</left>
+							<top>13</top>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+					<control type="group">
+						<left>40</left>
+						<top>3</top>
+						<width>220</width>
+						<height>36</height>
+						<visible>Player.HasVideo</visible>
+						<control type="label">
+							<description>Caption</description>
+							<left>0</left>
+							<top>0</top>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17_B</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<left>0</left>
+							<top>15</top>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17</font>
+							<textcolor>TopBarStatusColor</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+			</control>
+		
+	<!--(((CONTROLS)))============================================================================================================================-->		
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="!Window.IsActive(FileBrowser)">Conditional</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+					<effect type="fade" start="100" end="0" time="250" />
+				</animation>
+			<!--header,separators-->
+				<control type="group">
+					<left>30</left>
+					<top>80</top>
+					<control type="label">
+						<description>PLUGIN/ADDON NAME</description>
+						<left></left>
+						<top>-620</top><!--NewLabelPos!-->
+						<font>font_32_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[Listitem.Label]</label>
+						<width>600</width>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--**************************************** SEPARATORS ****************************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<top>34</top>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM-->
+						<description>BOTTOM bar</description>
+						<top>565</top>
+						<width>1220</width>
+						<height>5</height>
+						<!-- <texture>separatio_FS.png</texture> -->
+					</control>
+					<control type="image"> <!--BOTTOM 2-->
+						<description>BOTTOM bar</description>
+						<top>620</top>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--********************************************************************************************-->
+				</control>
+			<!--main area-->
+				<control type="group"> 
+					<top>10</top>
+					<control type="image">
+						<description>PLUGIN ICON</description>
+						<left>50</left>
+						<!-- <top>390</top> -->
+						<top>120</top>
+						<width>290</width>
+						<height>260</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+					</control>
+					
+					
+					<control type="image">
+						<description>INFO BACKGROUND</description>
+						<left>370</left>
+						<top>120</top>
+						<width>860</width>
+						<height>195</height>
+						<info>-</info>
+						<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+						<bordersize></bordersize>
+					</control>
+					<control type="image">
+						<description>DESCRIPTION BACKGROUND</description>
+						<left>370</left>
+						<top>325</top>
+						<width>860</width>
+						<height>350</height>
+						<info>-</info>
+						<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+						<bordersize></bordersize>
+					</control>
+					
+					
+					
+					<control type="list" id="1000">
+						<left>385</left>
+						<top>125</top>
+						<width>830</width>
+						<height>210</height>
+						<onup></onup>
+						<ondown></ondown>
+						<onleft></onleft>
+						<onright></onright>
+						<itemgap></itemgap>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>830</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="0,10,2,10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<left>5</left>
+								<width>170</width>
+								<height>35</height>
+								<font>font_20_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<left>190</left>
+								<top>-1</top>
+								<width>635</width>
+								<height>35</height> 
+								<font>font_20_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="416">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+							<control type="image">
+								<width>830</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="0,10,2,10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<left>5</left>
+								<width>170</width>
+								<height>35</height>
+								<font>font_20_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<visible>true</visible>
+								<left>190</left>
+								<top>-1</top>
+								<width>635</width>
+								<height>35</height>
+								<font>font_20_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="416">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						
+						<content>
+							<item id="1">
+								<description>Type</description>
+								<label>$LOCALIZE[146]</label>
+								<label2>$INFO[ListItem.Property(Addon.Type)]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>Author</description>
+								<label>$LOCALIZE[21863]:</label>
+								<label2>$INFO[ListItem.Property(Addon.Creator)]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Version</description>
+								<label>$LOCALIZE[24051]</label>
+								<label2>$INFO[ListItem.Property(Addon.Version)]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Rating</description>
+								<label>$LOCALIZE[24000] ID:</label>
+								<label2>$INFO[ListItem.Property(Addon.ID)]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="5">
+								<description>Summary</description>
+								<label>$LOCALIZE[20037]:</label>
+								<label2>$INFO[ListItem.Property(Addon.Summary)]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+					
+					<control type="grouplist">
+						<left>375</left>
+						<top>340</top>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<left>10</left>
+							<width>300</width>
+							<height>25</height>
+							<font>font_20_B</font> <!--CAT. LABEL-->
+							<aligny>left</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$LOCALIZE[21821]: </label>
+						</control>
+						<control type="textbox" id="400">
+							<top></top>
+							<left>20</left>
+							<description>Description</description>
+							<width>795</width>
+							<height>120</height>
+							<font>font_22_B</font>
+							<align>justify</align>
+							<textcolor>Grey</textcolor>
+							<label>$INFO[ListItem.Property(Addon.Description)]</label>
+							<pagecontrol>60</pagecontrol>
+							<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+						</control>
+						<control type="image">
+							<description>SPACER</description>
+							<left></left>
+							<top></top>
+							<width>850</width>
+							<height>13</height>
+							<texture></texture>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top></top>
+							<width>840</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+							<animation effect="slide" end="0,-6" time="0" condition="true">conditional</animation>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<width>300</width>
+							<height>25</height>
+							<font>font_20_B</font> <!--CAT. LABEL-->
+							<aligny>left</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>$LOCALIZE[24052]: </label>
+						</control>
+						<control type="textbox">
+							<description>Disclaimer</description>
+							<top></top>
+							<left>20</left>
+							<width>795</width>
+							<height>120</height>
+							<font>font_22_B</font>
+							<align>justify</align>
+							<textcolor>Grey</textcolor>
+							<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+							<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+							<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						</control>
+					</control>
+					<control type="scrollbar" id="60">
+						<left>1208</left>
+						<top>380</top>
+						<width>4</width>
+						<height>110</height>
+						<onleft>9000</onleft>
+						<onright>1000</onright>
+						<ondown>60</ondown>
+						<onup>60</onup>
+						<showonepage>false</showonepage>
+					</control>
+					
+				<!--control/content areas-->
+					<control type="group">
+						<left>45</left>
+						<top>20</top>
+						
+						<!--******************************** CONTENT Arrows ************************************************-->
+						<control type="group"> 
+							<left>1180</left>
+							<top>10</top>
+							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+							<control type="image">
+								<description>Up Arrow</description>
+								<left>0</left>
+								<top>115</top>
+								<width>40</width>
+								<height>40</height>
+								<texture>arrow-scroll-up-focus2.png</texture>
+								<visible>Container(2).HasPrevious</visible>
+							</control>
+							<control type="image">
+								<description>Down Arrow</description>
+								<left>0</left>
+								<top>560</top>
+								<width>40</width>
+								<height>40</height>
+								<texture flipy="true">arrow-scroll-up-focus2.png</texture>
+								<visible>Container(2).HasNext</visible>
+							</control>
+						</control>
+						<!--************************************************************************************************-->
+						
+						
+						
+						<control type="grouplist" id="9000">
+							<description>Category Area</description>
+							<left>5</left>
+							<!-- <top>120</top> -->
+							<top>370</top>
+							<width>355</width>
+							<height>350</height>
+							<itemgap>7</itemgap>
+							<orientation>vertical</orientation>	
+							<onup>9000</onup>
+							<ondown>9000</ondown>
+							<onright>60</onright>
+						
+							<!-- <onleft>9001</onleft> -->
+							<control type="button" id="6">
+								<description>install</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>24022</label>
+							</control>
+							<control type="button" id="7">
+								<description>disable/enable</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>24021</label>
+							</control>
+							<control type="button" id="8">
+								<description>update</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>24069</label>
+							</control>
+							<control type="button" id="9">
+								<description>settings</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>24020</label>
+							</control>
+							<control type="button" id="12">
+								<description>run addon</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>518</label>
+							</control>
+							
+							<control type="button" id="10">
+								<description>changelog</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>24036</label>
+							</control>
+							<control type="radiobutton" id="13">
+								<description>auto update</description>
+								<width>290</width>
+								<height>35</height>
+								<font>font_22_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<textwidth>278</textwidth>
+								<align>left</align>
+								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
+								<radioposx>260</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>18</radiowidth>
+								<radioheight>18</radioheight>
+								<pulseonselect>false</pulseonselect>
+								<colordiffuse></colordiffuse>
+								<disabledcolor>AA555555</disabledcolor>
+								<label>21340</label>
+							</control>
+						</control>
+						<control type="grouplist" id="2">
+							<description>Content Area</description>
+							<left>385</left>
+							<top>120</top>
+							<width>780</width>
+							<height>490</height>
+							<itemgap>3</itemgap>
+							<orientation>vertical</orientation>
+							<onup>2</onup>
+							<ondown>2</ondown>
+							<onleft>9</onleft>
+							<onright>9001</onright>
+						</control>
+					</control>	
+				
+				
+				</control>
+				
+	
+			</control>
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
+		</control>
+	</controls>	
+</window>
