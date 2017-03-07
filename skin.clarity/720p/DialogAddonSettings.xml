@@ -543,7 +543,7 @@
 						<font>font_26_CB</font>
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
-						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 						<pulseonselect>false</pulseonselect>
 						<colordiffuse></colordiffuse>
 						<texturenofocus border="5"></texturenofocus>
@@ -619,10 +619,10 @@
 					<control type="label" id="7">
 						<description></description>
 						<height>35</height>
-						<font>DefaultFont</font>
-						<textcolor>GreyColor</textcolor>
-						<shadowcolor>Black</shadowcolor>
-						<align>center</align>
+						<font>font_21_B</font>
+						<textcolor>Grey</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
 						<aligny>center</aligny>
 					</control>
 				</control>
