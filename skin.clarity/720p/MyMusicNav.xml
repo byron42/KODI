@@ -210,39 +210,23 @@
 						<ondown>50</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<itemlayout height="207" width="228" >	
-						<!--Thumbs-->	
+						<itemlayout height="207" width="228">	
 							<control type="image">
-								<description>Cover</description>
+								<description>Default Cover</description>
 								<left>25</left>
 								<top>32</top>
 								<width>175</width>
 								<height>144</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
-								<bordersize>6</bordersize>
-								<visible>!IsEmpty(ListItem.Thumb)</visible>
-							</control>
-						<!--Icons-->
-							<control type="image">
-								<description>Default Cover</description>
-								<left>50</left>
-								<top>46</top>
-								<width>125</width>
-								<height>125</height>
 								<aspectratio align="center">keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 								<bordersize>9</bordersize>
 								<colordiffuse>BBFFFFFF</colordiffuse>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-						<!--Labels-->	
 							<control type="label">
-								<left>116</left>
-								<top>174</top>
-								<width>165</width>
+								<left>20</left>
+								<top>176</top>
+								<width>185</width>
 								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
@@ -266,48 +250,29 @@
 								<animation effect="zoom" end="107" center="auto" time="0">focus</animation>
 								<animation effect="zoom" start="107" center="auto" time="0">unfocus</animation>
 							</control>	
-						<!--Thumbs-->	
 							<control type="image">
-								<description>Cover</description>
+								<description>Default Cover</description>
 								<left>25</left>
 								<top>32</top>
 								<width>175</width>
 								<height>144</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
-								<bordersize>6</bordersize>
-								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
-								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
-								<visible>!IsEmpty(ListItem.Thumb)</visible>
-							</control>
-						<!--Icons-->
-							<control type="image">
-								<description>Default Cover</description>
-								<left>50</left>
-								<top>46</top>
-								<width>125</width>
-								<height>125</height>
 								<aspectratio align="center">keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
 								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-						<!--Labels-->	
 							<control type="label">
-								<left>124</left>
-								<top>184</top>
-								<width>158</width>
+								<left>20</left>
+								<top>186</top>
+								<width>185</width>
 								<font>font_22_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>black</shadowcolor>
 								<align>center</align>
 								<aligny>top</aligny>
-								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
-								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<animation effect="zoom" end="110" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="110" center="auto" time="0">unfocus</animation>
 								<info>ListItem.Label</info>
 							</control>
 						</focusedlayout>
