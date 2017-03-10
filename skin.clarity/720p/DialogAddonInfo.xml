@@ -4,13 +4,22 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
+			<visible>!Window.IsActive(textviewer)</visible>
+			<animation effect="fade" start="100" end="0" delay="" time="200">Hidden</animation>
+			<animation effect="fade" start="0" end="100" delay="0" time="200">Visible</animation>
+			<!---->
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(addonsettings) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(2002)">Conditional</animation>
 		
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->
 			<control type="group">	
+				<!--(AddonFanartFadeOut)-->
+				<animation effect="fade" start="20" end="200" time="200">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<visible>!Control.IsVisible(1121)</visible>
 				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
@@ -151,6 +160,26 @@
 				<animation effect="fade" start="100" end="0" delay="100" time="200">WindowClose</animation>
 			</control>
 			
+			<!--********************************** BackgroundFanart *********************************************-->
+			<control type="group" id="1121">
+				<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+				<!--(VisibleFadeEffect)-->
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="0">Hidden</animation>
+				<control type="image">
+					<description>Fanart Background</description>
+					<include>BackgroundOffset</include>
+					<width>1280</width>
+					<include>VariableBackgroundHeight</include>
+					<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>600</fadetime>
+					<animation effect="fade" end="25" condition="true">Conditional</animation>
+				</control>	
+			</control>
+			<!--*************************************************************************************************-->
+	
+			
 	<!--(((TOP BAR)))=============================================================================================================================-->		
 			<control type="group" id="505">	
 				<description>Top Bar Area</description>
@@ -179,7 +208,6 @@
 				<!--*************************************************************************************************-->
 				
 				<!--******************************* (BreadCrumbPluginSettings) **************************************-->
-				<include>BreadCrumbButtonRight</include>
 				<include>BreadCrumbButtonLeft</include>
 				
 				<!--BreadCrumbHome-->
@@ -386,13 +414,18 @@
 		
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
+				<visible>!Window.IsVisible(textviewer)</visible>
+				<animation effect="fade" start="100" end="0" delay="" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="200" time="200">Visible</animation>
+				<!---->
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="!Window.IsActive(FileBrowser)">Conditional</animation>
-				<animation type="WindowOpen" reversible="false">
+				<!-- <animation effect="fade" start="100" end="0" delay="2" time="200" condition="Window.IsActive(textviewer)">Conditional</animation> -->
+				<!-- <animation effect="fade" start="0" end="100" time="250" delay="200" condition="![Window.IsActive(FileBrowser) | Window.IsActive(textviewer)]">Conditional</animation> -->
+				<animation type="WindowOpen" condition="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]" reversible="false">
 					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
 					<effect type="fade" start="0" end="100" time="300" />
 				</animation>
-				<animation type="WindowClose" reversible="false">
+				<animation type="WindowClose" condition="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]" reversible="false">
 					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
 					<effect type="fade" start="100" end="0" time="250" />
 				</animation>
@@ -715,7 +748,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -729,7 +762,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -743,7 +776,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -757,7 +790,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -771,7 +804,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -786,7 +819,7 @@
 								<font>font_22_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<colordiffuse></colordiffuse>
@@ -801,7 +834,7 @@
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<textwidth>278</textwidth>
 								<align>left</align>
-								<texturenofocus border="10,10,10,10">scrollbar-background.png</texturenofocus>
+								<texturenofocus colordiffuse="FFFFFFFF" border="10,10,10,10">SettingsNoFocus.png</texturenofocus>
 								<texturefocus border="10,10,10,10">SettingsFocus.png</texturefocus>
 								<radioposx>260</radioposx>
 								<radioposy>-</radioposy>
