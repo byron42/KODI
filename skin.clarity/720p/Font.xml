@@ -230,6 +230,11 @@
 		</font>
 	<!--25-->
 		<font>
+			<name>font_25</name>
+			<filename>XBMC.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
 			<name>font_25_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>

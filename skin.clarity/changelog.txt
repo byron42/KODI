@@ -5,6 +5,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 	3.6.17
 ------------------------------------------------------------------------------
+		= updated MyWeather.xml to work with Kodi.  
+
+		= got conditional visibility transitions working between addon 
+		  dialogs and actual windows.
+
 		= intital git upload for KODI, ready to start digging in
 	
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

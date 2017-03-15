@@ -132,6 +132,8 @@
 	<string id="31305">REWIND</string>
 	<string id="31309">memoria utilizzata</string>
 	<string id="31315">base</string>
+	
+	
 
 	<!--CREDITI PERSONALIZZATI-->
 	<string id="31320"> - quadro realizzato da Qualar</string>
@@ -146,6 +148,14 @@
 	<string id="31329">grazie soprattutto a BUZZ per la continuazione del XBMC4XBOX e chiunque altro che ha contribuito a mantenere questo vecchio cavallo di battaglia in esecuzione e reale. Ancora più importante, grazie a SCARFA per fare questa impressionante pelle per cominciare -</string>
 	<string id="31330">grazie al team XBMC per creare e mantenere un programma meraviglioso che mi ha dato tanta gioia per un certo numero di anni. Grazie anche a skinners prima di me che ha spianato la strada con le loro pelli impressionante -</string>
 	<string id="31331">(pelle originale da Scarfa, Mod da Byron)</string>
+	
+	<string id="31332">Temperatura Attuale</string>
+	<string id="31333">Daily</string>
+	<string id="31334">36 ore</string>
+	<string id="31335">Week-end</string>
+	<string id="31336">Oraria</string>
+	<string id="31337">Mappe</string>
+	<string id="31338">Avvisi</string>
 	
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31400 thru 31499 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 

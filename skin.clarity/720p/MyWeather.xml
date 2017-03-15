@@ -1,5 +1,5 @@
 <window id="2600">
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
@@ -167,28 +167,419 @@
 
 			</control>
 			
-			<control type="button" id="9001">
-				<description>fake button to steal focus</description>
+			<control type="button" id="">
+				<description>fake button to steal focus (not used atm?)</description>
 				<onup>850</onup>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 			</control>
 			
+	<!--(((VIEWS)))===================================================================================================================================-->				
 			<control type="group">
+				<top>45</top>
 				<!--WeatherSlideAnim-->
-				<animation effect="slide" start="1280,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-				<animation effect="slide" end="1280,0" start="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-				<include condition="IsEmpty(Weather.Plugin)" file="includes_Weather.xml">weather</include>
-				<include condition="!IsEmpty(Weather.Plugin)" file="includes_Weather.xml">weatherplus</include>
+				<animation effect="zoom" end="95" center="auto" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<animation effect="slide" end="0,15" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				
+			<!--left panel-->
+				<control type="group">
+					<animation effect="slide" start="-1280,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+					<animation effect="slide" end="-1280,0" start="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+					<left>60</left>
+					<top>40</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>500</width>
+						<height>620</height>
+						<texture border="30">Glass/ShutDownButton.png</texture>
+						<colordiffuse>BBBBBBBB</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>500</width>
+						<height>50</height>
+						<texture border="20">WeatherHeader.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>385</top>
+						<width>500</width>
+						<height>235</height>
+						<texture flipy="true" border="20">WeatherHeader.png</texture>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<left>20</left>
+						<top>0</top>
+						<width>460</width>
+						<height>50</height>
+						<font>font_21_B</font>
+						<label>$LOCALIZE[31332]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>Grey</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>55</top>
+						<width>440</width>
+						<height>46</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
+					</control>
+					<control type="label">
+						<description>Provider Text</description>
+						<left>20</left>
+						<top>60</top>
+						<width>460</width>
+						<height>35</height>
+						<font>font_17</font>
+						<textcolor>ThemeColor</textcolor>
+						<scroll>true</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[31300] : [COLOR=orange]$INFO[Window.Property(WeatherProvider)][/COLOR]</label>
+						<!-- <include>Window_OpenClose_Animation</include> -->
+						<animation effect="fade" time="200">WindowOpen</animation>
+						<animation effect="fade" time="200">WindowClose</animation>
+						<visible>IsEmpty(Window.Property(WeatherProviderLogo))</visible>
+					</control>
+					<control type="group">
+						<control type="label">
+							<description>weather location label</description>
+							<left>20</left>
+							<top>100</top>
+							<width>460</width>
+							<height>30</height>
+							<font>font_20_B</font>
+							<textcolor>white</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[Window.Property(Location)]</label>
+						</control>
+						<control type="label">
+							<description>update label</description>
+							<left>20</left>
+							<top>120</top>
+							<width>460</width>
+							<height>35</height>
+							<font>font_17</font>
+							<label>$LOCALIZE[20347] $LOCALIZE[1443] - $INFO[Window.Property(Updated)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>Grey</textcolor>
+						</control>
+						<control type="group">
+							<control type="label">
+								<description>current temp Value</description>
+								<left>15</left>
+								<top>185</top>
+								<width>180</width>
+								<height>40</height>
+								<font>Font_Lib80</font>
+								<align>right</align>
+								<aligny>top</aligny>
+								<label>$INFO[Window.Property(Current.Temperature)]</label>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="label">
+								<description>current temp Value Units</description>
+								<left>200</left>
+								<top>206</top>
+								<width>100</width>
+								<height>40</height>
+								<font>font_25</font>
+								<align>left</align>
+								<aligny>top</aligny>
+								<label>[B]$INFO[System.TemperatureUnits][/B]</label>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="image">
+								<description>current weather icon</description>
+								<left>260</left>
+								<top>145</top>
+								<width>200</width>
+								<height>200</height>
+								<info>Window.Property(Current.ConditionIcon)</info>
+								<aspectratio>keep</aspectratio>
+							</control>
+						</control>
+						<control type="label">
+							<description>current condition label</description>
+							<left>20</left>
+							<top>350</top>
+							<width>460</width>
+							<height>30</height>
+							<info>Window.Property(Current.Condition)</info>
+							<wrapmultiline>true</wrapmultiline>
+							<font>font_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+					</control>
+					
+					<control type="grouplist">
+						<left>0</left>
+						<top>400</top>
+						<width>170</width>
+						<height>180</height>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>current feels like label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[402] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.FeelsLike))</visible>
+						</control>
+						<control type="label">
+							<description>current dew label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[405] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.DewPoint))</visible>
+						</control>
+						<control type="label">
+							<description>current humidity label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[406] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Humidity))</visible>
+						</control>
+						<control type="label">
+							<description>current UV Index label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[403] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.UVIndex))</visible>
+						</control>
+						<control type="label">
+							<description>current Precipitation label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[33021] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Precipitation))</visible>
+						</control>
+						<control type="label">
+							<description>current Wind label</description>
+							<left>0</left>
+							<top>0</top>
+							<width>170</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[404] :</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Wind))</visible>
+						</control>
+					</control>
+					<control type="grouplist">
+						<left>185</left>
+						<top>400</top>
+						<width>300</width>
+						<height>180</height>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>current feels like Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.FeelsLike))</visible>
+						</control>
+						<control type="label">
+							<description>current dew Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.DewPoint))</visible>
+						</control>
+						<control type="label">
+							<description>current humidity Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>Window.Property(Current.Humidity)</info>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Humidity))</visible>
+						</control>
+						<control type="label">
+							<description>current UV Index Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>Window.Property(Current.UVIndex)</info>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.UVIndex))</visible>
+						</control>
+						<control type="label">
+							<description>current Precipitation Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>Window.Property(Current.Precipitation)</info>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Precipitation))</visible>
+						</control>
+						<control type="label">
+							<description>current Wind Value</description>
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>28</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>Window.Property(Current.Wind)</info>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Current.Wind))</visible>
+						</control>
+					</control>
+					<control type="group">
+						<!-- <visible>!IsEmpty(Window.Property(Today.IsFetched))</visible> -->
+						<control type="label">
+							<description>Sunrise Label</description>
+							<left>30</left>
+							<top>570</top>
+							<width>300</width>
+							<height>35</height>
+							<font>font_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[33027] : [COLOR=white]$INFO[Window.Property(Today.Sunrise)][/COLOR]</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Today.Sunrise))</visible>
+						</control>
+						<control type="label">
+							<description>Sunset label</description>
+							<left>170</left>
+							<top>570</top>
+							<width>300</width>
+							<height>35</height>
+							<font>font_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[33028] : [COLOR=white]$INFO[Window.Property(Today.Sunset)][/COLOR]</label>
+							<textcolor>Grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window.Property(Today.Sunset))</visible>
+						</control>
+					</control>
+				</control>
+			<!--right panel-->	
+				<control type="group">
+					<animation effect="slide" start="1280,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+					<animation effect="slide" end="1280,0" start="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+					<left>580</left>
+					<top>40</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>650</width>
+						<height>620</height>
+						<texture border="30">Glass/ShutDownButton.png</texture>
+						<colordiffuse>BBBBBBBB</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>650</width>
+						<height>50</height>
+						<texture border="20">WeatherHeader.png</texture>
+					</control>
+					<control type="group" id="50">
+						<include>VisibleFadeEffect</include>
+						<include>WeatherDaily</include>
+						<include>Weather36Hour</include>
+						<include>WeatherWeekend</include>
+						<include>WeatherHourly</include>
+						<include>WeatherMaps</include>
+						<include>WeatherAlerts</include>
+					</control>
+				</control>
 			</control>
 			
 	<!--(((MENU BAR)))=========================================================================================================================-->		
-			<control type="group">	
+			<control type="group" id="9000">	
 				<!--SkinSystemStatMenuSlide-->
 				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!---->
-				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="[!ControlGroup(850).HasFocus + !ControlGroup(200).HasFocus] + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>
 				<height>34</height>
 				<top>44</top>
@@ -199,126 +590,240 @@
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
-				<!--********************************* MyWeatherMenuBar ************************************************-->
-				<control type="grouplist" id="850">
+				<!--********************************************* DefaultMenuBar ************************************************************-->
+				<control type="group" id="850">
+					<!-- <animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus | !ControlGroup(200).HasFocus">Conditional</animation> -->
 					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
-					<description>Weather Menu Bar</description>
-					<top>-3</top>
-					<width>ScreenWidth</width>
-					<height>34</height>
-					<itemgap>0</itemgap>
+					<!-- <visible>!Skin.HasSetting(KioskMode)</visible> -->
+					<defaultcontrol always="true">400</defaultcontrol>
 					<onup>600</onup>
-					<ondown>9001</ondown>
-					<orientation>horizontal</orientation>
-					<control type="spincontrolex" id="3">
-						<description>Select Location</description>
-						<width>500</width>
-						<height>36</height>	
-						<font>-</font>	
-						<textcolor>ButtonColor</textcolor>
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textoffsetx>13</textoffsetx>
-						<textwidth>500</textwidth>
-						<align>left</align>
-						<texturefocus border="10"></texturefocus>
+					<onleft>600</onleft>
+					<ondown>50</ondown>
+					<onback>50</onback>
+					<control type="togglebutton" id="185">
+						<description>Menu Bar Options</description>
+						<left>10</left>
+						<top>3</top>
+						<width>30</width>
+						<height>30</height>
+						<texturefocus>view-options-focus.png</texturefocus>
+						<texturenofocus>view-options-nofocus.png</texturenofocus>
+						<alttexturefocus>view-options-extra-focus.png</alttexturefocus>
+						<alttexturenofocus>view-options-extra-nofocus.png</alttexturenofocus>
+						<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
+						<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
 						<pulseonselect>false</pulseonselect>
-						<colordiffuse>-</colordiffuse>	
-						<texturenofocus>-</texturenofocus>
-						<!-- <reverse></reverse> -->
-					</control>	
-					<control type="image" id="116">
-						<description>MenuBarSeparator</description>
-						<width>4</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
+						<onup>600</onup>
+						<ondown>500</ondown>
+						<onleft>-</onleft>
+						<onright>184</onright>
+						<enable>false</enable>
+						<animation effect="fade" start="100" end="50" condition="!Control.IsEnabled(185)">Condtional</animation>
 					</control>
-					<control type="button" id="2">
-						<description>Refresh</description>
-						<width>180</width>
-						<height>36</height>	
-						<aligny>top</aligny>
-						<textoffsety>4</textoffsety>
-						<font>font_19_UB</font>
-						<textcolor>ButtonColor</textcolor>
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<align>center</align>
-						<textoffsetx>13</textoffsetx>
-						<textwidth>154</textwidth>
-						<texturefocus border="10"></texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>	
-						<texturenofocus>-</texturenofocus>
-						<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
+					<control type="button" id="184">
+						<description>View Mode Options</description>
+						<visible>!Control.IsVisible(77)</visible>  <!--Hide for viewtypes with no options-->
+						<left>40</left>
+						<top>3</top>
+						<width>23</width>
+						<height>23</height>
+						<texturefocus diffuse="info-background.png">viewprefs.png</texturefocus>
+						<texturenofocus>viewprefs.png</texturenofocus>
+						<onclick>SetFocus(188)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<onup>600</onup>
+						<ondown>500</ondown>
+						<onleft>185</onleft>
+						<onright>564</onright>
+						<enable>false</enable>
+						<animation effect="fade" start="100" end="50" condition="!Control.IsEnabled(184)">Condtional</animation>
+						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
+						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>	
 					</control>
-					<control type="image" id="117">
-						<description>MenuBarSeparator</description>
-						<width>4</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
-					</control>
-					<control type="button" id="4">
-						<description>Settings</description>
-						<width>180</width>
-						<height>36</height>	
-						<aligny>top</aligny>
-						<textoffsety>4</textoffsety>
-						<font>font_19_UB</font>
-						<textcolor>ButtonColor</textcolor>
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<align>center</align>
-						<textoffsetx>13</textoffsetx>
-						<textwidth>154</textwidth>
-						<texturefocus border="10"></texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>	
-						<texturenofocus>-</texturenofocus>
-						<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>
-					</control>
-					<control type="image" id="118">
-						<description>MenuBarSeparator</description>
-						<width>4</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
+					<control type="group" id="564">	
+						<control type="group">      				
+						<!--MenuBarOptions-->
+							<control type="grouplist" id="212">
+								<left>80</left>
+								<top>-3</top>
+								<width>ScreenWidth</width>
+								<height>34</height>
+								<itemgap>0</itemgap>
+								<onup>600</onup>
+								<ondown>50</ondown>
+								<onleft>184</onleft>
+								<onback>50</onback>
+								<onright>-</onright>
+								<orientation>horizontal</orientation>
+								<visible>Window.IsVisible(weather)</visible>
+								<control type="image" id="350">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="400">
+									<description>OUTLOOK</description>
+									<width>280</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>font_19_UB</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>left</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>230</textwidth>
+									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<label>$LOCALIZE[33030]:  $INFO[ListItem(2)]</label>
+									<onclick>SetFocus(200)</onclick>
+								</control>	
+								<control type="image" id="351">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="spincontrolex" id="3">
+									<description>Select Location</description>
+									<width>450</width>
+									<height>36</height>	
+									<font>-</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>500</textwidth>
+									<align>left</align>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>false</pulseonselect>
+									<colordiffuse>-</colordiffuse>	
+									<texturenofocus>-</texturenofocus>
+								</control>	
+								<control type="image" id="352">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="2">
+									<description>Refresh</description>
+									<width>180</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>font_19_UB</font>
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>center</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>154</textwidth>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>ThemeColor</colordiffuse>	
+									<texturenofocus>-</texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
+								</control>
+								<control type="image" id="355">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="4">
+									<description>Settings</description>
+									<width>180</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>font_19_UB</font>
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>center</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>154</textwidth>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>ThemeColor</colordiffuse>	
+									<texturenofocus>-</texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+									<onclick>ActivateWindow(WeatherSettings)</onclick>
+								</control>
+								<control type="image" id="358">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+							</control>
+							<!--location labels-->
+							<control type="label">
+								<description>location label</description>
+								<left>381</left>
+								<top>-3</top>
+								<width>450</width>
+								<height>36</height>
+								<label>$INFO[Window.Property(Location)]</label>
+								<aligny>top</aligny>
+								<textoffsety>4</textoffsety>
+								<font>font_19_UB</font>
+								<textcolor>ButtonColor</textcolor>
+								<shadowcolor></shadowcolor>
+								<align>left</align>
+								<visible>!Control.HasFocus(3)</visible>
+							</control>
+							<control type="label">
+								<description>location label</description>
+								<left>381</left>
+								<top>-3</top>
+								<width>450</width>
+								<height>36</height>
+								<label>$INFO[Window.Property(Location)]</label>
+								<aligny>top</aligny>
+								<textoffsety>4</textoffsety>
+								<font>font_19_UB</font>
+								<textcolor>ButtonFocusColor</textcolor>
+								<shadowcolor></shadowcolor>
+								<align>left</align>
+								<visible>Control.HasFocus(3)</visible>
+							</control>
+							<!-- fake button for id="400" unfocus -->
+							<control type="button">
+								<left>84</left>
+								<top>-3</top>
+								<visible>ControlGroup(200).HasFocus</visible>
+								<description>OUTLOOK</description>
+								<width>280</width>
+								<height>36</height>	
+								<aligny>top</aligny>
+								<textoffsety>4</textoffsety>
+								<font>font_19_UB</font>	
+								<textcolor>ButtonFocusColor</textcolor>
+								<focusedcolor>ButtonFocusColor</focusedcolor>
+								<align>left</align>
+								<textoffsetx>13</textoffsetx>
+								<textwidth>230</textwidth>
+								<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturenofocus>		
+								<!-- <label>$LOCALIZE[33030]:  $INFO[Control.GetLabel(200)]</label> -->
+								<label>$LOCALIZE[33030]</label>
+								<onclick>noop</onclick>
+							</control>	
+							<!--MenuBarOptionsSwitchAnim-->
+							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
+							<animation effect="fade" end="0" time="200">Hidden</animation>
+							<!-- <visible>!Skin.HasSetting(ShowMediaExtraOptions) | Window.IsVisible(Programs)</visible> -->
+						</control>		
 					</control>
 				</control>
-			<!--location labels-->
-				<control type="label">
-					<description>location label</description>
-					<left>8</left>
-					<top>-3</top>
-					<width>450</width>
-					<height>36</height>
-					<label>$INFO[Weather.Location]</label>
-					<aligny>top</aligny>
-					<textoffsety>4</textoffsety>
-					<font>font_19_UB</font>
-					<textcolor>ButtonColor</textcolor>
-					<shadowcolor></shadowcolor>
-					<align>left</align>
-					<visible>!Control.HasFocus(3)</visible>
-				</control>
-				<control type="label">
-					<description>location label</description>
-					<left>8</left>
-					<top>-3</top>
-					<width>450</width>
-					<height>36</height>
-					<label>$INFO[Weather.Location]</label>
-					<aligny>top</aligny>
-					<textoffsety>4</textoffsety>
-					<font>font_19_UB</font>
-					<textcolor>ButtonFocusColor</textcolor>
-					<shadowcolor></shadowcolor>
-					<align>left</align>
-					<visible>Control.HasFocus(3)</visible>
-				</control>
-				<!--***************************************************************************************************-->
-			
+				<!--*************************************************************************************************************************-->
+				
 				<!--MenuBarOpenCloseAnim-->
-				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="[!ControlGroup(850).HasFocus + !ControlGroup(200).HasFocus]  + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
-				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+				<animation type="WindowClose" condition="[[ControlGroup(850).HasFocus + ControlGroup(200).HasFocus] + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
 					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
 					<effect type="fade" start="100" end="0" time="1" delay="200"/>
 				</animation>
@@ -507,5 +1012,206 @@
 			
 			</control>
 		</control>
+		
+	<!--(((OUTLOOK OPTIONS)))=========================================================================================================================-->		
+		<control type="group" id="9001">
+			<visible>ControlGroup(200).HasFocus</visible>
+			<animation effect="fade" end="100" time="250" >Visible</animation>
+			<animation effect="fade" end="0" time="450">Hidden</animation>
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!---->
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--************************* FullControlAreaBackground ******************************-->
+			<control type="image">
+				<left>-10</left>
+				<top>77</top>
+				<width>1300</width>
+				<height>750</height>		
+				<texture>black.png</texture>
+				<colordiffuse></colordiffuse>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" end="83" condition="true" >Conditional</animation>
+				<animation effect="fade" end="100" time="300" >Visible</animation>
+				<animation effect="fade" end="0" time="450">Hidden</animation>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<!--**********************************************************************************-->
+			<onup>600</onup>
+			<ondown>50</ondown>
+			<control type="grouplist" id="200">
+				<description>View Mode Menu</description>
+				<left>83</left>
+				<top>75</top>
+				<width>400</width>
+				<itemgap>2</itemgap>
+				<onleft>SetFocus(850)</onleft>
+				<onright>SetFocus(850)</onright>
+				<orientation>vertical</orientation>
+				<textoffset>10</textoffset>
+				<!--MenuOpenCloseAnim-->
+				<animation type="Focus">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="Unfocus">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
+				<control type="image">
+					<description>MenuBarBigItemTopBorder</description>
+					<width>400</width>
+					<height>8</height>
+					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
+				</control>
+				<control type="button" id="302">
+					<description>Weather Daily</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31333]</label>
+					<onfocus>ClearProperty(Weather.CurrentView)</onfocus>
+					<onclick>SetFocus(50)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				</control>
+				<control type="button" id="303">
+					<description>36 hour</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31334]</label>
+					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
+					<onclick>SetFocus(50)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+				</control>
+				<control type="button" id="304">
+					<description>weekend</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31335]</label>
+					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
+					<onclick>SetFocus(50)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				</control>
+				<control type="button" id="305">
+					<description>hourly</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31336]</label>
+					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
+					<onclick>SetFocus(50)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				</control>
+				<control type="button" id="306">
+					<description>maps</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31337]</label>
+					<onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
+					<onclick>SetFocus(50)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(Map.IsFetched))</visible>
+				</control>
+				<control type="button" id="307">
+					<description>alerts</description>
+					<width>400</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+					<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+					<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31338]</label>
+					<onfocus>SetProperty(Weather.CurrentView,alerts)</onfocus>
+					<onclick>SetFocus(850)</onclick>
+					<onback>850</onback>
+					<visible>!IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+				</control>
+				<control type="image">
+					<description>MenuBarItemBigBottomBorder</description>
+					<width>400</width>
+					<height>8</height>
+					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>	
+				</control>
+			</control>
+		</control>
+
 	</controls>	
 </window>

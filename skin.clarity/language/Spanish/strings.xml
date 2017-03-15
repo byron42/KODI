@@ -132,7 +132,9 @@
 	<string id="31305">REWIND</string>
 	<string id="31309">memoria usada</string>
 	<string id="31315">básico</string>
-
+	
+	<string id="31316">Temperatura Actual</string>
+	
 <!--CRÉDITOS PERSONALIZADOS-->
 	<string id="31320"> - marco creado por Qualar</string>
 	<string id="31321"> - el tiempo condicional y giratoria CD Mod creado por Qualar</string>
@@ -146,6 +148,15 @@
 	<string id="31329">gracias especialmente a BUZZ para la continuación de XBMC4XBOX y cualquiera que ha contribuido a mantener este viejo caballo corriendo y REAL. Lo más importante, gracias a SCARFA para hacer este impresionante piel a -</string>
 	<string id="31330">gracias al equipo XBMC para crear y mantener un programa tan maravilloso que me ha dado mucha alegría para un número de años. Gracias también a los desolladores ante mí que abrió el camino con sus pieles impresionantes -</string>
 	<string id="31331">(piel original por Scarfa, Mod por Byron)</string>
+
+	<string id="31332">Temperatura actual</string>
+	<string id="31333">Diario</string>
+	<string id="31334">36-horas</string>
+	<string id="31335">Fin de semana</string>
+	<string id="31336">Cada hora</string>
+	<string id="31337">Mapas</string>
+	<string id="31338">Alertas</string>
+	
 <!--ooooooooooooooooooooooooooooooooooooooooo string 31400 de id thru 31499 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
 	<!--piel ajustes medios-->

@@ -406,7 +406,15 @@
 		<value condition="Container.Content(Movies)">$INFO[ListItem.StarRating]</value>
 		<value condition="!Container.Content(Movies)">$INFO[ListItem.Label2]</value>
 	</variable>
-	
+<!---->
+	<variable name="ForcastTypeLabel">
+		<value condition="!IsEmpty(Window.Property(Alerts.IsFetched))">$LOCALIZE[31338]</value>
+		<value condition="!IsEmpty(Window.Property(Daily.IsFetched))">$LOCALIZE[31333]</value>
+		<value condition="!IsEmpty(Window.Property(36Hour.IsFetched))">$LOCALIZE[31334]</value>
+		<value condition="!IsEmpty(Window.Property(Weekend.IsFetched))">$LOCALIZE[31335]</value>
+		<value condition="!IsEmpty(Window.Property(Hourly.IsFetched))">$LOCALIZE[31336]</value>
+		<value condition="!IsEmpty(Window.Property(Map.IsFetched))">$LOCALIZE[31337]</value>
+	</variable>
 <!---->
 	<variable name="ListViewExtraInfo">
 		<value condition="!IsEmpty(ListItem.PlotOutline) + [Window.IsVisible(videos) | Window.IsVisible(MusicFiles)]">$INFO[ListItem.PlotOutline]</value>

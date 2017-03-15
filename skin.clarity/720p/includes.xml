@@ -3,6 +3,7 @@
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
 	<include file="Includes_SystemStatistics.xml"/>
+	<include file="ViewsWeather.xml"/>
 	
 	<!---->
 	<constant name="ScreenWidth">1280</constant>
@@ -1418,5 +1419,9 @@
 	<include name="OSD_settings__OpenClose">
 		<animation effect="fade" time="400">WindowOpen</animation>
 		<animation effect="fade" time="400">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="225">Visible</animation>
+		<animation effect="fade" time="225">Hidden</animation>
 	</include>
 </includes>
