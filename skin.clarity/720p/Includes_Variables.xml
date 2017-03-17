@@ -85,7 +85,7 @@
 <!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
 	<variable name="BreadCrumbLabel_Left">
 		<value condition="Window.IsVisible(selectdialog)">    [UPPERCASE]$LOCALIZE[424][/UPPERCASE]   </value> <!--select-->
-		<value condition="Window.IsVisible(virtualkeyboard)">    [UPPERCASE]$LOCALIZE[35150][/UPPERCASE]   </value> <!--keyboard-->
+		<value condition="Window.IsVisible(virtualkeyboard)">    [UPPERCASE]$LOCALIZE[413][/UPPERCASE]   </value> <!--keyboard-->
 		<value condition="Window.IsVisible(DialogRepoInfo.xml) | Window.IsVisible(textviewer) | Window.IsVisible(addoninformation)">    [UPPERCASE]$LOCALIZE[24000][/UPPERCASE]   </value> <!--Add-on-->
 		<value condition="Window.IsVisible(127) | Window.IsVisible(script-RCB-gameinfo.xml)">    [UPPERCASE]$LOCALIZE[15016][/UPPERCASE]   </value> <!--games-->
 		<value condition="Window.IsActive(3010)">    [UPPERCASE]$LOCALIZE[470][/UPPERCASE]   </value> <!--credits-->

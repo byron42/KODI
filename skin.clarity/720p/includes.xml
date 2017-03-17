@@ -156,6 +156,7 @@
 					<texturenofocus border="7,0,2,0"></texturenofocus>
 					<colordiffuse></colordiffuse>
 					<label>$VAR[BreadCrumbLabel_Left]</label>
+					<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>-2</left>
