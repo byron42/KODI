@@ -3047,7 +3047,7 @@
 				
 				<!--*********************************** (BreadCrumbHome) ********************************************-->
 				<control type="group">
-					<visible>Skin.HasSetting(ShowXbmcLogo)</visible>
+					<visible>Skin.HasSetting(ShowKodiLogo)</visible>
 					<control type="image">
 						<width>70</width>
 						<height>44</height> <!--BC HOME-->
@@ -3083,29 +3083,26 @@
 				</control>
 				<!--*************************************************************************************************-->
 				
-				<!--****************************** BreadCrumbHome(xbmc4xboxICON) ************************************-->
+				<!--****************************** BreadCrumbHome(KODI_ICON) ************************************-->
 				<control type="group">
-					<visible>!Skin.HasSetting(ShowXbmcLogo)</visible>
+					<visible>!Skin.HasSetting(ShowKodiLogo)</visible>
 					<control type="image">
-						<left>6</left>
-						<top>4</top>
-						<width>177</width>
-						<height>35</height>
-						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
-						<!--<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>-->
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 					</control>	
-				<!--xbumc4xbox logo-->		
+				<!--Kodi logo-->		
 					<control type="button" id="837"> 
-						<left>20</left>
-						<top>3</top>
-						<width>150</width>
-						<height>33</height>
-						<texturefocus>Breadcrumb/xbmc4xbox_logo_focus.png</texturefocus>
+						<left>3</left>
+						<top>4</top>
+						<width>55</width>
+						<height>36</height>
+						<texturefocus>Breadcrumb/kodi_logo_focus.png</texturefocus>
 						<texturenofocus></texturenofocus>
-						<colordiffuse></colordiffuse> <!--DEFAULT-->
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<onclick>ActivateWindow(Home)</onclick>
-						<pulseonselect time="400">true</pulseonselect>
+						<pulseonselect>true</pulseonselect>
 						<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 						<ondown>850</ondown>
 						<onright>458</onright>
@@ -3113,11 +3110,11 @@
 					</control>
 					<control type="image">
 						<description>xbmc4xbox Icon No Focus</description>
-						<left>20</left>
-						<top>3</top>
-						<width>150</width>
-						<height>33</height>
-						<texture>$VAR[xbmc4xbox_Icon]</texture>
+						<left>3</left>
+						<top>4</top>
+						<width>55</width>
+						<height>36</height>
+						<texture>$VAR[kodi_Icon]</texture>
 						<colordiffuse></colordiffuse>
 						<visible>!Control.HasFocus(837)</visible>
 					</control>

@@ -47,10 +47,10 @@
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">Breadcrumb/GOLD/breadcrumb-home-nofocusGOLD.png</value>
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/breadcrumb-home-nofocuswHITE.png</value>
 	</variable>
-	<variable name="xbmc4xbox_Icon">
-		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">Breadcrumb/xbmc4xbox_logo.png</value>
-		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">Breadcrumb/GOLD/xbmc4xbox_logo.png</value>
-		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/xbmc4xbox_logo.png</value>
+	<variable name="kodi_Icon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">Breadcrumb/kodi_logo.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">Breadcrumb/GOLD/kodi_logo.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/kodi_logo.png</value>
 	</variable>
 
 <!--(((RAM SAVING BG'S)))=================================-->

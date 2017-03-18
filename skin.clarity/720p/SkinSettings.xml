@@ -1727,8 +1727,8 @@
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31538</label>
-							<selected>Skin.HasSetting(ShowXbmcLogo)</selected>
-							<onclick>Skin.ToggleSetting(ShowXbmcLogo)</onclick>
+							<selected>Skin.HasSetting(ShowKodiLogo)</selected>
+							<onclick>Skin.ToggleSetting(ShowKodiLogo)</onclick>
 						</control> 
 						<control type="radiobutton" id="10029"> 
 							<description>Hide Global Search home icon</description>
