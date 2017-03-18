@@ -528,7 +528,7 @@
 							<font>font_32_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[Control.GetLabel(1)]</label>
+							<label>13406</label>
 							<width>800</width>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -746,7 +746,7 @@
 						<disabledcolor>ff343434</disabledcolor> <!--JET-->
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
-						<label>$INFO[Control.GetLabel(5)]</label>
+						<label>186</label>
 					</control>			
 					<control type="button" id="7">
 						<description>Cancel</description>
