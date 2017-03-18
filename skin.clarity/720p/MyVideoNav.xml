@@ -11856,7 +11856,7 @@
 						<height>41</height>
 						<texture border="10">Glass/SquareThemeBorder.png</texture>
 						<colordiffuse>BBFFFFFF</colordiffuse>
-						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837) | ControlGroup(456).HasFocus</visible>
 					</control>
 				</control>
 				<!--*************************************************************************************************-->
@@ -11907,57 +11907,7 @@
 				<!--*************************************************************************************************-->
 
 				<!--*********************************** WeatherNotification *****************************************-->
-				<control type="group" id="456">
-					<left>950</left>
-					<top>4</top>
-					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
-					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
-					<!--WeatherNotificationOpenCloseAnim-->
-					<animation effect="fade" end="100" time="200">Visible</animation>
-					<animation effect="fade" end="0" time="200">Hidden</animation> 
-					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
-					<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
-					<control type="button" id="458">
-						<width>100</width>
-						<height>35</height>
-						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
-						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
-						<onclick>ActivateWindow(MyWeather)</onclick>
-						<ondown>850</ondown>
-						<onright>346</onright>
-						<onleft>837</onleft>
-					</control>
-					<control type="image" id="457">
-						<left>8</left>
-						<top>4</top>
-						<width>27</width>
-						<height>27</height>
-						<texture>$INFO[Weather.Conditions]</texture>
-					</control>
-					<control type="label">
-						<left>92</left>
-						<width>55</width>
-						<height>35</height>
-						<font>font_20</font>
-						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Weather.Temperature]</label>
-						<visible>!Control.HasFocus(458)</visible>
-					</control>
-					<control type="label">
-						<left>92</left>
-						<width>55</width>
-						<height>35</height>
-						<font>font_20</font>
-						<textcolor>TopBarStatusColor2</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Weather.Temperature]</label>
-						<visible>Control.HasFocus(458)</visible>
-					</control>
-				</control>
+				<include>TopBarWeatherNotification</include>
 				<!--*************************************************************************************************-->
 				
 				<!--********************************* MediaPlayingNotification **************************************-->

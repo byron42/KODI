@@ -40,7 +40,8 @@
 	<include name="BackgroundOffsetNoTransparency">
 		<top>44</top>
 	</include>
-	
+
+<!--(((TOP BAR)))=========================================================-->	
 	<include name="SystemTray">
 		<control type="group" id="600">
 			<left>1055</left>
@@ -130,8 +131,47 @@
 		</control>
 	</include>
 	
+	<include name="TopBarWeatherNotification">	
+		<control type="group" id="456">
+			<left>950</left>
+			<top>4</top>
+			<animation effect="slide" end="-30,0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
+			<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
+			+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+			<!--WeatherNotificationOpenCloseAnim-->
+			<animation effect="fade" end="100" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">Hidden</animation> 
+			<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+			<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+			<control type="button" id="458">
+				<width>100</width>
+				<height>35</height>
+				<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
+				<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<onclick>ActivateWindow(MyWeather)</onclick>
+				<!-- <ondown>505</ondown> top bar -->
+				<ondown condition="!Window.IsActive(custom_DialogFavourites.xml)">850</ondown>  <!--menu bar-->
+				<ondown condition="Window.IsActive(custom_DialogFavourites.xml)">450</ondown>  <!--menu bar-->
+				<onright>346</onright>  <!--play icon-->
+				<onleft>837</onleft> <!--home icon-->
+				<label>$INFO[Weather.Temperature]</label>
+				<font>font_20</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor>
+				<focusedcolor>TopBarStatusColor2</focusedcolor>
+			</control>
+			<control type="image" id="457">
+				<left>8</left>
+				<top>4</top>
+				<width>27</width>
+				<height>27</height>
+				<texture>$INFO[Weather.Conditions]</texture>
+			</control>
+		</control>
+	</include>
 	
-<!--(((BREADCRUMBS)))=========================================================-->
 	<include name="BreadCrumbButtonLeft">
 		<control type="group">
 			<control type="grouplist">		

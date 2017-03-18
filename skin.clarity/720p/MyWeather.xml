@@ -848,7 +848,7 @@
 						<height>41</height>
 						<texture border="10">Glass/SquareThemeBorder.png</texture>
 						<colordiffuse>BBFFFFFF</colordiffuse>
-						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837) | ControlGroup(456).HasFocus</visible>
 					</control>
 				</control>
 				<!--*************************************************************************************************-->
