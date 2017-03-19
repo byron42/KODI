@@ -303,43 +303,8 @@
 						<animation effect="fade" delay="500" time="0">Hidden</animation>
 						<include>BreadCrumbButtonLeft</include>
 					</control>	
-					<!--*************************************************************************************************-->
 					
-					<!--BreadCrumbHome-->
-					<control type="group">
-						<control type="image">
-							<width>70</width>
-							<height>44</height> <!--BC HOME-->
-							<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
-						</control>	
-					 <!--home icon-->
-						<control type="button" id="837">
-							<left>10</left>
-							<top>6</top>
-							<width>31</width>
-							<height>28</height>
-							<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
-							<texturenofocus></texturenofocus>
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<onclick>ActivateWindow(Home)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
-							<ondown>850</ondown>
-							<onright>458</onright>
-							<onleft>350</onleft>
-						</control>
-						<control type="image">
-							<description>Home Icon No Focus</description>
-							<left>10</left>
-							<top>6</top>
-							<width>31</width>
-							<height>28</height>
-							<texture>$VAR[BreadCrumbHomeIcon]</texture>
-							<colordiffuse></colordiffuse>
-							<visible>!Control.HasFocus(837)</visible>
-						</control>
-					</control>
+					<include>BreadCrumbHome</include>	
 					<!--*************************************************************************************************-->
 					
 					<!--*********************************** WeatherNotification *****************************************-->
