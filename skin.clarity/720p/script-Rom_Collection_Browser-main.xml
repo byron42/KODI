@@ -2137,23 +2137,7 @@
 			<control type="group">	
 				<description>Top Bar Area</description>		
 				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
-				<control type="group">	
-					<control type="image" id="1110">
-						<width>ScreenWidth</width>
-						<height>53</height>
-						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
-					</control>
-					
-					<control type="image" id="1110">
-						<width>ScreenWidth</width>
-						<top>1</top>
-						<height>41</height>
-						<texture border="10">Glass/SquareThemeBorder.png</texture>
-						<colordiffuse>BBFFFFFF</colordiffuse>
-						<visible>Control.HasFocus(345) | Control.HasFocus(346) | Control.HasFocus(837)</visible>
-					</control>
-				</control>
+				<include>TopBarImage</include>
 				<!--*************************************************************************************************-->
 				
 				<!--************************************* (SystemTray) **********************************************-->
