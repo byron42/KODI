@@ -32,6 +32,11 @@
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/PowerNoFocusGold.png</value>
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">SystemTray/WHITE/PowerNoFocusWhite.png</value>
 	</variable>
+	<variable name="SystemTrayFavoritesIcon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">SystemTray/FavoritesNoFocusGray.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/FavoritesNoFocusGold.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">SystemTray/WHITE/FavoritesNoFocusWhite.png</value>
+	</variable>
 	<variable name="SystemTrayPlayIcon">
 		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">SystemTray/PlayNoFocusGray.png</value>
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/PlayNoFocusGold.png</value>
