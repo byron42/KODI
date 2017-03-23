@@ -3,14 +3,13 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<origin x="895" y="4">!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)</origin>
-		<origin x="925" y="4">!Skin.HasSetting(HideGlobalSearchIcon) + !Window.IsActive(Home)</origin>
 		<origin x="925" y="4">true</origin>
 	</coordinates>
 	<controls>
 		<control type="group">	
-			<animation effect="slide" end="0,0" time="300" condition="Window.Previous(Home) + !Skin.HasSetting(HideGlobalSearchIcon)">Conditional</animation>
-			<animation effect="slide" end="0,0" time="300" delay="1000" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.Next(Home)">Conditional</animation>
+			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
+			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
+			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
 			<!---->
 			<animation effect="fade" end="0" time="0">WindowClose</animation>
 			<control type="image">

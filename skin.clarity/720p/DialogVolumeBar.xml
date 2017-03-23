@@ -84,9 +84,11 @@
 	<!--(((TopBar volume)))============================================================================================================================-->	
 		<control type="group">
 			<!--SearchIconSlideAnim-->
-			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
+			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
+			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
+			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
 			<control type="group">
-				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</visible>
+				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)]</visible>
 				<!--NotificationOpenCloseAnim-->
 				<animation effect="fade" end="100" time="200">Visible</animation>
 				<animation effect="fade" end="0" time="200">Hidden</animation> 

@@ -47,7 +47,7 @@
 			<control type="image" id="1110">
 				<width>ScreenWidth</width>
 				<height>53</height>
-				<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+				<texture border="0,0,12,7">$VAR[TopBarImage]</texture>
 				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
 			</control>
 			<control type="image" id="1110">
@@ -65,7 +65,7 @@
 		<control type="group">
 			<left></left>
 			<top>4</top>
-			<defaultcontrol always="true">350</defaultcontrol>
+			<defaultcontrol always="true"></defaultcontrol>
 			<control type="button">
 				<description>Time</description>
 				<left>1055</left>
@@ -89,7 +89,7 @@
 		<!--shutdown/play/search/fav icons-->
 			<control type="group" id="600">
 				<left></left>
-				<defaultcontrol always="true">345</defaultcontrol>
+				<defaultcontrol always="true"></defaultcontrol>
 				<control type="grouplist">
 					<left>1067</left>
 					<width>200</width>
@@ -103,7 +103,7 @@
 					<ondown>850</ondown>
 					<onleft>458</onleft>
 					<onright>837</onright>
-					<control type="button" id="350">
+					<control type="button" id="345">
 						<description>SEARCH ICON</description>
 						<width>29</width>
 						<height>29</height>
@@ -112,12 +112,13 @@
 						<colordiffuse>FFFFFFFF</colordiffuse>
 						<onclick>RunAddon(script.globalsearch)</onclick>
 						<pulseonselect>true</pulseonselect>
+						<animation effect="fade" end="100">VisibleChange</animation>
 						<!--SystemTrayButtonFocusAnim-->
 						<animation effect="zoom" end="110" center="auto" time="100">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="auto" time="100">Unfocus</animation>
 						<visible>!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)</visible>
 					</control>
-					<control type ="button" id="347">
+					<control type ="button" id="346">
 						<description>Play Icon</description>
 						<width>30</width>
 						<height>29</height>
@@ -126,12 +127,13 @@
 						<colordiffuse>FFFFFFFF</colordiffuse>
 						<onclick>XBMC.PlayDVD</onclick>
 						<pulseonselect>true</pulseonselect>
+						<animation effect="fade" end="100">VisibleChange</animation>
 						<!--SystemTrayButtonFocusAnim-->
 						<animation effect="zoom" end="110" center="auto" time="100">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="auto" time="100">Unfocus</animation>
 						<visible>System.HasMediadvd</visible>
 					</control>
-					<control type ="button" id="346">
+					<control type ="button" id="347">
 						<description>Favorite Icon</description>
 						<width>28</width>
 						<height>28</height>
@@ -144,7 +146,7 @@
 						<animation effect="zoom" end="110" center="auto" time="100">Focus</animation>
 						<animation effect="zoom" start="110" end="100" center="auto" time="100">Unfocus</animation>
 					</control>
-					<control type="button" id="345">
+					<control type="button" id="348">
 						<description>Shutdown</description>
 						<top></top>
 						<width>29</width>
@@ -175,7 +177,7 @@
 						<height>29</height>
 						<texture>$VAR[SystemTraySearchIcon]</texture>
 						<colordiffuse></colordiffuse>
-						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(350)">Conditional</animation>
+						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(345)">Conditional</animation>
 						<visible>!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)</visible>
 					</control>
 					<control type="image">
@@ -184,7 +186,7 @@
 						<height>29</height>
 						<texture>$VAR[SystemTrayPlayIcon]</texture>
 						<colordiffuse></colordiffuse>
-						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(347)">Conditional</animation>
+						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(346)">Conditional</animation>
 						<visible>System.HasMediadvd</visible>
 					</control>
 					<control type="image">
@@ -193,7 +195,7 @@
 						<height>28</height>
 						<texture>$VAR[SystemTrayFavoritesIcon]</texture>
 						<colordiffuse></colordiffuse>
-						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(346)">Conditional</animation>
+						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(347)">Conditional</animation>
 					</control>
 					<control type="image">
 						<description>Shutdown No Focus</description>
@@ -202,12 +204,11 @@
 						<height>30</height>
 						<texture>$VAR[SystemTrayShutdownIcon]</texture>
 						<colordiffuse></colordiffuse>
-						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(345)">Conditional</animation>
+						<animation effect="fade" end="100" delay="0" time="0" condition="!Control.HasFocus(348)">Conditional</animation>
 					</control>
 				</control>
 			</control>
 		</control>
-	
 	</include>
 	
 	<include name="VariableSystemTrayBack">
@@ -229,9 +230,13 @@
 		<control type="group" id="456">
 			<left>950</left>
 			<top>4</top>
-			<animation effect="slide" end="-30,0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
+			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+			<animation effect="slide" end="-275,0" time="0" condition="Player.HasMedia">Conditional</animation>
+			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
+			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
+			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
 			<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
-			+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+			+ !Window.IsActive(133) + !Window.IsActive(112)</visible>
 			<!--WeatherNotificationOpenCloseAnim-->
 			<animation effect="fade" end="100" time="200">Visible</animation>
 			<animation effect="fade" end="0" time="200">Hidden</animation> 
@@ -247,7 +252,7 @@
 				<!-- <ondown>505</ondown> top bar -->
 				<ondown condition="!Window.IsActive(custom_DialogFavourites.xml)">850</ondown>  <!--menu bar-->
 				<ondown condition="Window.IsActive(custom_DialogFavourites.xml)">450</ondown>  <!--menu bar-->
-				<onright>350</onright>  <!--play icon-->
+				<onright>345</onright>  <!--search icon-->
 				<onleft>837</onleft> <!--home icon-->
 				<label>$INFO[Weather.Temperature]</label>
 				<font>font_20</font>
@@ -268,6 +273,10 @@
 	
 	<include name="TopBarMediaNotification">
 		<control type="group">
+			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
+			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
+			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
 			<left>780</left>
 			<top>4</top>
 			<visible>Player.HasMedia</visible>
@@ -490,7 +499,7 @@
 				<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 				<ondown>850</ondown>
 				<onright>458</onright>
-				<onleft>345</onleft>
+				<onleft>348</onleft>
 			</control>
 			<control type="image">
 				<description>Home Icon No Focus</description>
