@@ -391,8 +391,9 @@
 				
 				<!--******************************** (BreadCrumbFavourites) *****************************************-->
 				<control type="group">
+					<animation effect="slide" start="5,0" time="0" condition="!Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
 					<control type="grouplist">		
-						<left>60</left>
+						<left>40</left>
 						<top>4</top>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
@@ -448,7 +449,7 @@
 						</control>
 					</control>
 					<control type="grouplist">		
-						<left>60</left>
+						<left>40</left>
 						<top>4</top>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>

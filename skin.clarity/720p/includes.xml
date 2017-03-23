@@ -386,8 +386,9 @@
 	
 	<include name="BreadCrumbButtonLeft">
 		<control type="group">
+			<animation effect="slide" start="5,0" time="0" condition="!Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
 			<control type="grouplist">		
-				<left>60</left>
+				<left>40</left>
 				<top>4</top>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -443,7 +444,7 @@
 				</control>
 			</control>
 			<control type="grouplist">		
-				<left>60</left>
+				<left>40</left>
 				<top>4</top>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -479,7 +480,9 @@
 	
 	<include name="BreadCrumbHome">
 		<control type="group">
+			<visible>Skin.HasSetting(ShowKodiLogo)</visible>
 			<control type="image">
+				<left>-15</left>
 				<width>70</width>
 				<height>44</height> <!--BC HOME-->
 				<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
@@ -487,8 +490,8 @@
 			</control>	
 		 <!--home icon-->
 			<control type="button" id="837">
-				<left>10</left>
-				<top>6</top>
+				<left>5</left>
+				<top>8</top>
 				<width>31</width>
 				<height>28</height>
 				<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
@@ -496,21 +499,57 @@
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<onclick>ActivateWindow(Home)</onclick>
 				<pulseonselect>true</pulseonselect>
-				<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+				<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 				<ondown>850</ondown>
 				<onright>458</onright>
 				<onleft>348</onleft>
 			</control>
 			<control type="image">
 				<description>Home Icon No Focus</description>
-				<left>10</left>
-				<top>6</top>
+				<left>5</left>
+				<top>8</top>
 				<width>31</width>
 				<height>28</height>
 				<texture>$VAR[BreadCrumbHomeIcon]</texture>
 				<colordiffuse></colordiffuse>
 				<visible>!Control.HasFocus(837)</visible>
 			</control>
+		</control>
+	<!--BreadCrumbHome(KODI_ICON) -->
+		<control type="group">
+			<visible>!Skin.HasSetting(ShowKodiLogo)</visible>
+			<control type="image">
+				<left>-20</left>
+				<width>70</width>
+				<height>44</height> <!--BC HOME-->
+				<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+			</control>	
+		<!--Kodi logo-->		
+			<control type="button" id="837"> 
+				<left>-5</left>
+				<top>1</top>
+				<width>45</width>
+				<height>42</height>
+				<texturefocus colordiffuse="ThemeColor">special://skin/images/skin/KodiLogo.png</texturefocus>
+				<texturenofocus colordiffuse="Grey">special://skin/images/skin/KodiLogo.png</texturenofocus>
+				<onclick>ActivateWindow(Home)</onclick>
+				<pulseonselect>true</pulseonselect>
+				<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
+				<ondown>850</ondown>
+				<onright>458</onright>
+				<onleft>348</onleft>
+			</control>
+			<!-- <control type="image"> -->
+				<!-- <description>xbmc4xbox Icon No Focus</description> -->
+				<!-- <left>3</left> -->
+				<!-- <top>4</top> -->
+				<!-- <width>55</width> -->
+				<!-- <height>36</height> -->
+				<!-- <texture>$VAR[kodi_Icon]</texture> -->
+				<!-- <colordiffuse></colordiffuse> -->
+				<!-- <visible>!Control.HasFocus(837)</visible> -->
+			<!-- </control> -->
 		</control>
 	</include>
 
