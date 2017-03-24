@@ -79,7 +79,7 @@
 				<textoffsety>7</textoffsety>
 				<label>$INFO[System.Time]</label>
 				<texturefocus border="8"></texturefocus>
-				<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+				<texturenofocus border="10">SystemTray/TopNotifyBack.png</texturenofocus>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
@@ -245,8 +245,8 @@
 			<control type="button" id="458">
 				<width>100</width>
 				<height>35</height>
-				<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
-				<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+				<texturefocus border="10">SystemTray/TopNotifyBack.png</texturefocus>
+				<texturenofocus border="10">SystemTray/TopNotifyBack.png</texturenofocus>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 				<onclick>ActivateWindow(MyWeather)</onclick>
 				<!-- <ondown>505</ondown> top bar -->
@@ -288,7 +288,7 @@
 			<control type="image">
 				<width>270</width>
 				<height>35</height>
-				<texture border="8">SystemTray/top-bar-status-background.png</texture>
+				<texture border="10">SystemTray/TopNotifyBack.png</texture>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 			</control>
 			<control type="image">

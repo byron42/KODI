@@ -12,11 +12,18 @@
 			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
 			<!---->
 			<animation effect="fade" end="0" time="0">WindowClose</animation>
-			<control type="image">
+			<control type="button">
 				<width>125</width>
 				<height>35</height>
-				<texture border="8">SystemTray/top-bar-status-background.png</texture>
+				<texturefocus border="10">SystemTray/TopNotifyBack.png</texturefocus>
+				<texturenofocus border="10">SystemTray/TopNotifyBack.png</texturenofocus>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<label>$INFO[Player.Volume]</label>
+				<font>font_20</font>
+				<textwidth>80</textwidth>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<align>right</align>
+				<aligny>center</aligny>
 			</control>
 			<control type="image">
 				<left>8</left>
@@ -26,16 +33,6 @@
 				<texture>volume-mute.png</texture>
 				<!--TopBarStatusIconFadeAnim-->
 				<animation effect="fade" end="50" condition="true">conditional</animation>
-			</control>
-			<control type="label">
-				<left>40</left>
-				<width>80</width>
-				<height>35</height>
-				<font>font_20</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Volume]</label>
 			</control>
 		</control>
 	</controls>

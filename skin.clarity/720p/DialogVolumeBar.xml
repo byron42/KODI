@@ -94,11 +94,18 @@
 				<animation effect="fade" end="0" time="200">Hidden</animation> 
 				<animation effect="fade" end="100" time="200">WindowOpen</animation>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
-				<control type="image">
+				<control type="button">
 					<width>125</width>
 					<height>35</height>
-					<texture border="8">SystemTray/top-bar-status-background.png</texture>
+					<texturefocus border="10">SystemTray/TopNotifyBack.png</texturefocus>
+					<texturenofocus border="10">SystemTray/TopNotifyBack.png</texturenofocus>
 					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					<label>$INFO[Player.Volume]</label>
+					<font>font_20</font>
+					<textwidth>80</textwidth>
+					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+					<align>right</align>
+					<aligny>center</aligny>
 				</control>
 				<control type="image">
 					<left>8</left>
@@ -109,18 +116,7 @@
 					<!--TopBarStatusIconFadeAnim-->
 					<animation effect="fade" end="50" condition="true">conditional</animation>
 				</control>
-				<control type="label">
-					<left>40</left>
-					<width>80</width>
-					<height>35</height>
-					<font>font_20</font>
-					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[Player.Volume]</label>
-				</control>
 			</control>
 		</control>
-		
 	</controls>
 </window>
