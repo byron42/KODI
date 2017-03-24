@@ -15,9 +15,9 @@
 				<visible>true</visible> <!--skinwide equal viz bg-->
 				<!--************************* FullControlAreaBackground ******************************-->
 				<control type="image">
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>ScreenWidth</width>
-					<include>VariableBackgroundHeight</include>		
+					<height>ScreenHeight</height>		
 					<texture>black.png</texture>
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="80" time="400" condition="">Visible</animation>

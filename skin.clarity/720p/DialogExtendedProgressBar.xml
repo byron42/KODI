@@ -21,8 +21,8 @@
 				<top>-5</top>	
 				<width>ScreenWidth</width>
 				<height>48</height>
-				<texture flipy="true" border="0,0,0,7">$VAR[TopBarImage]</texture>
-				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<texture flipy="true" border="0,0,0,7">top-bar-background.png</texture>
+				<colordiffuse>BBBBBBBB</colordiffuse> <!--BLUE-->
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<!--****************************************************************************************************************-->

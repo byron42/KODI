@@ -30,16 +30,16 @@
 		<!--***************************************** Backgrounds *********************************************-->
 		<!--BackgroundFSVideo-->
 			<control type="videowindow">
-				<include>BackgroundOffset</include>
+				<top>0</top>
 				<width>1280</width>
-				<include>VariableBackgroundHeight</include>
+				<height>ScreenHeight</height>
 				<visible>Player.HasVideo + !Window.IsActive(ShutdownMenu)</visible>
 			</control>
 		<!--BackgroundFSViz-->
 			<control type="visualisation">
 				<left></left>
 				<top></top>
-				<include>BackgroundOffset</include>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<visible>Player.HasAudio + !Window.IsActive(ShutdownMenu)</visible>
@@ -47,9 +47,9 @@
 		<!--Background Dim-->
 			<control type="image">
 				<description>Dim Background</description>
-				<include>BackgroundOffset</include>
+				<top>0</top>
 				<width>1280</width>
-				<include>VariableBackgroundHeight</include>
+				<height>ScreenHeight</height>
 				<texture>background-dim.png</texture>
 				<!--BackgroundVizDimAnim-->
 				<animation effect="fade" end="70" condition="true">Conditional</animation>

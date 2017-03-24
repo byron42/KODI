@@ -15,9 +15,9 @@
 						<control type="image">
 							<left>0</left>
 							<description>Universal Classic Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -29,9 +29,9 @@
 					<control type="image">
 						<left>0</left>
 						<description>Universal Classic Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -45,9 +45,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<description>Custom Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-music.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
 						<visible>Skin.HasSetting(ApplyAllMusicCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<aspectratio>stretch</aspectratio>
@@ -59,9 +59,9 @@
 					</control>
 					<control type="image">
 						<description>Default Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>MusicBackground_And_Res</include>
 						<colordiffuse>-</colordiffuse>
 						<aspectratio>stretch</aspectratio>
@@ -77,15 +77,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -97,15 +97,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -119,9 +119,9 @@
 					<control type="group">
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -131,9 +131,9 @@
 						</control>
 						<control type="image">
 							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
@@ -148,9 +148,9 @@
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -162,9 +162,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -194,9 +194,9 @@
 				<control type="image">
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
 				
 				<!--********************************************* SongInfoMenuBar ***********************************************************-->

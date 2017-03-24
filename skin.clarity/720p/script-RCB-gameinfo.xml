@@ -18,9 +18,9 @@
 			<control type="image">
 				<width>ScreenWidth</width>
 				<height>34</height>
-				<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+				<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+				<colordiffuse>BBBBBBBB</colordiffuse>
 			</control>
 			
 			<!--********************************************* GameInfoMenuBar **********************************************************-->

@@ -8,8 +8,8 @@
 			<control type="image" id="1110">
 				<width>ScreenWidth</width>
 				<height>35</height>
-				<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<texture border="0,0,0,7">Transparent-Top-Bar.png</texture>
+				<colordiffuse>BBBBBBBB</colordiffuse> <!--BLUE-->
 				<animation effect="fade" start="80" end="80"  condition="true">Conditional</animation>
 			</control>
 			<control type="grouplist">
@@ -28,7 +28,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>1</textoffsety>
-					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<texturefocus border="10">Transparent-Top-Bar.png</texturefocus>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 					<texturenofocus border="10">search-focus.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
@@ -46,7 +46,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>1</textoffsety>
-					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<texturefocus border="10">Transparent-Top-Bar.png</texturefocus>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 					<texturenofocus border="10">search-focus.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
@@ -64,7 +64,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>1</textoffsety>
-					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<texturefocus border="10">Transparent-Top-Bar.png</texturefocus>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 					<texturenofocus border="10">search-focus.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
@@ -82,7 +82,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>1</textoffsety>
-					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<texturefocus border="10">Transparent-Top-Bar.png</texturefocus>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 					<texturenofocus border="10">search-focus.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
@@ -100,7 +100,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>1</textoffsety>
-					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<texturefocus border="10">Transparent-Top-Bar.png</texturefocus>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 					<texturenofocus border="10">search-focus.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>

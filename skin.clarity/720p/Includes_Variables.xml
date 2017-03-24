@@ -1,21 +1,5 @@
 <includes>
 <!--(((TOP BAR)))=================================-->
-	<variable name="TopBarColor">
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff454A4F</value>
-		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff332D22</value>
-		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff3F3F3F</value>
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff666666</value>
-	<!--transparent-->
-		<!--<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">BC454A4F</value>
-		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
-		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb666666</value>-->
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
-	</variable>
-	<variable name="TopBarImage">
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">Transparent-Top-Bar.png</value>
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
-	</variable>
 	<variable name="BreadCrumbBackgroundColor">
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,2) + !Skin.String(BreadCrumbBackgroundColor,3)">ff454A4F</value>
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,1) + !Skin.String(BreadCrumbBackgroundColor,3)">ff8A795D</value>
@@ -71,14 +55,6 @@
 		<value condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">ButtonColor</value>
 		<value condition="ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">ThemeColor</value>
 		<value condition="!Skin.HasSetting(ConstantHomeSubmenu)">ThemeColor</value>
-	</variable>
-	<variable name="HomeMenuColors">
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">FFFFFFFF</value>
-	</variable>
-	<variable name="SubMenuImage">
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">Transparent-Sub-Bar.png</value>
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">home-submenu-cover1.png</value>
 	</variable>
 	
 <!--(((VIDEO LIBRARY BREADCRUMB LABEL)))=================================-->
@@ -158,19 +134,6 @@
 		<value condition="Substring(Container.FolderPath,sources://music/) | Substring(Container.FolderPath,sources://video/)">     [UPPERCASE]$LOCALIZE[744][/UPPERCASE]   </value> <!--files-->
 	</variable>
 	
-<!--(((BREADCRUMB TAB SIZE)))=================================-->
-	<variable name="BreadCrumb_Left_Tab_Size">
-		<value condition="![Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)]">BreadCrumb/breadcrumb-background-small.png</value>
-		<value condition="Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)">BreadCrumb/breadcrumb-background-mid.png</value>
-		<value condition="">BreadCrumb/breadcrumb-background-big.png</value>
-	</variable>
-	<variable name="BreadCrumb_Right_Tab_Size">
-		<value condition="![Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500) | Window.IsActive(503) | Window.IsActive(DialogRepoInfo.xml) | Window.IsActive(textviewer) | Window.IsActive(addoninformation)]">BreadCrumb/breadcrumb-background-small.png</value>
-		<value condition="Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)">BreadCrumb/breadcrumb-background-mid.png</value>
-		<value condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503) | Window.IsActive(DialogRepoInfo.xml) | Window.IsActive(textviewer)">BreadCrumb/breadcrumb-background-big.png</value>
-	</variable>
-	
-
 <!--(((FILE MANAGER/PLAYLIST EDITOR)))=================================-->
 	<variable name="NumObjectsLeftColor">
 		<value condition="!Control.HasFocus(20)">Grey</value>

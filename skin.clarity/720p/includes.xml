@@ -19,36 +19,15 @@
 	<constant name="MediaFlagsCrossfadeTime">400</constant>
 	<constant name="SortLetterOffsetY">280</constant>
 	
-	<include name="VariableBackgroundHeight">
-		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
-		<include condition="Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
-	</include>
-	<include name="TallBackground">
-		<height>720</height>
-	</include>
-	<include name="NormalBackground">
-		<height>676</height>
-	</include>
 	
-	<include name="BackgroundOffset">
-		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
-		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
-	</include>
-	<include name="BackgroundOffsetTransparency">
-		<top>0</top>
-	</include>
-	<include name="BackgroundOffsetNoTransparency">
-		<top>44</top>
-	</include>
-
 <!--(((TOP BAR)))=========================================================-->	
 	<include name="TopBarImage">
 		<control type="group">	
 			<control type="image" id="1110">
 				<width>ScreenWidth</width>
 				<height>53</height>
-				<texture border="0,0,12,7">$VAR[TopBarImage]</texture>
-				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<texture border="0,0,12,7">Transparent-Top-Bar.png</texture>
+				<colordiffuse>BBBBBBBB</colordiffuse> <!--BLUE-->
 			</control>
 			<control type="image" id="1110">
 				<width>ScreenWidth</width>
@@ -556,6 +535,25 @@
 			<!-- </control> -->
 		</control>
 	</include>
+
+<!--(((BACKGROUNDS)))==============================================================-->
+	<include name="UniversalClassicBackground">
+		<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+			<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+			<control type="image">
+				<left>0</left>
+				<description>Universal Classic Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+				<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+			</control>
+		</control>
+	</include>
+
 
 	<!--((( HOME BACKGROUND RESOLUTIONS )))==============================================================-->
 <!-- HOME Programs -->

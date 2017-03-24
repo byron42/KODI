@@ -343,7 +343,7 @@
 			<control type="group" id="851"> <!--OPTIONS LIST-->
 				<left>0</left>
 				<top>20</top>
-				<include>VariableBackgroundHeight</include><!--518-->
+				<height>ScreenHeight</height><!--518-->
 				<width>1280</width><!--125-->
 				<pagecontrol></pagecontrol>
 				<onup>851</onup>

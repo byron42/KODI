@@ -29,9 +29,9 @@
 						<control type="image">
 							<left>0</left>
 							<description>Universal Classic Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -43,9 +43,9 @@
 					<control type="image">
 						<left>0</left>
 						<description>Universal Classic Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -59,9 +59,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<description>Custom Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-programs.jpg">$INFO[Skin.String(ProgramsCustomBG)]</imagepath>
 						<visible>Skin.HasSetting(ApplyAllProgramsCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<aspectratio>stretch</aspectratio>
@@ -73,9 +73,9 @@
 					</control>
 					<control type="image">
 						<description>Default Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>ProgramsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -90,15 +90,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -111,15 +111,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -148,9 +148,9 @@
 				<animation effect="fade" time="0">Hidden</animation>
 				<control type="image" id="75">
 					<description>Fanart Background</description>
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
+					<height>ScreenHeight</height>
 					<texture>$INFO[Listitem.Property(background)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>600</fadetime>
@@ -167,9 +167,9 @@
 				<animation effect="fade" start="100" end="0" delay="" time="300">Hidden</animation>
 				<control type="multiimage">
 					<description>Custom Background</description>
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
+					<height>ScreenHeight</height>
 					<imagepath background="true" fallback="special://skin/images/backgrounds/background-system.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
 					<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					<aspectratio>stretch</aspectratio>
@@ -181,9 +181,9 @@
 				</control>
 				<control type="image">
 					<description>Default Background</description>
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
+					<height>ScreenHeight</height>
 					<include>SystemBackground_And_Res</include>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -195,9 +195,9 @@
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -209,9 +209,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -1288,8 +1288,8 @@
 						<top>-5</top>	
 						<width>ScreenWidth</width>
 						<height>48</height>
-						<texture flipy="true" border="0,0,0,7">$VAR[TopBarImage]</texture>
-						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+						<texture flipy="true" border="0,0,0,7">Transparent-Top-Bar.png</texture>
+						<colordiffuse>BBBBBBBB</colordiffuse> <!--BLUE-->
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<!--****************************************************************************************************************-->
@@ -1379,18 +1379,18 @@
 						<description>FirstMenuBarImage</description>
 						<width>ScreenWidth</width>
 						<height>34</height>
-						<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+						<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+						<colordiffuse>BBBBBBBB</colordiffuse>
 					</control>
 					<control type="image">
 						<top>34</top>	
 						<description>SecondMenuBarImage</description>
 						<width>ScreenWidth</width>
 						<height>32</height>
-						<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+						<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+						<colordiffuse>BBBBBBBB</colordiffuse>
 					</control>
 					<!--********************************************* DefaultMenuBar ************************************************************-->
 					<control type="group" id="850">

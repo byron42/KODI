@@ -16,9 +16,9 @@
 				<control type="image">
 					<left>0</left>
 					<description>Universal Classic Background</description>
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
+					<height>ScreenHeight</height>
 					<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
 					<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 					<aspectratio>stretch</aspectratio>
@@ -30,9 +30,9 @@
 				<control type="image">
 					<left>0</left>
 					<description>Universal Classic Background</description>
-					<include>BackgroundOffset</include>
+					<top>0</top>
 					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
+					<height>ScreenHeight</height>
 					<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -47,9 +47,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeProgramsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -65,9 +65,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomePicturesBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -83,9 +83,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeMusicBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -101,9 +101,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -119,9 +119,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -137,9 +137,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -155,9 +155,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeGeneralBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -173,9 +173,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeScriptsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -191,9 +191,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeSystemBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -209,9 +209,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeWeatherBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -223,9 +223,9 @@
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<left>0</left>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<imagepath>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<timeperimage>5000</timeperimage>
@@ -244,9 +244,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<include>HomeAddonsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -262,15 +262,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -283,15 +283,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -314,9 +314,9 @@
 			<!--[21]   music vids  ============(308)-->
 				
 			<control type="group" id="2013"> <!--Recently Added Fullscreen Fanart-->
-				<include>BackgroundOffset</include>
+				<top>0</top>
 				<width>1280</width>
-				<include>VariableBackgroundHeight</include>
+				<height>ScreenHeight</height>
 				<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 			<!--Movie Fanart-->	
 				<control type="image">
@@ -378,7 +378,7 @@
 				<control type="image">
 					<visible>ControlGroup(304).HasFocus</visible>
 					<width>ScreenWidth</width>
-					<include>VariableBackgroundHeight</include>		
+					<height>ScreenHeight</height>		
 					<texture>background-dim.png</texture>
 					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" end="50" time="200">Visible</animation>
@@ -1330,8 +1330,8 @@
 					<top>571</top>
 					<width>ScreenWidth</width>
 					<height>40</height>
-					<texture border="80,4,80,4">$VAR[SubMenuImage]</texture>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<texture border="80,4,80,4">Transparent-Sub-Bar.png</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<aspectratio aligny="top">scale</aspectratio>
 					<!--<visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible>-->
 					<visible>!Skin.HasSetting(ConstantHomeSubmenu) + ![Window.IsVisible(selectdialog) | Window.IsVisible(script-RCB-importoptions.xml) | Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
@@ -1340,9 +1340,9 @@
 	
 			<!--*************************** DialogPopUpScreenDim ********************************-->
 			<control type="image">
-				<include>BackgroundOffset</include>
+				<top>0</top>
 				<width>1280</width>
-				<include>VariableBackgroundHeight</include>
+				<height>ScreenHeight</height>
 				<texture>background-dim.png</texture>
 				<animation effect="fade" start="0" end="40" time="300">Visible</animation>
 				<animation effect="fade" start="40" end="0" time="300">Hidden</animation>
@@ -1366,7 +1366,7 @@
 					<height>14</height>
 					<texture>bottom-bar-top.png</texture>
 					<visible>!Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</visible>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<!--BottomPaneTopHighlightFadeAnim-->
 					<animation effect="fade" end="15" condition="true">Conditional</animation>
 				</control>
@@ -1375,7 +1375,7 @@
 					<width>ScreenWidth</width>
 					<height>120</height>
 					<texture>bottom-bar-background.png</texture>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<visible>!Window.IsVisible(3006) + !Window.IsVisible(3007)</visible>
 				</control>	
 				<control type="image">
@@ -1384,7 +1384,7 @@
 					<width>ScreenWidth</width>
 					<height>86</height>
 					<texture>home-submenu-cover-bottom.png</texture>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<visible>Window.IsVisible(3006) | Window.IsVisible(3007)</visible>
 				</control>
 				<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
@@ -1618,7 +1618,7 @@
 					<width>ScreenWidth</width>
 					<height>120</height>
 					<texture>bottom-bar-overlay3.png</texture>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<!--<visible>[!Window.IsVisible(3006) + !Window.IsVisible(3007)] + !Skin.HasSetting(ConstantHomeSubmenu)</visible>-->
 					<visible>[!Window.IsVisible(3006) + !Window.IsVisible(3007)]</visible>
 				</control>	
@@ -1688,8 +1688,8 @@
 						<top>30</top>
 						<width>ScreenWidth</width>
 						<height>2</height>
-						<texture border="80,4,80,4">$VAR[SubMenuImage]</texture>
-						<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+						<texture border="80,4,80,4">Transparent-Sub-Bar.png</texture>
+						<colordiffuse>BBBBBBBB</colordiffuse>
 						<aspectratio aligny="top">scale</aspectratio>
 						<visible>Skin.HasSetting(ConstantHomeSubmenu) + ![Container(850).HasFocus(2) | Container(850).HasFocus(9)]</visible>
 					</control>
@@ -2848,11 +2848,11 @@
 					<description>Menu Bar Image</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 					<!--MenuBarRSSFeedsOpenCloseAnim-->
-					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
+					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250">WindowOpen</animation>
 				</control>
 				<control type="rss">
 					<description>RSS Feeds</description>
@@ -2865,13 +2865,11 @@
 					<titlecolor>ThemeColor</titlecolor>
 					<headlinecolor>FF8A795D</headlinecolor>
 					<!--MenuBarRSSFeedsOpenCloseAnim-->
-					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
+					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250">WindowOpen</animation>
 				</control>
 				<!--MenuBarRSSFeedsOpenCloseAnim-->
-				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
-				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowClose</animation>
-				<animation effect="slide" start="0,-86" time="300" delay="250" condition="Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
-				<animation effect="slide" end="0,-86" time="300" condition="Skin.HasSetting(TransparentMenuBacks)">WindowClose</animation>
+				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250">WindowOpen</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200">WindowClose</animation>
 				<visible>System.GetBool(LookAndFeel.EnableRSSFeeds)</visible>
 			</control>
 		

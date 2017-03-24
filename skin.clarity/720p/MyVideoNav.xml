@@ -20,9 +20,9 @@
 						<control type="image">
 							<left>0</left>
 							<description>Universal Classic Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -34,9 +34,9 @@
 						<control type="image">
 							<left>0</left>
 							<description>Universal Classic Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -50,9 +50,9 @@
 						<visible>[Substring(Container.FolderPath,videodb://1/,Left) | Substring(Container.FolderPath,videodb://4/,Left) | Substring(Container.FolderPath,videodb://3/,Left)] | ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 						<control type="multiimage">
 							<description>Custom Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
 							<visible>Skin.HasSetting(ApplyAllMoviesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 							<aspectratio>stretch</aspectratio>
@@ -64,9 +64,9 @@
 						</control>
 						<control type="image">
 							<description>Default Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<include>MoviesBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -85,9 +85,9 @@
 						| ![Player.HasAudio + !Skin.HasSetting(HideNowPlayingMusic)] + ![Player.HasVideo + !Skin.HasSetting(HideNowPlayingVideos)]</visible>
 						<control type="multiimage">
 							<description>Custom Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos.jpg">$INFO[Skin.String(TVShowsCustomBG)]</imagepath>
 							<visible>Skin.HasSetting(ApplyAllTVShowsCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 							<aspectratio>stretch</aspectratio>
@@ -99,9 +99,9 @@
 						</control>
 						<control type="image">
 							<description>Default Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<include>TvShowsBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -120,9 +120,9 @@
 						<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos)] + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)] | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
@@ -132,9 +132,9 @@
 						</control>	
 						<control type="image">
 							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMoviesFanart)</visible>
@@ -154,9 +154,9 @@
 						| [Control.IsVisible(50) + !Skin.HasSetting(HideTVShowsIconViewFanart)]]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>$INFO[Fanart.Image]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -167,9 +167,9 @@
 						</control>	
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -180,9 +180,9 @@
 						</control>	
 						<control type="image">
 							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
+							<top>0</top>
 							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
+							<height>ScreenHeight</height>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(DoNotDimTVShowsFanart)</visible>
@@ -197,15 +197,15 @@
 				<control type="group">
 					<visible>[Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="videowindow">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -217,15 +217,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -241,9 +241,9 @@
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 					<animation effect="fade" start="100" end="0" time="0" condition="Control.IsVisible(52)">Conditional</animation>
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -255,9 +255,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 					<control type="image">
-						<include>BackgroundOffset</include>
+						<top>0</top>
 						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
+						<height>ScreenHeight</height>		
 						<texture>control-area-background2.png</texture>
 						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -564,8 +564,8 @@
 					<control type="image">
 						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 						<width>1280</width>
-						<include>BackgroundOffset</include>
-						<include>VariableBackgroundHeight</include>
+						<top>0</top>
+						<height>ScreenHeight</height>
 						<texture>listview-background-dim.png</texture>
 						<!--SkinSystemStatReopositonBigger-->
 						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
@@ -573,8 +573,8 @@
 					<control type="image">
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 						<width>1280</width>
-						<include>BackgroundOffset</include>
-						<include>VariableBackgroundHeight</include>
+						<top>0</top>
+						<height>ScreenHeight</height>
 						<texture>listview-background-dim.png</texture>
 						<!--SkinSystemStatReopositonBigger-->
 						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
@@ -4789,7 +4789,7 @@
 						<ondown>77</ondown>
 						<viewtype label="31117">Wall View</viewtype>
 						<width>1288</width>
-						<include>VariableBackgroundHeight</include>	
+						<height>ScreenHeight</height>	
 						<scrolltime>100</scrolltime>
 						<orientation>horizontal</orientation>
 						<preloaditems>2</preloaditems>
@@ -8982,7 +8982,7 @@
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 					<control type="image">
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>view-fade-background.png</texture>
 						<visible>!Skin.HasSetting(HideTVShowsEpisodeListFanart)</visible>
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
@@ -11138,7 +11138,7 @@
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 					<control type="image">
 						<width>1280</width>
-						<include>VariableBackgroundHeight</include>
+						<height>ScreenHeight</height>
 						<texture>view-fade-background.png</texture>
 						<visible>!Skin.HasSetting(HideTVShowsWideListFanart)</visible>
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
@@ -11417,9 +11417,9 @@
 					<description>MenuBarImage</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<texture flipy="true" border="80,4,80,4">Transparent-Sub-Bar.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
 				<!--********************************************* DefaultMenuBar ************************************************************-->
 				<control type="group" id="850">
@@ -12485,7 +12485,7 @@
 			<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ViewsDialogPopUpScreenDim OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 			<control type="image">
 				<width>1280</width>
-				<include>VariableBackgroundHeight</include>
+				<height>ScreenHeight</height>
 				<texture>background-dim.png</texture>
 				<animation effect="fade" start="0" end="70" time="500">Visible</animation>
 				<animation effect="fade" start="70" end="0" time="450">Hidden</animation>
