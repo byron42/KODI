@@ -386,9 +386,9 @@
 	
 	<include name="BreadCrumbButtonLeft">
 		<control type="group">
-			<animation effect="slide" start="5,0" time="0" condition="!Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
+			<animation effect="slide" end="2,0" time="0" condition="Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
 			<control type="grouplist">		
-				<left>40</left>
+				<left>35</left>
 				<top>4</top>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -417,10 +417,10 @@
 					<height>35</height>
 					<texture></texture>
 				</control>
-				<control type="button" id="">
+				<control type="button" id="4000">
 					<description>Right Button</description>
 					<visible></visible>
-					<left>-11</left>
+					<left>-14</left>
 					<width>auto</width>
 					<height>35</height>
 					<font>font_22_WCBI</font>
@@ -434,6 +434,8 @@
 					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> 
 					<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<label>$VAR[BreadCrumbLabel_Right]</label>
+					<!-- <visible>!IsEmpty(Control.GetLabel(4000))</visible> -->
+					<!-- <animation effect="fade" end="100" delay="0" time="0">VisibleChange</animation> -->
 				</control>
 				<control type="image">
 					<left>-2</left>
@@ -441,10 +443,12 @@
 					<height>35</height>
 					<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip.png</texture>
 					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
+					<visible>!IsEmpty(Control.GetLabel(4000))</visible>
+					<animation effect="fade" end="100" delay="0" time="0">VisibleChange</animation>
 				</control>
 			</control>
 			<control type="grouplist">		
-				<left>40</left>
+				<left>35</left>
 				<top>4</top>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -482,7 +486,7 @@
 		<control type="group">
 			<visible>Skin.HasSetting(ShowKodiLogo)</visible>
 			<control type="image">
-				<left>-15</left>
+				<left>-17</left>
 				<width>70</width>
 				<height>44</height> <!--BC HOME-->
 				<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>
@@ -519,7 +523,7 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(ShowKodiLogo)</visible>
 			<control type="image">
-				<left>-20</left>
+				<left>-22</left>
 				<width>70</width>
 				<height>44</height> <!--BC HOME-->
 				<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip-home.png</texture>

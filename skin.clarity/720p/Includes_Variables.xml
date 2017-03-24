@@ -89,73 +89,73 @@
 	
 <!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
 	<variable name="BreadCrumbLabel_Left">
-		<value condition="Window.IsVisible(selectdialog)">    [UPPERCASE]$LOCALIZE[424][/UPPERCASE]   </value> <!--select-->
-		<value condition="Window.IsVisible(virtualkeyboard)">    [UPPERCASE]$LOCALIZE[413][/UPPERCASE]   </value> <!--keyboard-->
-		<value condition="Window.IsVisible(DialogRepoInfo.xml) | Window.IsVisible(textviewer) | Window.IsVisible(addoninformation)">    [UPPERCASE]$LOCALIZE[24000][/UPPERCASE]   </value> <!--Add-on-->
-		<value condition="Window.IsVisible(127) | Window.IsVisible(script-RCB-gameinfo.xml)">    [UPPERCASE]$LOCALIZE[15016][/UPPERCASE]   </value> <!--games-->
-		<value condition="Window.IsActive(3010)">    [UPPERCASE]$LOCALIZE[470][/UPPERCASE]   </value> <!--credits-->
-		<value condition="Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(132)">    [UPPERCASE]$LOCALIZE[31910][/UPPERCASE]   </value> <!--media-->
-		<value condition="Window.IsVisible(139)">    [UPPERCASE]$LOCALIZE[31911][/UPPERCASE]   </value> <!--picture-->
-		<value condition="Window.IsActive(10140)">    [UPPERCASE]$LOCALIZE[31602][/UPPERCASE]   </value> <!--plugin-->
-		<value condition="Window.IsActive(111) | Window.IsActive(7) | Window.IsActive(4)">    [UPPERCASE]$LOCALIZE[13000][/UPPERCASE]   </value> <!--system-->
-		<value condition="Window.IsActive(3080)">    [UPPERCASE]$LOCALIZE[1036][/UPPERCASE]   </value> <!--favourites-->
-		<value condition="Window.IsActive(skinsettings) | Window.IsActive(131) | Window.IsActive(130) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(profiles)">    [UPPERCASE]$LOCALIZE[5][/UPPERCASE]   </value> <!--settings-->
-		<value condition="Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)">    [UPPERCASE]$LOCALIZE[636][/UPPERCASE]   </value> <!--custom-->
-		<value condition="Window.IsVisible(2001) + Container.Content(Artists)">    [UPPERCASE]$LOCALIZE[557][/UPPERCASE]   </value> <!--artist-->
-		<value condition="Window.IsVisible(2001) + Container.Content(Albums)">    [UPPERCASE]$LOCALIZE[558][/UPPERCASE]   </value> <!--albums-->
-		<value condition="Window.IsVisible(135)">    [UPPERCASE]$LOCALIZE[179][/UPPERCASE]   </value> <!--song-->
-		<value condition="Window.IsVisible(2003) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes) + !Container.Content(MusicVideos)">    [UPPERCASE]$LOCALIZE[157][/UPPERCASE]   </value> <!--video-->
-		<value condition="Window.IsVisible(2003) + Container.Content(Movies)">    [UPPERCASE]$LOCALIZE[20338][/UPPERCASE]   </value> <!--movies-->
-		<value condition="Window.IsVisible(2003) + Container.Content(TVShows)">    [UPPERCASE]$LOCALIZE[20364][/UPPERCASE]   </value> <!--tv shows-->
-		<value condition="Window.IsVisible(2003) + Container.Content(Episodes)">    [UPPERCASE]$LOCALIZE[20359][/UPPERCASE]   </value> <!--episodes-->
-		<value condition="Window.IsVisible(2003) + Container.Content(MusicVideos)">    [UPPERCASE]$LOCALIZE[20391][/UPPERCASE]   </value> <!--music vids-->
-		<value condition="Window.IsActive(3)">    [UPPERCASE]$LOCALIZE[10003][/UPPERCASE]   </value> <!--file mangager-->
-		<value condition="Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(503) | Window.IsActive(501)">    [UPPERCASE]$LOCALIZE[2][/UPPERCASE]   </value> <!--music-->
-		<value condition="Window.IsActive(2)">    [UPPERCASE]$LOCALIZE[1][/UPPERCASE]   </value> <!--pictures-->
-		<value condition="Window.IsActive(1)">    [UPPERCASE]$LOCALIZE[0][/UPPERCASE]   </value> <!--programs-->
-		<value condition="Window.IsActive(20)">    [UPPERCASE]$LOCALIZE[247][/UPPERCASE]   </value> <!--scripts-->
-		<value condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">    [UPPERCASE]$LOCALIZE[3][/UPPERCASE]   </value> <!--videos-->
-		<value condition="Window.IsActive(2600)">    [UPPERCASE]$LOCALIZE[8][/UPPERCASE]   </value> <!--weather-->
-		<value condition="Window.IsActive(125)">    [UPPERCASE]$LOCALIZE[298][/UPPERCASE]   </value> <!--bookmarks-->
-		<value condition="Window.IsVisible(35)">    [UPPERCASE]$LOCALIZE[20315][/UPPERCASE]   </value> <!--GAME SAVES-->
-		<value condition="Window.IsActive(AddonBrowser)">    [UPPERCASE]$LOCALIZE[24001][/UPPERCASE]   </value> <!--add-ons-->
+		<value condition="Window.IsVisible(selectdialog)">     [UPPERCASE]$LOCALIZE[424][/UPPERCASE]   </value> <!--select-->
+		<value condition="Window.IsVisible(virtualkeyboard)">     [UPPERCASE]$LOCALIZE[413][/UPPERCASE]   </value> <!--keyboard-->
+		<value condition="Window.IsVisible(DialogRepoInfo.xml) | Window.IsVisible(textviewer) | Window.IsVisible(addoninformation)">     [UPPERCASE]$LOCALIZE[24000][/UPPERCASE]   </value> <!--Add-on-->
+		<value condition="Window.IsVisible(127) | Window.IsVisible(script-RCB-gameinfo.xml)">     [UPPERCASE]$LOCALIZE[15016][/UPPERCASE]   </value> <!--games-->
+		<value condition="Window.IsActive(3010)">     [UPPERCASE]$LOCALIZE[470][/UPPERCASE]   </value> <!--credits-->
+		<value condition="Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(132)">     [UPPERCASE]$LOCALIZE[31910][/UPPERCASE]   </value> <!--media-->
+		<value condition="Window.IsVisible(139)">     [UPPERCASE]$LOCALIZE[31911][/UPPERCASE]   </value> <!--picture-->
+		<value condition="Window.IsActive(10140)">     [UPPERCASE]$LOCALIZE[31602][/UPPERCASE]   </value> <!--plugin-->
+		<value condition="Window.IsActive(111) | Window.IsActive(7) | Window.IsActive(4)">     [UPPERCASE]$LOCALIZE[13000][/UPPERCASE]   </value> <!--system-->
+		<value condition="Window.IsActive(3080)">     [UPPERCASE]$LOCALIZE[1036][/UPPERCASE]   </value> <!--favourites-->
+		<value condition="Window.IsActive(skinsettings) | Window.IsActive(131) | Window.IsActive(130) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(profiles)">     [UPPERCASE]$LOCALIZE[5][/UPPERCASE]   </value> <!--settings-->
+		<value condition="Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)">     [UPPERCASE]$LOCALIZE[636][/UPPERCASE]   </value> <!--custom-->
+		<value condition="Window.IsVisible(2001) + Container.Content(Artists)">     [UPPERCASE]$LOCALIZE[557][/UPPERCASE]   </value> <!--artist-->
+		<value condition="Window.IsVisible(2001) + Container.Content(Albums)">     [UPPERCASE]$LOCALIZE[558][/UPPERCASE]   </value> <!--albums-->
+		<value condition="Window.IsVisible(135)">     [UPPERCASE]$LOCALIZE[179][/UPPERCASE]   </value> <!--song-->
+		<value condition="Window.IsVisible(2003) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes) + !Container.Content(MusicVideos)">     [UPPERCASE]$LOCALIZE[157][/UPPERCASE]   </value> <!--video-->
+		<value condition="Window.IsVisible(2003) + Container.Content(Movies)">     [UPPERCASE]$LOCALIZE[20338][/UPPERCASE]   </value> <!--movies-->
+		<value condition="Window.IsVisible(2003) + Container.Content(TVShows)">     [UPPERCASE]$LOCALIZE[20364][/UPPERCASE]   </value> <!--tv shows-->
+		<value condition="Window.IsVisible(2003) + Container.Content(Episodes)">     [UPPERCASE]$LOCALIZE[20359][/UPPERCASE]   </value> <!--episodes-->
+		<value condition="Window.IsVisible(2003) + Container.Content(MusicVideos)">     [UPPERCASE]$LOCALIZE[20391][/UPPERCASE]   </value> <!--music vids-->
+		<value condition="Window.IsActive(3)">     [UPPERCASE]$LOCALIZE[10003][/UPPERCASE]   </value> <!--file mangager-->
+		<value condition="Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(503) | Window.IsActive(501)">     [UPPERCASE]$LOCALIZE[2][/UPPERCASE]   </value> <!--music-->
+		<value condition="Window.IsActive(2)">     [UPPERCASE]$LOCALIZE[1][/UPPERCASE]   </value> <!--pictures-->
+		<value condition="Window.IsActive(1)">     [UPPERCASE]$LOCALIZE[0][/UPPERCASE]   </value> <!--programs-->
+		<value condition="Window.IsActive(20)">     [UPPERCASE]$LOCALIZE[247][/UPPERCASE]   </value> <!--scripts-->
+		<value condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">     [UPPERCASE]$LOCALIZE[3][/UPPERCASE]   </value> <!--videos-->
+		<value condition="Window.IsActive(2600)">     [UPPERCASE]$LOCALIZE[8][/UPPERCASE]   </value> <!--weather-->
+		<value condition="Window.IsActive(125)">     [UPPERCASE]$LOCALIZE[298][/UPPERCASE]   </value> <!--bookmarks-->
+		<value condition="Window.IsVisible(35)">     [UPPERCASE]$LOCALIZE[20315][/UPPERCASE]   </value> <!--GAME SAVES-->
+		<value condition="Window.IsActive(AddonBrowser)">     [UPPERCASE]$LOCALIZE[24001][/UPPERCASE]   </value> <!--add-ons-->
 		
-		<value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml) | Window.IsVisible(script-RCB-editromcollection.xml) | Window.IsVisible(script-RCB-missinginfo.xml) | Window.IsVisible(script-RCB-editscraper.xml) | Window.IsVisible(script-RCB-removeRC.xml) | Window.IsVisible(script-RCB-importoptions.xml)">     [UPPERCASE] R C B [/UPPERCASE]   </value> <!---->
+		<value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml) | Window.IsVisible(script-RCB-editromcollection.xml) | Window.IsVisible(script-RCB-missinginfo.xml) | Window.IsVisible(script-RCB-editscraper.xml) | Window.IsVisible(script-RCB-removeRC.xml) | Window.IsVisible(script-RCB-importoptions.xml)">      [UPPERCASE] R C B [/UPPERCASE]   </value> <!---->
 	</variable>
 	
 	
 	<variable name="BreadCrumbLabel_Right">
 		<!-- <value condition="Window.IsVisible(shutdownmenu)">    [UPPERCASE] $LOCALIZE[13005] [/UPPERCASE]     </value> --> <!--shutdown-->
-		<value condition="Window.IsVisible(selectdialog)">    [UPPERCASE] $LOCALIZE[33061] [/UPPERCASE]   </value> <!--MENU-->
-		<value condition="Window.IsVisible(systeminfo) | Window.IsVisible(movieinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) |  Window.IsVisible(musicinformation)">    [UPPERCASE]$LOCALIZE[31019][/UPPERCASE]    </value> <!--information-->
-		<value condition="Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)">    [UPPERCASE]$LOCALIZE[31804][/UPPERCASE]   </value> <!--recently added-->
-		<value condition="Substring(Container.FolderPath,musicdb://8/,Left)">    [UPPERCASE]$LOCALIZE[521][/UPPERCASE]   </value> <!--compilations-->
+		<value condition="Window.IsVisible(selectdialog)">     [UPPERCASE] $LOCALIZE[33061] [/UPPERCASE]   </value> <!--MENU-->
+		<value condition="Window.IsVisible(systeminfo) | Window.IsVisible(movieinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) |  Window.IsVisible(musicinformation)">     [UPPERCASE]$LOCALIZE[31019][/UPPERCASE]   </value> <!--information-->
+		<value condition="Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)">     [UPPERCASE]$LOCALIZE[31804][/UPPERCASE]   </value> <!--recently added-->
+		<value condition="Substring(Container.FolderPath,musicdb://8/,Left)">     [UPPERCASE]$LOCALIZE[521][/UPPERCASE]   </value> <!--compilations-->
 	<!--music library-->
-		<!-- <value condition="Window.IsActive(music) + IsEmpty(Container.FolderPath)">    [UPPERCASE]$LOCALIZE[14022][/UPPERCASE]   </value>--> <!--library-->
-		<value condition="Substring(Container.FolderPath,musicdb://genres/,Left)">    [UPPERCASE]$LOCALIZE[135][/UPPERCASE]   </value> <!--genres-->
-		<value condition="Substring(Container.FolderPath,musicdb://artists/,Left)">    [UPPERCASE]$LOCALIZE[133][/UPPERCASE]   </value> <!--artists-->
-		<value condition="Substring(Container.FolderPath,musicdb://albums/,Left)">    [UPPERCASE]$LOCALIZE[132][/UPPERCASE]   </value> <!--albums-->
-		<value condition="Substring(Container.FolderPath,musicdb://singles/,Left)">    [UPPERCASE]$LOCALIZE[1050][/UPPERCASE]   </value> <!--singles-->
-		<value condition="Substring(Container.FolderPath,musicdb://songs/,Left)">    [UPPERCASE]$LOCALIZE[134][/UPPERCASE]   </value> <!--songs-->
-		<value condition="Substring(Container.FolderPath,musicdb://years/,Left)">    [UPPERCASE]$LOCALIZE[652][/UPPERCASE]   </value> <!--years-->
-		<value condition="Substring(Container.FolderPath,musicdb://top100/songs/,Left) | Substring(Container.FolderPath,musicdb://top100/albums/,Left)">    [UPPERCASE]$LOCALIZE[271][/UPPERCASE]   </value> <!--top 100-->
-		<value condition="Substring(Container.FolderPath,special://musicplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)">    [UPPERCASE]$LOCALIZE[136][/UPPERCASE]   </value> <!--playlists-->
-		<value condition="Substring(Container.FolderPath,videodb://musicvideos/,Left)">    [UPPERCASE]$LOCALIZE[3][/UPPERCASE]   </value> <!--music videos-->
+		<!-- <value condition="Window.IsActive(music) + IsEmpty(Container.FolderPath)">     [UPPERCASE]$LOCALIZE[14022][/UPPERCASE]   </value>--> <!--library-->
+		<value condition="Substring(Container.FolderPath,musicdb://genres/,Left)">     [UPPERCASE]$LOCALIZE[135][/UPPERCASE]   </value> <!--genres-->
+		<value condition="Substring(Container.FolderPath,musicdb://artists/,Left)">     [UPPERCASE]$LOCALIZE[133][/UPPERCASE]   </value> <!--artists-->
+		<value condition="Substring(Container.FolderPath,musicdb://albums/,Left)">     [UPPERCASE]$LOCALIZE[132][/UPPERCASE]   </value> <!--albums-->
+		<value condition="Substring(Container.FolderPath,musicdb://singles/,Left)">     [UPPERCASE]$LOCALIZE[1050][/UPPERCASE]   </value> <!--singles-->
+		<value condition="Substring(Container.FolderPath,musicdb://songs/,Left)">     [UPPERCASE]$LOCALIZE[134][/UPPERCASE]   </value> <!--songs-->
+		<value condition="Substring(Container.FolderPath,musicdb://years/,Left)">     [UPPERCASE]$LOCALIZE[652][/UPPERCASE]   </value> <!--years-->
+		<value condition="Substring(Container.FolderPath,musicdb://top100/songs/,Left) | Substring(Container.FolderPath,musicdb://top100/albums/,Left)">     [UPPERCASE]$LOCALIZE[271][/UPPERCASE]   </value> <!--top 100-->
+		<value condition="Substring(Container.FolderPath,special://musicplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)">     [UPPERCASE]$LOCALIZE[136][/UPPERCASE]   </value> <!--playlists-->
+		<value condition="Substring(Container.FolderPath,videodb://musicvideos/,Left)">     [UPPERCASE]$LOCALIZE[3][/UPPERCASE]   </value> <!--music videos-->
 		
 	<!--video library-->
-		<!-- <value condition="Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)">    [UPPERCASE]$LOCALIZE[14022][/UPPERCASE]   </value>--> <!--library-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/genres/,Left) | Substring(Container.FolderPath,videodb://tvshows/genres/,Left) | Substring(Container.FolderPath,videodb://musicvideos/genres/,Left)">    [UPPERCASE]$LOCALIZE[135][/UPPERCASE]   </value> <!--genres-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/titles/,Left) | Substring(Container.FolderPath,videodb://tvshows/titles/,Left) | Substring(Container.FolderPath,videodb://musicvideos/titles/,Left)">    [UPPERCASE]$LOCALIZE[369][/UPPERCASE]   </value> <!--title-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/years/,Left) | Substring(Container.FolderPath,videodb://tvshows/years/,Left) | Substring(Container.FolderPath,videodb://musicvideos/years/,Left)">    [UPPERCASE]$LOCALIZE[345][/UPPERCASE]   </value> <!--year-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/artists/,Left) | Substring(Container.FolderPath,videodb://tvshows/artists/,Left)">    [UPPERCASE]$LOCALIZE[344][/UPPERCASE]   </value> <!--actors-->
-		<value condition="Substring(Container.FolderPath,videodb://musicvideos/artists/,Left)">    [UPPERCASE]$LOCALIZE[133][/UPPERCASE]   </value> <!--artists-->
-		<value condition="Substring(Container.FolderPath,videodb://musicvideos/albums/,Left)">    [UPPERCASE]$LOCALIZE[132][/UPPERCASE]   </value> <!--albums-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/directors/,Left) | Substring(Container.FolderPath,videodb://musicvideos/directors/,Left)">    [UPPERCASE]$LOCALIZE[20348][/UPPERCASE]   </value> <!--directors-->
-		<value condition="Substring(Container.FolderPath,videodb://movies/studios/,Left) | Substring(Container.FolderPath,videodb://tvshows/studios/,Left) | Substring(Container.FolderPath,videodb://musicvideos/studios/,Left)">    [UPPERCASE]$LOCALIZE[20388][/UPPERCASE]   </value> <!--studios-->
-		<value condition="Substring(Container.FolderPath,special://videoplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)">    [UPPERCASE]$LOCALIZE[136][/UPPERCASE]   </value> <!--playlists-->
+		<!-- <value condition="Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)">     [UPPERCASE]$LOCALIZE[14022][/UPPERCASE]   </value>--> <!--library-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/genres/,Left) | Substring(Container.FolderPath,videodb://tvshows/genres/,Left) | Substring(Container.FolderPath,videodb://musicvideos/genres/,Left)">     [UPPERCASE]$LOCALIZE[135][/UPPERCASE]   </value> <!--genres-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/titles/,Left) | Substring(Container.FolderPath,videodb://tvshows/titles/,Left) | Substring(Container.FolderPath,videodb://musicvideos/titles/,Left)">     [UPPERCASE]$LOCALIZE[369][/UPPERCASE]   </value> <!--title-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/years/,Left) | Substring(Container.FolderPath,videodb://tvshows/years/,Left) | Substring(Container.FolderPath,videodb://musicvideos/years/,Left)">     [UPPERCASE]$LOCALIZE[345][/UPPERCASE]   </value> <!--year-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/artists/,Left) | Substring(Container.FolderPath,videodb://tvshows/artists/,Left)">     [UPPERCASE]$LOCALIZE[344][/UPPERCASE]   </value> <!--actors-->
+		<value condition="Substring(Container.FolderPath,videodb://musicvideos/artists/,Left)">     [UPPERCASE]$LOCALIZE[133][/UPPERCASE]   </value> <!--artists-->
+		<value condition="Substring(Container.FolderPath,videodb://musicvideos/albums/,Left)">     [UPPERCASE]$LOCALIZE[132][/UPPERCASE]   </value> <!--albums-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/directors/,Left) | Substring(Container.FolderPath,videodb://musicvideos/directors/,Left)">     [UPPERCASE]$LOCALIZE[20348][/UPPERCASE]   </value> <!--directors-->
+		<value condition="Substring(Container.FolderPath,videodb://movies/studios/,Left) | Substring(Container.FolderPath,videodb://tvshows/studios/,Left) | Substring(Container.FolderPath,videodb://musicvideos/studios/,Left)">     [UPPERCASE]$LOCALIZE[20388][/UPPERCASE]   </value> <!--studios-->
+		<value condition="Substring(Container.FolderPath,special://videoplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)">     [UPPERCASE]$LOCALIZE[136][/UPPERCASE]   </value> <!--playlists-->
 	<!--others-->
-		<value condition="Substring(Container.FolderPath,addons://sources/audio) | Substring(Container.FolderPath,addons://sources/video)">    [UPPERCASE]$LOCALIZE[24001][/UPPERCASE]   </value> <!--plugins-->
-		<value condition="Substring(Container.FolderPath,sources://music/) | Substring(Container.FolderPath,sources://video/)">    [UPPERCASE]$LOCALIZE[744][/UPPERCASE]   </value> <!--files-->
+		<value condition="Substring(Container.FolderPath,addons://sources/audio) | Substring(Container.FolderPath,addons://sources/video)">     [UPPERCASE]$LOCALIZE[24001][/UPPERCASE]   </value> <!--plugins-->
+		<value condition="Substring(Container.FolderPath,sources://music/) | Substring(Container.FolderPath,sources://video/)">     [UPPERCASE]$LOCALIZE[744][/UPPERCASE]   </value> <!--files-->
 	</variable>
 	
 <!--(((BREADCRUMB TAB SIZE)))=================================-->
@@ -191,10 +191,10 @@
 	
 <!--(((RECENTLY ADDED)))=================================-->
 	<variable name="RecentItemHeader">
-		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">    [UPPERCASE]$LOCALIZE[20386][/UPPERCASE]</value> <!--movies-->
-		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">    [UPPERCASE]$LOCALIZE[20387][/UPPERCASE]</value> <!--TvShows-->
-		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">    [UPPERCASE]$LOCALIZE[359][/UPPERCASE]</value> <!--music-->
-		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">    [UPPERCASE]$LOCALIZE[20390][/UPPERCASE]</value> <!--music vids-->
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">     [UPPERCASE]$LOCALIZE[20386][/UPPERCASE]</value> <!--movies-->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">     [UPPERCASE]$LOCALIZE[20387][/UPPERCASE]</value> <!--TvShows-->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">     [UPPERCASE]$LOCALIZE[359][/UPPERCASE]</value> <!--music-->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">     [UPPERCASE]$LOCALIZE[20390][/UPPERCASE]</value> <!--music vids-->
 	</variable>	
 	<!--content labels-->
 	<variable name="RecentItem.1.Label">

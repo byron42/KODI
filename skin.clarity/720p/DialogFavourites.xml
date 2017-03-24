@@ -391,16 +391,16 @@
 				
 				<!--******************************** (BreadCrumbFavourites) *****************************************-->
 				<control type="group">
-					<animation effect="slide" start="5,0" time="0" condition="!Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
+					<animation effect="slide" end="2,0" time="0" condition="Skin.HasSetting(ShowKodiLogo)">Conditional</animation>
 					<control type="grouplist">		
-						<left>40</left>
+						<left>35</left>
 						<top>4</top>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
 						<!--BreadCrumbOpenCloseAnim-->
 						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
-						<animation effect="fade" start="100" time="0"  delay="500">WindowClose</animation>
+						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
 						<control type="button">
 							<description>Dummy Left Button</description>
 							<width>auto</width>
@@ -414,6 +414,7 @@
 							<texturenofocus border="7,0,2,0"></texturenofocus>
 							<colordiffuse></colordiffuse>
 							<label>    [UPPERCASE]$LOCALIZE[1036][/UPPERCASE]   </label>
+							<animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<left>-2</left>
@@ -421,10 +422,10 @@
 							<height>35</height>
 							<texture></texture>
 						</control>
-						<control type="button" id="">
+						<control type="button" id="4000">
 							<description>Right Button</description>
 							<visible></visible>
-							<left>-11</left>
+							<left>-14</left>
 							<width>auto</width>
 							<height>35</height>
 							<font>font_22_WCBI</font>
@@ -438,7 +439,8 @@
 							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> 
 							<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 							<!-- <label>    [UPPERCASE]$LOCALIZE[13005][/UPPERCASE]   </label> -->
-							<label></label>
+							<!-- <visible>!IsEmpty(Control.GetLabel(4000))</visible> -->
+							<!-- <animation effect="fade" end="100" delay="0" time="0">VisibleChange</animation> -->
 						</control>
 						<control type="image">
 							<left>-2</left>
@@ -446,17 +448,19 @@
 							<height>35</height>
 							<texture border="0,0,0,0">special://skin/images/skin/breadcrumb-tip.png</texture>
 							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
+							<visible>!IsEmpty(Control.GetLabel(4000))</visible>
+							<animation effect="fade" end="100" delay="0" time="0">VisibleChange</animation>
 						</control>
 					</control>
 					<control type="grouplist">		
-						<left>40</left>
+						<left>35</left>
 						<top>4</top>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
 						<!--BreadCrumbOpenCloseAnim-->
 						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
-						<animation effect="fade" start="100" time="0"  delay="500">WindowClose</animation>
+						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
 						<control type="button">
 							<description>REAL Left Button</description>
 							<width>auto</width>
