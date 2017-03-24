@@ -3,6 +3,7 @@
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
 	<include file="Includes_SystemStatistics.xml"/>
+	<include file="Includes_Backgrounds.xml"/>
 	<include file="ViewsWeather.xml"/>
 	
 	<!---->

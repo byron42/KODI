@@ -1,0 +1,37 @@
+<includes>
+	<include name="UniversalClassicBackground">
+		<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+			<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+			<control type="image">
+				<left>0</left>
+				<description>Universal Classic Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+				<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+			</control>
+		</control>
+	</include>
+	<include name="UniversalCustomBackground">
+		<control type="group"> <!--***** UNIVERSAL CUSTOM BG **************************-->
+			<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+			<control type="image">
+				<left>0</left>
+				<description>Universal Classic Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+			</control>
+		</control>
+	</include>
+
+
+
+</includes>

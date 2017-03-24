@@ -19,44 +19,9 @@
 
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->			
 				<control type="group">	
-					<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
-						<visible>Window.IsActive(Home) + Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
-						<control type="image">
-							<left>0</left>
-							<description>Universal Classic Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="45" end="100" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
-						</control>
-						<control type="image">
-							<top>0</top>
-							<width>ScreenWidth</width>
-							<height>ScreenHeight</height>		
-							<texture>background-dim.png</texture>
-							<!--MediaViewOpenCloseAnim-->
-							<animation effect="fade" start="10" end="35" time="400">WindowOpen</animation>
-							<animation effect="fade" start="35" end="0" time="400">WindowClose</animation>
-						</control>
-					</control>
-					<control type="group"> <!--UNIVERSAL CUSTOM BG-->
-						<visible>Window.IsActive(Home) + !IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
-						<control type="image">
-							<left>0</left>
-							<description>Universal Classic Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="45" end="100" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
-						</control>
-					</control>
-					
+					<!--*********************************** Custom/Universal *********************************************-->
+					<include>UniversalClassicBackground</include>
+					<include>UniversalCustomBackground</include>
 					<!--*********************************** BackgroundSelect **********************************************-->
 					<control type="group">
 						<description>plain background</description>
