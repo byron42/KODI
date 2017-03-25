@@ -235,48 +235,11 @@
 			
 			<!-- CUSTOM BG'S REMOVED FOR NON CUSTOMIZED OPTIONS -->
 			
-				<!--*********************************** BackgroundFSVideo ***********************************************-->
-				<control type="group">
-					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
-					<control type="videowindow">
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-					</control>
-					<control type="image">
-						<description>Dim Background</description>
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>!Skin.HasSetting(HideFSBackgroundDim)</visible>
-					</control>
-				</control>
-				<!--*****************************************************************************************************-->
-				
-				<!--************************************* BackgroundFSViz ***********************************************-->
-				<control type="group">
-					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
-					<control type="visualisation">
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-					</control>	
-					<control type="image">
-						<description>Dim Background</description>
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<visible>!Skin.HasSetting(HideFSBackgroundDim)</visible>
-					</control>	
-				</control>
-				<!--*****************************************************************************************************-->
-				
+				<!--*********************************** Background_FS_Media *******************************************-->
+				<include>Background_FS_Video</include>
+				<include>Background_FS_Viz</include>
+				<!--***************************************************************************************************-->
+
 				<!--BackgroundOpenCloseAnim-->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>

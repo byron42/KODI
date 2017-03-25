@@ -1,7 +1,7 @@
 <includes>
 	<include name="UniversalClassicBackground">
 		<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
-			<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+			<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 			<control type="image">
 				<left>0</left>
 				<description>Universal Classic Background</description>
@@ -15,6 +15,7 @@
 			</control>
 		</control>
 	</include>
+	
 	<include name="UniversalCustomBackground">
 		<control type="group"> <!--***** UNIVERSAL CUSTOM BG **************************-->
 			<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
@@ -32,6 +33,45 @@
 		</control>
 	</include>
 
+<!--(((FULL-SCREEN MEDIA)))=============================================================================================================================-->
+	<include name="Background_FS_Video">
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+			<control type="videowindow">
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+			</control>
+			<control type="image">
+				<description>Dim Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<texture>background-dim.png</texture>
+				<!--BackgroundVizDimAnim-->
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="Background_FS_Viz">
+		<control type="group">
+			<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+			<control type="visualisation">
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+			</control>	
+			<control type="image">
+				<description>Dim Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<texture>background-dim.png</texture>
+				<!--BackgroundVizDimAnim-->
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
+			</control>	
+		</control>
+	</include>
 
 
 </includes>

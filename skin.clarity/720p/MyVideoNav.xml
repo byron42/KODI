@@ -167,46 +167,11 @@
 				</control>
 				<!--***************************************************************************************************-->
 				
-				<!--*********************************** BackgroundFSVideo ***********************************************-->
-				<control type="group">
-					<visible>[Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="videowindow">
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-					</control>
-					<control type="image">
-						<description>Dim Background</description>
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-					</control>
-				</control>
+				<!--*********************************** Background_FS_Media *******************************************-->
+				<include>Background_FS_Video</include>
+				<include>Background_FS_Viz</include>
 				<!--***************************************************************************************************-->
-				
-				<!--*********************************** BackgroundFSViz ***********************************************-->
-				<control type="group">
-					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
-					<control type="visualisation">
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-					</control>	
-					<control type="image">
-						<description>Dim Background</description>
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
-						<animation effect="fade" end="70" condition="true">Conditional</animation>
-					</control>	
-				</control>
-				<!--***************************************************************************************************-->
-				
+
 				<!--BackgroundDim-->
 				<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
 				
