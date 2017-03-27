@@ -11,240 +11,166 @@
 		<!--CUSTOM SUB CATS FADE-->	
 			<animation effect="fade" start="100" end="0" delay="950" time="50" condition="Window.IsActive(3071) | Window.IsActive(3072)
 			| Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
-			
+			<!--*********************************** Custom/Universal *********************************************-->
 			<include>UniversalClassicBackground</include>
 			<include>UniversalCustomBackground</include>
-			
-			
-			<control type="group"> <!--***** HOME BACKGROUNDS *****************************-->
-			<!--PROGRAMS-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeProgramsBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(1) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+			<!--*********************************** HOME BACKGROUNDS *********************************************-->
+			<control type="group">
+				<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+				<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+				<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+			<!--PROGRAMS-->	
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeProgramsBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(1)</visible>
 				</control>
 			<!--PICTURES-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomePicturesBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(2) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomePicturesBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(2)</visible>
 				</control>
 			<!--MUSIC/MUSIC VIDEOS-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeMusicBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>[Container(850).HasFocus(3) | Container(850).HasFocus(21)] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeMusicBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>[Container(850).HasFocus(3) | Container(850).HasFocus(21)]</visible>
 				</control>
 			<!--VIDEO-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeVideosBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(4) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeVideosBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(4)</visible>
 				</control>
 			<!--MOVIES-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeVideosBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(5) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeVideosBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(5)</visible>
 				</control>
 			<!--TV SHOWS-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeVideosBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(6) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeVideosBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(6)</visible>
 				</control>
 			<!--GENERAL-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeGeneralBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(7) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
-				</control>
-			<!--SCRIPTS-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeScriptsBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(20) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeGeneralBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(7)</visible>
 				</control>
 			<!--SYSTEM-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeSystemBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(8) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeSystemBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(8)</visible>
 				</control>
 			<!--WEATHER-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeWeatherBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(9) + [[!Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]] | [Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]]] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<left>0</left>
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<imagepath>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<timeperimage>5000</timeperimage>
-						<randomize>true</randomize>
-						<fadetime>2000</fadetime>		
-						<!--KenBurnsAnim-->
-						<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-						<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-						<visible>Container(850).HasFocus(9) + Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + !Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeWeatherBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(9) + [[!Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]] | [Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]]] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+				</control>
+				<control type="multiimage">
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<imagepath>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</imagepath>
+					<aspectratio>scale</aspectratio>
+					<timeperimage>5000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>2000</fadetime>		
+					<!--KenBurnsAnim-->
+					<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+					<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+					<visible>Container(850).HasFocus(9) + Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + !Skin.HasSetting(Disable_Weather_Conditional_Backgrounds)</visible>
 				</control>
 			<!--ADDONS-->
-				<control type="group">
-					<description>Home Backgrounds</description>
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="multiimage">
-						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
-						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
-						<top>0</top>
-						<width>1280</width>
-						<height>ScreenHeight</height>
-						<include>HomeAddonsBackground_And_Res</include>
-						<aspectratio>stretch</aspectratio>
-						<timeperimage>10000</timeperimage>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(11) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					</control>
+				<control type="multiimage">
+					<top>0</top>
+					<width>1280</width>
+					<height>ScreenHeight</height>
+					<include>HomeAddonsBackground_And_Res</include>
+					<aspectratio>stretch</aspectratio>
+					<timeperimage>10000</timeperimage>
+					<fadetime>BackgroundCrossfadeTime</fadetime>
+					<randomize>true</randomize>
+					<visible>Container(850).HasFocus(11)</visible>
 				</control>
 			
 			<!-- CUSTOM BG'S REMOVED FOR NON CUSTOMIZED OPTIONS -->
 			
-				<!--*********************************** Background_FS_Media *******************************************-->
-				<include>Background_FS_Video</include>
-				<include>Background_FS_Viz</include>
-				<!--***************************************************************************************************-->
-
+			
 				<!--BackgroundOpenCloseAnim-->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+				<animation effect="fade" start="40" end="100" time="600">Visible</animation> 
+				<animation effect="fade" start="100" end="40" time="600">Hidden</animation>
 				
 			</control>
+			
+			<!--*********************************** Background_FS_Media *******************************************-->
+			<include>Background_FS_Video</include>
+			<include>Background_FS_Viz</include>
+			<!--***************************************************************************************************-->
+
 
 	<!--(((Recently Added)))=================================================================================================================-->
 			
