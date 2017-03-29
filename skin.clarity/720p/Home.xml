@@ -20,10 +20,26 @@
 				<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
 				<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 			<!--PROGRAMS-->	
+				<!-- <control type="togglebutton"> -->
+					<!-- <top>0</top> -->
+					<!-- <width>1280</width> -->
+					<!-- <height>ScreenHeight</height> -->
+					<!-- <texturefocus></texturefocus> -->
+					<!-- <alttexturefocus></alttexturefocus> -->
+					<!-- <texturenofocus background="true">special://skin/images/backgrounds/background-programs-home.jpg</texturenofocus> -->
+					<!-- <alttexturenofocus background="true">special://skin/images/backgrounds/HI-RES/background-programs-home.jpg</alttexturenofocus> -->
+					<!-- <usealttexture>Skin.HasSetting(UseHighResBG)</usealttexture> -->
+					<!-- <visible>Container(850).HasFocus(1) + IsEmpty(Container(850).ListItem.Thumb)</visible> -->
+				<!-- </control> -->
+				<!-- <include name="HomeBackgroundImage"> -->
+					<!-- <param name="ContainerImage" value="background-programs-home"/> -->
+					<!-- <param name="ContainerPosition" value="1"/> -->
+				<!-- </include> -->
 				<control type="multiimage">
 					<top>0</top>
 					<width>1280</width>
 					<height>ScreenHeight</height>
+					<!-- <imagepath background="true" fallback="backgrounds/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath> -->
 					<include>HomeProgramsBackground_And_Res</include>
 					<aspectratio>stretch</aspectratio>
 					<timeperimage>10000</timeperimage>

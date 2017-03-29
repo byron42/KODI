@@ -4,8 +4,8 @@
 	<include file="Includes_Variables.xml"/>
 	<include file="Includes_SystemStatistics.xml"/>
 	<include file="Includes_Backgrounds.xml"/>
-	<include file="ViewsWeather.xml"/>
-	
+	<include file="Includes_Weather.xml"/>
+	<include file="Includes_Buttons.xml"/>
 	<!---->
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
@@ -538,24 +538,35 @@
 	</include>
 
 <!--(((BACKGROUNDS)))==============================================================-->
-	<include name="UniversalClassicBackground">
-		<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
-			<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
-			<control type="image">
-				<left>0</left>
-				<description>Universal Classic Background</description>
-				<top>0</top>
-				<width>1280</width>
-				<height>ScreenHeight</height>
-				<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-				<texture background="true">$VAR[RamSavingBackgrounds]</texture>
-				<aspectratio>stretch</aspectratio>
-				<fadetime>BackgroundCrossfadeTime</fadetime>
-			</control>
-		</control>
-	</include>
-
-
+	
+	<!-- <include name="HomeBackgroundImage"> -->
+		<!-- <control type="togglebutton"> -->
+			<!-- <top>0</top> -->
+			<!-- <width>1280</width> -->
+			<!-- <height>ScreenHeight</height> -->
+			<!-- <texturefocus></texturefocus> -->
+			<!-- <alttexturefocus></alttexturefocus> -->
+			<!-- <texturenofocus background="true">special://skin/images/backgrounds/$PARAM[ContainerImage].jpg</texturenofocus> -->
+			<!-- <alttexturenofocus background="true">special://skin/images/backgrounds/HI-RES/$PARAM[ContainerImage].jpg</alttexturenofocus> -->
+			<!-- <usealttexture>Skin.HasSetting(UseHighResBG)</usealttexture> -->
+			<!-- <visible>[Container(850).HasFocus($PARAM[ContainerPosition]) | Container(850).HasFocus($PARAM[ContainerPosition.2])] + IsEmpty(Container(850).ListItem.Thumb)</visible> -->
+		<!-- </control> -->
+	<!-- </include>	 -->
+	
+	<!-- <include name="BackgroundImage"> -->
+			<!-- <control type="multiimage"> -->
+				<!-- <top>0</top> -->
+				<!-- <width>1280</width> -->
+				<!-- <height>ScreenHeight</height> -->
+				<!-- <imagepath background="true" fallback="special://skin/images/$PARAM[Folder]/background-$PARAM[ContainerImage]-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath> -->
+				<!-- <aspectratio>stretch</aspectratio> -->
+				<!-- <timeperimage>10000</timeperimage> -->
+				<!-- <fadetime>BackgroundCrossfadeTime</fadetime> -->
+				<!-- <randomize>true</randomize> -->
+				<!-- <visible>Container(850).HasFocus($PARAM[ContainerPosition])</visible> -->
+			<!-- </control> -->
+	<!-- </include> -->
+	
 	<!--((( HOME BACKGROUND RESOLUTIONS )))==============================================================-->
 <!-- HOME Programs -->
 	<include name="HomeProgramsBackground_And_Res">
@@ -878,7 +889,8 @@
 		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather-home.jpg</texture>
 	</include>
 	<!--*****************************************************************************************-->
-	
+
+
 <!--player control item gap-->
 	<include name="PlayerControlItemGap">
 		<include condition="Player.HasVideo">VideoPlayerItemGap</include>

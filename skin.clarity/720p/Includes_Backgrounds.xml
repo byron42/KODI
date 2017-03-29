@@ -29,6 +29,7 @@
 				<aspectratio>stretch</aspectratio>
 				<fadetime>BackgroundCrossfadeTime</fadetime>
 				<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+				<animation effect="fade" start="69" end="30" condition="!Window.IsActive(Home) + !Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation>
 			</control>
 		</control>
 	</include>

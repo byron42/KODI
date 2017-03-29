@@ -4144,6 +4144,10 @@
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[24022] $LOCALIZE[13508] $LOCALIZE[169] $LOCALIZE[33069]</label>
 							<selected>Skin.HasSetting(UseHighResBG)</selected>
+							
+							<!-- <onclick condition="!Skin.HasSetting(UseHighResBG)">Skin.SetString(BackgroundRes,1)</onclick> -->
+							<!-- <onclick condition="Skin.HasSetting(UseHighResBG)">Skin.Reset(BackgroundRes)</onclick> -->
+							
 							<onclick>Skin.ToggleSetting(UseHighResBG)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 						</control> 
@@ -4380,2030 +4384,394 @@
 							<enable>Skin.HasSetting(EnableClassicUniversalBG)</enable>
 						</control>
 					-->
-						<control type="radiobutton" id="1500">
-							<description>UNIVERSAL Background IMAGE Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>31937</label>
-							<selected>Skin.HasSetting(ExpandUniversalBGSettings)</selected>	
-							<onclick>Skin.ToggleSetting(ExpandUniversalBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="1501">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageUniversalBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(UniversalCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageUniversalBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-							<enable>false</enable>
-						</control>
-						<control type="button" id="1502">
-							<description>UNIVERSAL Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(UniversalCustomBG)][/COLOR]</label>
-							<onclick>Skin.SetImage(UniversalCustomBG)</onclick>
-							<onclick >Skin.Reset(EnableClassicUniversalBG)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings) + !Skin.HasSetting(UseMultiImageUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="1503">
-							<description>Universal Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055]</label>
-							<label2>[COLOR=ff71A6D2]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label2>
-							<onclick>Skin.SetPath(ProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings) + Skin.HasSetting(UseMultiImageUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-							<enable>false</enable>
-						</control>
-						<control type="togglebutton" id="1504">
-							<description>UNIVERSAL Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[0] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllUniversalCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllUniversalCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-							<enable>false</enable>
-						</control>
-						<control type="radiobutton" id="1505">
-							<description>Universal Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimUniversalCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimUniversalCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="2505">
-							<description>Universal options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(UniversalCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageUniversalBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllUniversalCustomBG)</onclick>
-							<onclick>Skin.Reset(DimUniversalCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						
+				<!--UNIVERSAL-->
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="1500"/>
+							<param name="label" value="31937"/>
+							<param name="category" value="Universal"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="1501"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Universal"/>
+							<param name="enable" value="false"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="1502"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Universal"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="1503"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Universal"/>
+							<param name="enable" value="false"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="1504"/>
+							<param name="label" value="31052"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Universal"/>
+							<param name="enable" value="false"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="1505"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Universal"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="2505"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Universal"/>
+						</include>
 				<!--PROGRAMS-->
-						<control type="radiobutton" id="100">
-							<description>Programs Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[0]</label>
-							<selected>Skin.HasSetting(ExpandProgramsBGSettings)</selected>	
-							<onclick>Skin.ToggleSetting(ExpandProgramsBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="101">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageProgramsBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(ProgramsCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageProgramsBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="102">
-							<description>Programs Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(ProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings) + !Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="103">
-							<description>Programs Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(ProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings) + Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="104">
-							<description>Programs Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[0] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllProgramsCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="105">
-							<description>Programs Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimProgramsCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="205">
-							<description>Programs options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(ProgramsCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageProgramsBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllProgramsCustomBG)</onclick>
-							<onclick>Skin.Reset(DimProgramsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="100"/>
+							<param name="label" value="0"/>
+							<param name="category" value="Programs"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="101"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Programs"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="102"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Programs"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="103"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Programs"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="104"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="0"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Programs"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="105"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Programs"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="205"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Programs"/>
+						</include>
 				<!--PICTURES-->		
-						<control type="radiobutton" id="106">
-							<description>Pictures Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[1]</label>
-							<selected>Skin.HasSetting(ExpandPicturesBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandPicturesBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="107">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImagePicturesBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(PicturesCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImagePicturesBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="108">
-							<description>Pictures Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(PicturesCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(PicturesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings) + !Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="109">
-							<description>Pictures Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(PicturesCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(PicturesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings) + Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="110">
-							<description>Pictures Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[1] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllPicturesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="111">
-							<description>Pictures Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimPicturesCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimPicturesCustomBG)</onclick>
-							<!--<onleft>Skin.ToggleSetting(ExpandPicturesBGSettings)</onleft>-->
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="211">
-							<description>PICTURES options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(PicturesCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImagePicturesBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllPicturesCustomBG)</onclick>
-							<onclick>Skin.Reset(DimPicturesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="106"/>
+							<param name="label" value="1"/>
+							<param name="category" value="Pictures"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="107"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Pictures"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="108"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Pictures"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="109"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Pictures"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="110"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="1"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Pictures"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="111"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Pictures"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="211"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Pictures"/>
+						</include>
 				<!--MUSIC-->		
-						<control type="radiobutton" id="112">
-							<description>Music Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[2]</label>
-							<selected>Skin.HasSetting(ExpandMusicBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandMusicBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="113">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageMusicBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(MusicCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageMusicBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="114">
-							<description>Music Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(MusicCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(MusicCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings) + !Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="115">
-							<description>Music Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(MusicCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(MusicCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings) + Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
-							<!--BackgroundSettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="116">
-							<description>Music Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[2] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllMusicCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllMusicCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="117">
-							<description>Music Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimMusicCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimMusicCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="217">
-							<description>Music options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(MusicCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageMusicBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllMusicCustomBG)</onclick>
-							<onclick>Skin.Reset(DimMusicCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="112"/>
+							<param name="label" value="2"/>
+							<param name="category" value="Music"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="113"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Music"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="114"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Music"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="115"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Music"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="116"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="2"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Music"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="117"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Music"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="217"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Music"/>
+						</include>
 				<!--VIDEOS-->
-						<control type="radiobutton" id="118">
-							<description>Videos Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[3]</label>
-							<selected>Skin.HasSetting(ExpandVideosBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandVideosBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="119">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageVideosBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(VideosCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageVideosBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="120">
-							<description>Videos Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(VideosCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(VideosCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings) + !Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="121">
-							<description>Videos Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(VideosCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(VideosCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings) + Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="122">
-							<description>Videos Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[3] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllVideosCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllVideosCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="123">
-							<description>Videos Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimVideosCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimVideosCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="223">
-							<description>Videos options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(VideosCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageVideosBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllVideosCustomBG)</onclick>
-							<onclick>Skin.Reset(DimVideosCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="118"/>
+							<param name="label" value="3"/>
+							<param name="category" value="Videos"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="119"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Videos"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="120"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Videos"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="121"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Videos"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="122"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="3"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Videos"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="123"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Videos"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="223"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Videos"/>
+						</include>
 				<!--MOVIES-->
-						<control type="radiobutton" id="142">
-							<description>Movies Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[342]</label>
-							<selected>Skin.HasSetting(ExpandMoviesBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandMoviesBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="143">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageMoviesBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(MoviesCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageMoviesBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="144">
-							<description>Movies Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(MoviesCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(MoviesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings) + !Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="145">
-							<description>Movies Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(MoviesCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(MoviesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings) + Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="146">
-							<description>Movies Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[342] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllMoviesCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllMoviesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="147">
-							<description>Movies Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimMoviesCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimMoviesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="247">
-							<description>Movies options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(MoviesCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageMoviesBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllMoviesCustomBG)</onclick>
-							<onclick>Skin.Reset(DimMoviesCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="142"/>
+							<param name="label" value="342"/>
+							<param name="category" value="Movies"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="143"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Movies"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="144"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Movies"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="145"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Movies"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="146"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="342"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Movies"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="147"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Movies"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="247"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Movies"/>
+						</include>
 				<!--TV SHOWS-->
-						<control type="radiobutton" id="136">
-							<description>TV Shows Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[20343]</label>
-							<selected>Skin.HasSetting(ExpandTVShowsBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandTVShowsBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="137">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageTVShowsBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(TVShowsCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageTVShowsBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="138">
-							<description>TV Shows Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(TVShowsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(TVShowsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + !Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="139">
-							<description>TV Shows Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(TVShowsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(TVShowsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="140">
-							<description>TV Shows Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[20343] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllTVShowsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="141">
-							<description>TV Shows Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimTVShowsCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimTVShowsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="241">
-							<description>TVShows options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(TVShowsCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageTVShowsBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllTVShowsCustomBG)</onclick>
-							<onclick>Skin.Reset(DimTVShowsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="136"/>
+							<param name="label" value="20343"/>
+							<param name="category" value="TVShows"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="137"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="TVShows"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="138"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="TVShows"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="139"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="TVShows"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="140"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="20343"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="TVShows"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="141"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="TVShows"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="241"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="TVShows"/>
+						</include>
 				<!--GENERAL-->
-						<control type="radiobutton" id="124">
-							<description>General Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[128]</label>
-							<selected>Skin.HasSetting(ExpandGeneralBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandGeneralBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="125">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageGeneralBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(GeneralCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageGeneralBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="126">
-							<description>General Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(GeneralCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(GeneralCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings) + !Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="127">
-							<description>General Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(GeneralCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(GeneralCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings) + Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="128">
-							<description>General Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[128] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllGeneralCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllGeneralCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="129">
-							<description>General Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimGeneralCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimGeneralCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="229">
-							<description>General options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(GeneralCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageGeneralBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllGeneralCustomBG)</onclick>
-							<onclick>Skin.Reset(DimGeneralCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-				<!--SCRIPTS-->
-						<control type="radiobutton" id="1660">
-							<description>Scripts Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[247]</label>
-							<selected>Skin.HasSetting(ExpandScriptsBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandScriptsBGSettings)</onclick>
-							<onclick condition="!Control.IsVisible(11111123)">PageDown(20084) </onclick>
-						</control>
-						<control type="togglebutton" id="1670">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageScriptsBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(ScriptsCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageScriptsBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="16800">
-							<description>Scripts Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(ScriptsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(ScriptsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings) + !Skin.HasSetting(UseMultiImageScriptsBGSettings)</visible>
-							<!--BackgroundSettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="16900">
-							<description>Scripts Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(ScriptsCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(ScriptsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings) + Skin.HasSetting(UseMultiImageScriptsBGSettings)</visible>
-							<!--BackgroundSettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="1671">
-							<description>Scripts Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[13000] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllScriptsCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllScriptsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="171">
-							<description>Scripts Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimScriptsCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimScriptsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="266">
-							<description>Scripts options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(ScriptsCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageScriptsBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllScriptsCustomBG)</onclick>
-							<onclick>Skin.Reset(DimScriptsCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="124"/>
+							<param name="label" value="128"/>
+							<param name="category" value="General"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="125"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="General"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="126"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="General"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="127"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="General"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="128"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="128"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="General"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="129"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="General"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="229"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="General"/>
+						</include>
+				<!--SCRIPTS (gone)-->
 				<!--SYSTEM-->
-						<control type="radiobutton" id="130">
-							<description>System Background Settings</description>
-							<left>10</left>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<textureradioonfocus>arrow-scroll-down-focus.png</textureradioonfocus>
-							<textureradioonnofocus>arrow-scroll-down-focus.png</textureradioonnofocus>
-							<textureradioofffocus>arrow-scroll-up-nofocus.png</textureradioofffocus>
-							<textureradiooffnofocus>arrow-scroll-up-nofocus.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[13000]</label>
-							<selected>Skin.HasSetting(ExpandSystemBGSettings)</selected>
-							<onclick>Skin.ToggleSetting(ExpandSystemBGSettings)</onclick>
-						</control>
-						<control type="togglebutton" id="131">
-							<description>Image/Multi Image Toggle</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31057]</label>
-							<altlabel>$LOCALIZE[31056]</altlabel>
-							<usealttexture>!Skin.HasSetting(UseMultiImageSystemBGSettings)</usealttexture>
-							<onclick>Skin.HasSetting(SystemCustomBG)</onclick>
-							<onclick>Skin.ToggleSetting(UseMultiImageSystemBGSettings)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="132">
-							<description>System Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31054] - [COLOR=ff71A6D2]$INFO[Skin.String(SystemCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetImage(SystemCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings) + !Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="133">
-							<description>System Multi Custom Background Path</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>690</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31055] - [COLOR=ff71A6D2]$INFO[Skin.String(SystemCustomBG)][/COLOR]</label>
-							<label2></label2>
-							<onclick>Skin.SetPath(SystemCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings) + Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="togglebutton" id="134">
-							<description>System Apply To All Windows</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31052] $LOCALIZE[13000] $LOCALIZE[31061]</label>
-							<altlabel>$LOCALIZE[31051]</altlabel>
-							<usealttexture>!Skin.HasSetting(ApplyAllSystemCustomBG)</usealttexture>
-							<onclick>Skin.ToggleSetting(ApplyAllSystemCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="radiobutton" id="135">
-							<description>System Dim Background</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse></colordiffuse>
-							<label>$LOCALIZE[31060]</label>
-							<selected>!Skin.HasSetting(DimSystemCustomBG)</selected>
-							<onclick>Skin.ToggleSetting(DimSystemCustomBG)</onclick>
-							<onclick>ActivateWindow(3001)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
-						<control type="button" id="235">
-							<description>System options default</description>
-							<left>10</left>
-							<width>800</width>
-							<font>font_21_U</font>
-							<textwidth>675</textwidth><!--RBTW-->
-							<textoffsetx>85</textoffsetx>
-							<aligny>top</aligny>
-							<textoffsety>2</textoffsety>
-							<textcolor>ff555555</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
-							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse background="true"></colordiffuse>
-							<label>$LOCALIZE[13278]s</label>
-							<onclick>Skin.Reset(SystemCustomBG)</onclick>
-							<onclick>Skin.Reset(UseMultiImageSystemBGSettings)</onclick>
-							<onclick>Skin.Reset(ApplyAllSystemCustomBG)</onclick>
-							<onclick>Skin.Reset(DimSystemCustomBG)</onclick>
-							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="130"/>
+							<param name="label" value="13000"/>
+							<param name="category" value="System"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="131"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="System"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="132"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="System"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="133"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="System"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="134"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="13000"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="System"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="135"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="System"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="235"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="System"/>
+						</include>
 				<!--WEATHER-->
 						<control type="radiobutton" id="160">
 							<description>Weather Background Settings</description>
@@ -6607,9 +4975,49 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-			
-
-			<!--ADD-ONS_(no options as of now)-->	
+				<!--ADD-ONS-->	
+						<include name="BackgroundCategoryButton">
+							<param name="id" value="170"/>
+							<param name="label" value="24001"/>
+							<param name="category" value="Addons"/>
+						</include>
+						<include name="BackgroundImageTypeButton">
+							<param name="id" value="171"/>
+							<param name="label" value="31057"/>
+							<param name="altlabel" value="31056"/>
+							<param name="category" value="Addons"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundImagePathButton">
+							<param name="id" value="172"/>
+							<param name="label" value="31054"/>
+							<param name="category" value="Addons"/>
+						</include>
+						<include name="BackgroundMultiImagePathButton">
+							<param name="id" value="173"/>
+							<param name="label" value="31055"/>
+							<param name="category" value="Addons"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundApplyAllWindows">
+							<param name="id" value="174"/>
+							<param name="label" value="31052"/>
+							<param name="label.2" value="24001"/>
+							<param name="label.3" value="31061"/>
+							<param name="altlabel" value="31051"/>
+							<param name="category" value="Addons"/>
+							<param name="enable" value="true"/>
+						</include>
+						<include name="BackgroundDimButton">
+							<param name="id" value="175"/>
+							<param name="label" value="31060"/>
+							<param name="category" value="Addons"/>
+						</include>
+						<include name="BackgroundCategoryDefault">
+							<param name="id" value="275"/>
+							<param name="label" value="13278"/>
+							<param name="category" value="Addons"/>
+						</include>
 					</control>
 					
 					<control type="grouplist" id="904">	<!--5 SCRIPTS-->
