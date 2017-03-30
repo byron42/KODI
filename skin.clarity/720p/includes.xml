@@ -4,7 +4,7 @@
 	<include file="Includes_Variables.xml"/>
 	<include file="Includes_SystemStatistics.xml"/>
 	<include file="Includes_Backgrounds.xml"/>
-	<include file="Includes_Weather.xml"/>
+	<include file="includes_Weather.xml"/>
 	<include file="Includes_Buttons.xml"/>
 	<!---->
 	<constant name="ScreenWidth">1280</constant>

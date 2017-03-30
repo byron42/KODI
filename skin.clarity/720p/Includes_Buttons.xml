@@ -233,4 +233,34 @@
 		</control>
 	</include>
 	
+	
+<!--(((CustomViewModesParams)))=========================================================-->	
+		
+	<include name="CustomViewModeButton">	
+		<control type="togglebutton" id="$PARAM[id]">
+			<description>$PARAM[ViewType]</description>
+			<width>400</width>
+			<height>38</height>
+			<font>font_24_B</font>
+			<textcolor>MenuItemColor</textcolor>
+			<focusedcolor>MenuItemFocusColor</focusedcolor>
+			<textoffsetx>18</textoffsetx>
+			<align>left</align>
+			<aligny>top</aligny>
+			<textwidth>382</textwidth>
+			<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+			<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+			<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+			<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+			<usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[$PARAM[label]])</usealttexture>
+			<colordiffuse>-</colordiffuse>
+			<pulseonselect>false</pulseonselect>
+			<label>$LOCALIZE[$PARAM[label]]</label>
+			<onclick>Container.SetViewMode($PARAM[ViewID])</onclick>
+			<onclick>Dialog.Close(3002)</onclick>
+			<visible>$PARAM[visible]</visible>
+		</control>
+	</include>
+	
+
 </includes>
