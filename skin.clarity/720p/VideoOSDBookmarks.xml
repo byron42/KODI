@@ -127,9 +127,9 @@
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
 								<info>ListItem.Label</info>	
-								<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesBigIconLabel)] 
+								<visible>![Container.Content(Movies) + Skin.HasSetting(HideBigIconViewLabel)] 
 								+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsBigIconLabel)]
-								+ ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicIconLabel)]</visible>
+								+ ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideIconViewLabel)]</visible>
 							</control>
 						</itemlayout>															
 						<focusedlayout height="270" width="300">																	

@@ -262,5 +262,41 @@
 		</control>
 	</include>
 	
+<!--(((CustomViewOptionsParams)))=========================================================-->	
+		
+	<include name="CustomViewOptionsButton">	
+		<param name="label.2" default="-1"/>
+		<param name="label.3" default="-1"/>
+		<definition>
+			<control type="radiobutton" id="$PARAM[id]">
+				<description>$PARAM[ViewOption]</description>
+				<width>450</width>
+				<height>38</height>
+				<font>font_24_B</font>
+				<textcolor>MenuItemColor</textcolor>
+				<focusedcolor>MenuItemFocusColor</focusedcolor>
+				<textoffsetx>13</textoffsetx>
+				<align>left</align>
+				<aligny>top</aligny>
+				<radioposx>419</radioposx>
+				<radioposy>-</radioposy>
+				<textwidth>395</textwidth>
+				<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
+				<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
+				<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
+				<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>   
+				<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+				<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<label>$PARAM[label.global]$LOCALIZE[$PARAM[label.1]] $LOCALIZE[$PARAM[label.2]] $LOCALIZE[$PARAM[label.3]]</label>
+				<selected>Skin.HasSetting($PARAM[StringID])</selected>
+				<onclick>Skin.ToggleSetting($PARAM[StringID])</onclick>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+		
+		
+			
 
 </includes>
