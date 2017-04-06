@@ -1189,7 +1189,7 @@
 				<control type="group" id="850">
 					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<visible>!Skin.HasSetting(KioskMode)</visible>
-					<onup>600</onup>
+					<onup>348</onup>
 					<onleft>600</onleft>
 					<ondown>500</ondown>
 					<control type="togglebutton" id="185">
@@ -1205,7 +1205,7 @@
 						<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
 						<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
 						<pulseonselect>false</pulseonselect>
-						<onup>600</onup>
+						<onup>348</onup>
 						<ondown>500</ondown>
 						<onleft>-</onleft>
 						<onright>184</onright>
@@ -1221,7 +1221,7 @@
 						<texturenofocus>viewprefs.png</texturenofocus>
 						<onclick>SetFocus(188)</onclick>
 						<pulseonselect>false</pulseonselect>
-						<onup>600</onup>
+						<onup>348</onup>
 						<ondown>500</ondown>
 						<onleft>185</onleft>
 						<onright>564</onright>
@@ -1237,7 +1237,7 @@
 								<width>ScreenWidth</width>
 								<height>34</height>
 								<itemgap>0</itemgap>
-								<onup>600</onup>
+								<onup>348</onup>
 								<ondown>500</ondown>
 								<onleft>184</onleft>
 								<onright>-</onright>
@@ -1371,7 +1371,7 @@
 								<width>ScreenWidth</width>
 								<height>34</height>
 								<itemgap>0</itemgap>
-								<onup>600</onup>
+								<onup>348</onup>
 								<ondown>500</ondown>
 								<onleft>184</onleft>
 								<onright>-</onright>

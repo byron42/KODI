@@ -213,7 +213,7 @@
 					<height>34</height>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<onup>600</onup>
+					<onup>348</onup>
 					<ondown>2</ondown>
 					<onleft>-</onleft>
 					<onright>-</onright>

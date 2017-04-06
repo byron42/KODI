@@ -1885,7 +1885,7 @@
 							<height>300</height>
 							<onleft>500</onleft>
 							<onright>700</onright>
-							<onup>600</onup>
+							<onup>348</onup>
 							<ondown>600</ondown>
 							<viewtype label="Genre">wrap</viewtype>
 							<focusposition>1</focusposition>
