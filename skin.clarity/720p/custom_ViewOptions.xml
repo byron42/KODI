@@ -37,7 +37,7 @@
 				<onup>900</onup>
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
-				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52)] + Window.IsActive(Music)</visible>
+				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,67)] + Window.IsActive(Music)</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -419,7 +419,7 @@
 				<onup>900</onup>
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
-				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52)] + Window.IsActive(Videos)</visible>
+				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,67)] + Window.IsActive(Videos)</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -714,30 +714,10 @@
 					<onclick>Container.SetViewMode(76)</onclick>
 					<visible>Skin.String(CurrentViewMode,76) + Container.Content(Movies)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2013"/>
-					<param name="ViewOption" value="List Info 2 Hide Plot (movies)"/>
-					<param name="label.1" value="31044"/>
-					<param name="StringID" value="HideMoviesListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,76) + Container.Content(Movies)"/>
-				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2014"/>
-					<param name="ViewOption" value="List Info 2 Use Full Plot (movies)"/>
-					<param name="label.1" value="31420"/>
-					<param name="StringID" value="UseMoviesListInfo2FullPlot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,76) + Container.Content(Movies)"/>
-				</include>
 				
 				
-	<!--check this-->
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2015"/>
-					<param name="ViewOption" value="List Info 2 Do Not Auto Scroll Plot (movies)"/>
-					<param name="label.1" value="31401"/>
-					<param name="StringID" value="DoNotAutoScrollMoviesListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,76) + Container.Content(Movies)"/>
-				</include>
+				
+	
 				<!-- <control type="radiobutton" id="2015"> -->
 					<!-- <param name="ViewOption" value="List Info 2 Do Not Auto Scroll Plot (Movies)"/> -->
 					<!-- <width>450</width> -->
@@ -761,19 +741,13 @@
 					<!-- <label>$LOCALIZE[31401]</label> -->
 					<!-- DoNotAutoScrollMoviesListInfo2Plot -->
 					<!-- <onclick>Skin.ToggleSetting(DoNotAutoScrollMoviesListInfo2Plot)</onclick> -->
-					<!-- <enable>!Skin.HasSetting(HideMoviesListInfo2Plot)</enable> -->
+					<!-- <enable>!Skin.HasSetting(HideListInfo2Description)</enable> -->
 					<!-- <visible>Skin.String(CurrentViewMode,76) + Container.Content(Movies)</visible> -->
 				<!-- </control> -->
 	<!--check this-->			
 				
 				
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2016"/>
-					<param name="ViewOption" value="List Info 2 Hide Overlay (movies)"/>
-					<param name="label.1" value="31046"/>
-					<param name="StringID" value="HideMoviesListInfo2Overlay"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,76) + Container.Content(Movies)"/>
-				</include>
+				
 	<!--oooooooooooooooooooooooooooooooooooooooooooooo I MIGHT USE THIS oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 				<!--<control type="radiobutton" id="2017">
 					<param name="ViewOption" value="Wrap List Info Use Wrap Style 1 (Movies)"/>
@@ -1499,7 +1473,7 @@
 					<param name="ViewOption" value="List Info Do Not Auto Scroll Plot (Episodes)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollEpisodesListInfoPlot"/>
-					<param name="visible" value="[Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,69) | Skin.String(CurrentViewMode,79)] + Container.Content(Episodes)"/>
+					<param name="visible" value="[Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,69)] + Container.Content(Episodes)"/>
 				</include>
 				<include name="CustomViewOptionsButton">
 					<param name="id" value="2043"/>
@@ -1598,27 +1572,7 @@
 					<onclick>Container.SetViewMode(79)</onclick>
 					<visible>Skin.String(CurrentViewMode,79) + Container.Content(TVShows)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2047"/>
-					<param name="ViewOption" value="List Info 2 Hide Plot (TV Shows)"/>
-					<param name="label.1" value="31044"/>
-					<param name="StringID" value="HideTVShowsListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,79) + Container.Content(TVShows)"/>
-				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2048"/>
-					<param name="ViewOption" value="List Info 2 Do Not Auto Scroll Plot (TV Shows)"/>
-					<param name="label.1" value="31401"/>
-					<param name="StringID" value="DoNotAutoScrollTVShowsListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,79) + Container.Content(TVShows)"/>
-				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2049"/>
-					<param name="ViewOption" value="List Info 2 Hide Overlay (TV Shows)"/>
-					<param name="label.1" value="31046"/>
-					<param name="StringID" value="HideTVShowsListInfo2Overlay"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,79) + Container.Content(TVShows)"/>
-				</include>
+				
 				<!--<control type="radiobutton" id="2050">
 					<param name="ViewOption" value="List Info 2 Use List Style 1 (Episodes)"/>
 					<width>450</width>
@@ -1709,27 +1663,7 @@
 					<onclick>Container.SetViewMode(80)</onclick>
 					<visible>Skin.String(CurrentViewMode,80) + Container.Content(Episodes)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2053"/>
-					<param name="ViewOption" value="List Info 2 Hide Plot (Episodes)"/>
-					<param name="label.1" value="31044"/>
-					<param name="StringID" value="HideEpisodesListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,80) + Container.Content(Episodes)"/>
-				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2054"/>
-					<param name="ViewOption" value="List Info 2 Do Not Auto Scroll Plot (Episodes)"/>
-					<param name="label.1" value="31401"/>
-					<param name="StringID" value="DoNotAutoScrollEpisodesListInfo2Plot"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,80) + Container.Content(Episodes)"/>
-				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2055"/>
-					<param name="ViewOption" value="List Info 2 Hide Overlay (Episodes)"/>
-					<param name="label.1" value="31046"/>
-					<param name="StringID" value="HideEpisodesListInfo2Overlay"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,80) + Container.Content(Episodes)"/>
-				</include>
+				
 				<include name="CustomViewOptionsButton">
 					<param name="id" value="2056"/>
 					<param name="ViewOption" value="Do Not Dim Fanart (TV Shows)"/>
@@ -1777,13 +1711,7 @@
 					<param name="StringID" value="HideListInfoViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,61)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
-					<param name="id" value="2065"/>
-					<param name="ViewOption" value="List Info 2 Hide Scrollbar"/>
-					<param name="label.1" value="31025"/>
-					<param name="StringID" value="HideListInfo2ViewScrollbar"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,76) | Skin.String(CurrentViewMode,79) | Skin.String(CurrentViewMode,80)"/>
-				</include>
+				
 				<!--<control type="radiobutton" id="2066">
 					<param name="ViewOption" value="Wrap Info Hide Scrollbar"/>
 					<width>450</width>
@@ -1836,7 +1764,7 @@
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
 					<param name="label.1" value="31914"/>
 					<param name="StringID" value="NoStars"/>
-					<param name="visible" value="[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,76) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)]"/>
+					<param name="visible" value="[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,67) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)]"/>
 				</include>
 				<include name="CustomViewOptionsButton">
 					<param name="id" value="2058"/>
@@ -1866,7 +1794,7 @@
 				<onup>900</onup>
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
-				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52)] + Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(Scripts) | Window.IsActive(VideoPlaylist) | Window.IsActive(MusicPlaylist) | Window.IsActive(134) | Window.IsActive(3080)</visible>
+				<visible>IsEmpty[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,67)] + Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(Scripts) | Window.IsActive(VideoPlaylist) | Window.IsActive(MusicPlaylist) | Window.IsActive(134) | Window.IsActive(3080)</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -1975,7 +1903,7 @@
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
 				<!-- <visible>IsVisible[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,571) | Skin.String(CurrentViewMode,66)]</visible> -->
-				<visible>!IsEmpty(Skin.String(CurrentViewMode,50)) | !IsEmpty(Skin.String(CurrentViewMode,51)) | !IsEmpty(Skin.String(CurrentViewMode,52))</visible>
+				<visible>!IsEmpty(Skin.String(CurrentViewMode,50)) | !IsEmpty(Skin.String(CurrentViewMode,51)) | !IsEmpty(Skin.String(CurrentViewMode,52)) | !IsEmpty(Skin.String(CurrentViewMode,67))</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -2086,6 +2014,56 @@
 					<param name="StringID" value="HideListViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
+				
+				
+<!-- LIST INFO 2 ****************************************************************************-->
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="2014"/>
+					<param name="ViewOption" value="List Info 2 Use Full Plot (GLOBAL LI2)"/>
+					<param name="label.1" value="31420"/>
+					<param name="StringID" value="UseListInfo2FullDescription"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+		<!--check this-->
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="1010"/>
+					<param name="ViewOption" value="List Info 2 Do Not Auto Scroll Description (GLOBAL LI2)"/>
+					<param name="label.1" value="31416"/>
+					<param name="StringID" value="DoNotAutoScrollListInfo2Description"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+		<!--check this-->
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="2013"/>
+					<param name="ViewOption" value="List Info 2 Hide Description (GLOBAL LI2)"/>
+					<param name="label.1" value="31044"/>
+					<param name="StringID" value="HideListInfo2Description"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="2016"/>
+					<param name="ViewOption" value="List Info 2 Hide Overlay (GLOBAL LI2)"/>
+					<param name="label.1" value="31046"/>
+					<param name="StringID" value="HideListInfo2Overlay"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="2020"/>
+					<param name="ViewOption" value="List Info 2 View Hide Star Rating (GLOBAL LI2)"/>
+					<param name="label.1" value="31015"/>
+					<param name="label.2" value="33067"/>
+					<param name="StringID" value="ListInfo2ViewHideStars"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+				<include name="CustomViewOptionsButton">
+					<param name="id" value="1030"/>
+					<param name="ViewOption" value="List Info 2 Hide Scrollbar (GLOBAL LI2)"/>
+					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
+					<param name="label.1" value="31025"/>
+					<param name="StringID" value="HideListInfo2ViewScrollbar"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
+				</include>
+				
 <!-- COVER FLOW ************************************************************************************-->
 				<include name="CustomViewOptionsButton">
 					<param name="id" value="10314"/>

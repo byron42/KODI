@@ -199,6 +199,35 @@
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>		
 			
+				<!--*************************************************************************** ListInfo2View **************** (67) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">67</defaultcontrol>
+					<visible>Control.IsVisible(67)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim-->
+					<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<!--*****************************-->
+					<include>CoreListInfo2View</include>
+					<!--*****************************-->
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,67)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(67)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>
+				
 				<!--************************************************************************ MusicWideIconView *************** (68) ********-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">68</defaultcontrol>
@@ -1583,375 +1612,6 @@
 					<!--ViewsScreenFullFadeAnim-->
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>
-				
-				<!--************************************************************************ MusicListInfoView2 ************** (67) ********-->
-				<control type="group" id="500">	
-					<defaultcontrol always="true">67</defaultcontrol>
-					<visible>Control.IsVisible(67)</visible>
-					<!--MediaViewOpenCloseAnim-->
-					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!--InfoPaneHiddenSlideAnim2-->
-					<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
-					<control type="scrollbar" id="150">
-						<description>ListInfo2ViewScrollbar</description>
-						<left>1250</left>
-						<top>97</top>
-						<height>542</height>
-						<visible>!Skin.HasSetting(HideListInfo2ViewScrollbar) + [Control.IsVisible(76) | Control.IsVisible(79) | Control.IsVisible(80) | Control.IsVisible(67)]</visible>
-						<onleft>500</onleft>
-					</control>
-					<control type="group">
-						<description>Media Info Area</description>
-						<left>40</left>
-						<top>70</top>
-						<!--******************************* SEPARATORS *********************************-->	
-						<control type="group"> <!--TOP-->
-							<top>300</top>
-							<left>5</left>
-							<control type="image">
-								<left>5</left>
-								<description>top bar</description>
-								<top>34</top>
-								<width>303</width>
-								<height>2</height>
-								<texture>separator.png</texture>
-							</control>
-							<control type="image">
-								<left>240</left>
-								<top>34</top>
-								<width>303</width>
-								<height>2</height>
-								<texture flipx="true">separator.png</texture>
-							</control>
-						</control>	
-						<control type="group"> <!--BOTTOM-->
-							<top>344</top>
-							<left>5</left>
-							<control type="image">
-								<left>5</left>
-								<description>top bar</description>
-								<top>34</top>
-								<width>303</width>
-								<height>3</height>
-								<texture>separator.png</texture>
-							</control>
-							<control type="image">
-								<left>240</left>
-								<top>34</top>
-								<width>303</width>
-								<height>3</height>
-								<texture flipx="true">separator.png</texture>
-							</control>
-						</control>	
-						<!--****************************************************************************-->				
-						<control type="image">
-							<left>-13</left>
-							<description>Default Background</description>
-							<width>586</width>
-							<height>335</height>
-							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
-							<bordersize>9</bordersize>
-							<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
-						</control>	
-						<control type="largeimage">
-							<left>-6</left>
-							<top>3</top>
-							<description>Fanart</description>
-							<width>570</width>
-							<height>329</height>
-							<bordertexture border="7">item-shadow-border.png</bordertexture>
-							<bordersize>5</bordersize>
-							<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>	
-						</control>
-						<control type="group">
-							<visible>!Container.OnNext + !Container.OnPrevious</visible>
-							<!--ControlsOpenCloseAnim-->
-							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-							<control type="image">
-								<description>Genre Background</description>
-								<left>0</left>
-								<top>5</top>
-								<width>562</width>
-								<height>30</height>
-								<colordiffuse>BFFFFFFF</colordiffuse>
-								<texture border="5">home-submenu-cover1.png</texture>
-								<visible>!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
-								<animation effect="fade" end="100" condition="true">Conditional</animation>
-							</control>	
-							<control type="label">
-								<description>Genre</description>
-								<left>10</left>
-								<top>18</top>
-								<width>540</width>
-								<font>font_19_B</font>
-								<textcolor>ThemeColor2</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<aligny>center</aligny>	
-								<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-							</control>
-							<control type="group">	
-								<top>22</top>
-								<control type="label">
-									<description>Media Info Row 1</description>
-									<left>5</left>
-									<top>333</top>
-									<width>380</width>
-									<font>font_19_B</font>
-									<textcolor>DefaultColor</textcolor>
-									<shadowcolor>ShadowColor</shadowcolor>
-									<aligny>center</aligny>	
-									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[557]:[/COLOR][/UPPERCASE] $INFO[ListItem.Artist]</label>
-									<visible>!IsEmpty(ListItem.Artist)</visible>
-								</control>
-								<control type="label">
-									<description>Media Info Row 1</description>
-									<left>555</left>
-									<top>333</top>
-									<width>160</width>
-									<font>font_19_B</font>
-									<textcolor>DefaultColor</textcolor>
-									<shadowcolor>ShadowColor</shadowcolor>
-									<aligny>center</aligny>	
-									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
-									<align>right</align>
-									<visible>!IsEmpty(ListItem.Year)</visible>
-								</control>
-								<control type="label">
-									<description>Media Info Row 1</description>
-									<left>555</left>
-									<top>333</top>
-									<width>160</width>
-									<font>font_19_B</font>
-									<textcolor>DefaultColor</textcolor>
-									<shadowcolor>ShadowColor</shadowcolor>
-									<aligny>center</aligny>	
-									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
-									<align>right</align>
-									<visible>!IsEmpty(ListItem.Year)</visible>
-								</control>
-							</control>
-						<!--INFO_BG-->
-							<control type="image">
-								<description>INFO BACKGROUND FOR DESCRIPTION</description>
-								<left>-13</left>
-								<top>379</top>
-								<width>587</width>
-								<height>198</height>
-								<info>-</info>
-								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
-								<bordersize>9</bordersize>
-							</control>
-						<!--desc. boxes-->
-							<control type="group">
-								<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideAlbumsListInfo2Description)</visible>
-								<control type="textbox">
-									<description>Description</description>
-									<left>5</left>
-									<top>394</top>
-									<width>550</width>
-									<height>160</height>
-									<font>font_20</font>
-									<textcolor>ThemeColor2</textcolor>
-									<align>justify</align>
-									<shadowcolor>ShadowColor</shadowcolor>
-									<label>$INFO[ListItem.Property(Album_Description)]</label>
-									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollAlbumsListInfo2Description)</autoscroll>
-									<!--ControlsOpenCloseAnim-->
-									<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-								</control>	
-							</control>
-						</control>
-					</control>
-					
-					<!--<include condition="Skin.String(MusicListInfo2Style,1)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2ClassicStyle</include>
-					<include condition="Skin.String(MusicListInfo2Style,2) | Skin.String(MusicListInfo2Style,)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2BannerStyle</include>
-					<include condition="Skin.String(MusicListInfo2Style,3)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2IconStyle</include>-->
-					
-					<control type="list" id="67">	
-						<viewtype label="$LOCALIZE[31120]">List Info 2</viewtype>
-						<left>610</left>
-						<top>74</top>
-						<width>626</width>
-						<height>572</height>
-						<pagecontrol>150</pagecontrol>
-						<onup>67</onup>
-						<ondown>67</ondown>
-						<onleft>850</onleft>
-						<onright>150</onright>	
-						<itemlayout height="95">
-							<control type="image">
-								<description>Background</description>
-								<left>20</left>
-								<top>2</top>
-								<width>590</width>
-								<height>87</height>
-								<texture border="5">button-nofocus.png</texture>
-								<animation effect="fade" end="50" condition="true">Conditional</animation>
-							</control>	
-							<control type="image">
-								<description>Cover</description>
-								<left>25</left>
-								<top>5</top>
-								<width>80</width>
-								<height>80</height>
-								<bordertexture border="7">item-shadow-border.png</bordertexture>
-								<bordersize>5</bordersize>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio>keep</aspectratio>
-							</control>
-							<control type="image">
-								<description>Default Cover</description>
-								<left>25</left>
-								<top>5</top>
-								<width>80</width>
-								<height>80</height>
-								<bordersize>5</bordersize>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>keep</aspectratio>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
-							</control>								
-							<control type="label">
-								<description>Title</description>
-								<left>115</left>
-								<top>9</top>
-								<width>490</width>
-								<font>DefaultFont</font>
-								<textcolor>DefaultColor</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-							<control type="label">
-								<left>120</left>
-								<top>60</top>
-								<width>490</width>
-								<font>font_21_U</font>
-								<textcolor>MediaInfoHeadColor2</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<aligny>center</aligny>				
-								<info>ListItem.Label2</info>
-								<visible>Skin.HasSetting(NoStars)</visible>
-							</control>
-							<control type="image">
-								<description>IMDB rating</description>
-								<left>67</left>
-								<align>left</align>
-								<top>50</top>
-								<width>220</width>
-								<height>25</height>
-								<info>ListItem.StarRating</info>						
-								<colordiffuse>ffcccccc</colordiffuse>	
-								<visible>!Skin.HasSetting(NoStars)</visible>
-							</control>
-						</itemlayout>		
-						<focusedlayout height="95">	
-							<control type="image">
-								<left>2</left>
-								<top>-5</top>
-								<width>626</width>
-								<height>100</height>
-								<visible>Control.HasFocus(67)</visible>
-								<texture border="10">Glass/keyfocus.png</texture>
-								<bordersize>9</bordersize>
-							</control>
-							<control type="image">
-								<left>2</left>
-								<top>-5</top>
-								<width>626</width>
-								<height>100</height>
-								<colordiffuse>BBBBBBBB</colordiffuse>
-								<texture border="10">Glass/keyfocus.png</texture>
-								<bordersize>9</bordersize>
-								<visible>!Control.HasFocus(67)</visible>
-							</control>
-							<control type="image">
-								<description>Cover</description>
-								<left>25</left>
-								<top>5</top>
-								<width>80</width>
-								<height>80</height>
-								<bordertexture border="7">item-shadow-border.png</bordertexture>
-								<bordersize>5</bordersize>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
-								<aspectratio>keep</aspectratio>
-							</control>
-							<control type="image">
-								<description>Default Cover</description>
-								<left>25</left>
-								<top>5</top>
-								<width>80</width>
-								<height>80</height>
-								<bordersize>5</bordersize>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>keep</aspectratio>
-								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
-							</control>				
-							<control type="label">
-								<description>Title</description>
-								<left>120</left>
-								<top>9</top>
-								<width>405</width>
-								<font>DefaultFont</font>
-								<textcolor>ThemeColor2</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<animation effect="zoom" end="120" center="120,15" time="100">focus</animation>
-								<animation effect="zoom" start="120" center="120,15" time="100">unfocus</animation>	
-							</control>
-							<control type="label">
-								<left>120</left>
-								<top>60</top>
-								<width>490</width>
-								<font>font_21_U</font>
-								<textcolor>ThemeColor</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<aligny>center</aligny>	
-								<animation effect="zoom" end="120" center="120,55" time="100">focus</animation>
-								<animation effect="zoom" start="120" center="120,55" time="100">unfocus</animation>	
-								<info>ListItem.Label2</info>
-								<visible>Skin.HasSetting(NoStars)</visible>
-							</control>
-							<control type="image">
-								<description>IMDB rating</description>
-								<left>67</left>
-								<top>50</top>
-								<width>220</width>
-								<height>25</height>
-								<info>ListItem.StarRating</info>						
-								<colordiffuse>ThemeColor</colordiffuse>	
-								<visible>!Skin.HasSetting(NoStars)</visible>
-								<animation effect="zoom" end="110" center="85,52" time="100">focus</animation>
-								<animation effect="zoom" start="110" center="85,52" time="100">unfocus</animation>	
-							</control>
-						</focusedlayout>		
-					</control>	
-					
-					<control type="button" id="188">
-						<onfocus>Skin.SetString(CurrentViewMode,67)</onfocus>
-						<description>ViewOptionsHelperBtn</description>
-						<width>1</width>
-						<height>1</height>
-						<onfocus>SetFocus(184)</onfocus>
-						<onfocus>ActivateWindow(3017)</onfocus>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>	
-						<visible>Control.IsVisible(67)</visible>
-					</control>
-					<!--ViewsScreenFullFadeAnim-->
-					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
-				</control>	
 				
 				<!--*************************************** (needs work!!!) *************** MusicWrapListInfoView ************ (64) ********-->
 				<control type="group" id="500">	

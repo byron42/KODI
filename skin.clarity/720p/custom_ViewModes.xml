@@ -52,13 +52,13 @@
 				</control>
 				<include name="CustomViewModeButton">
 					<param name="id" value="1"/>
-					<param name="ViewType" value="icon"/>
+					<param name="ViewType" value="icon (global)"/>
 					<param name="label" value="31103"/>
 					<param name="ViewID" value="50"/>
 				</include>
 				<include name="CustomViewModeButton">
 					<param name="id" value="2"/>
-					<param name="ViewType" value="big icon"/>
+					<param name="ViewType" value="big icon (global)"/>
 					<param name="label" value="31104"/>
 					<param name="ViewID" value="51"/>
 				</include>
@@ -125,6 +125,13 @@
 					<param name="ViewID" value="52"/>
 				</include>
 				<include name="CustomViewModeButton">
+					<param name="id" value="27"/>
+					<param name="ViewType" value="list info 2 (global)"/>
+					<param name="label" value="31120"/>
+					<param name="ViewID" value="67"/>
+				</include>
+				
+				<include name="CustomViewModeButton">
 					<param name="id" value="10"/>
 					<param name="ViewType" value="list info (movies)"/>
 					<param name="label" value="31111"/>
@@ -162,13 +169,7 @@
 					<!-- <visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies)]</visible> -->
 				<!-- </control> -->
 				
-				<include name="CustomViewModeButton">
-					<param name="id" value="11"/>
-					<param name="ViewType" value="list info 2 (movies)"/>
-					<param name="label" value="31120"/>
-					<param name="ViewID" value="76"/>
-					<param name="visible" value="Container.Content(Movies)"/>
-				</include>
+				
 			<!--************************************************************************************************************-->
 
 			<!--********************************************* USING THIS ***************************************************-->
@@ -358,13 +359,7 @@
 					<param name="ViewID" value="64"/>
 					<param name="visible" value="Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewModeButton">
-					<param name="id" value="27"/>
-					<param name="ViewType" value="list info (music)"/>
-					<param name="label" value="31120"/>
-					<param name="ViewID" value="67"/>
-					<param name="visible" value="Container.Content(Albums)"/>
-				</include>
+				
 				<include name="CustomViewModeButton">
 					<param name="id" value="270"/>
 					<param name="ViewType" value="cover flow (music)"/>
@@ -387,23 +382,11 @@
 					<param name="visible" value="Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(AddonBrowser)"/>
 				</include>
 			<!--********************************************* USING THIS ***************************************************-->
-				<include name="CustomViewModeButton">
-					<param name="id" value="28"/>
-					<param name="ViewType" value="list info 2 (tvshows)"/>
-					<param name="label" value="31120"/>
-					<param name="ViewID" value="79"/>
-					<param name="visible" value="Container.Content(TVShows)"/>
-				</include>
+				
 			<!--************************************************************************************************************-->
 
 			<!--********************************************* USING THIS ***************************************************-->
-				<include name="CustomViewModeButton">
-					<param name="id" value="29"/>
-					<param name="ViewType" value="list info 2 (Episodes)"/>
-					<param name="label" value="31120"/>
-					<param name="ViewID" value="80"/>
-					<param name="visible" value="Container.Content(Episodes)"/>
-				</include>
+				
 			<!--************************************************************************************************************-->
 				<control type="image">
 					<description>MenuBarItemBigBottomBorder</description>

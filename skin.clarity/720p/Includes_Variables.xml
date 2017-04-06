@@ -394,5 +394,45 @@
 		<!-- <value condition="!IsEmpty(ListItem.Property(Album_Description)) + Window.IsVisible(MusicFiles)">$INFO[ListItem.Property(Album_Description)]</value> -->
 		<!-- <value condition="!IsEmpty(ListItem.Property(Addon.Summary) + Window.IsVisible(Programs)">$INFO[ListItem.Property(Addon.Summary)]</value> -->
 	</variable>
-<!---->	
+<!--(((LI2 VARS)))======================================-->	
+	<variable name="ListInfo2Description">
+	<!--plot-->
+		<value condition="!Skin.HasSetting(UseListInfo2FullDescription) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideListInfo2Description)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="Skin.HasSetting(UseListInfo2FullDescription) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideListInfo2Description)">$INFO[ListItem.Plot]</value>
+	<!--description-->
+		<value condition="!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideListInfo2Description)">$INFO[ListItem.Property(Album_Description)]</value>
+	<!--summary-->
+		<value condition="!IsEmpty(ListItem.Property(Addon.Description)) + !Skin.HasSetting(HideListInfo2Description)">$INFO[ListItem.Property(Addon.Description)]</value>
+	</variable>
+	<variable name="ListInfo2ItemType">
+		<value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
+		<value condition="!IsEmpty(ListItem.Property(Addon.Type))">[UPPERCASE]$INFO[ListItem.Property(Addon.Type)][/UPPERCASE]</value>
+	</variable>
+	<variable name="ListInfo2Author">
+		<value condition="!IsEmpty(ListItem.Property(Addon.Creator))">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[21863]:[/COLOR][/UPPERCASE] $INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="!IsEmpty(ListItem.Director)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[20339]:[/COLOR][/UPPERCASE] $INFO[ListItem.Director]</value>
+		<value condition="!IsEmpty(ListItem.Artist)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[557]:[/COLOR][/UPPERCASE] $INFO[ListItem.Artist]</value>
+		<!-- <value condition="IsEmpty(ListItem.Property(Addon.Creator)) | IsEmpty(ListItem.Director) | IsEmpty(ListItem.Artist)">[COLOR=Grey]$LOCALIZE[29915] $LOCALIZE[161][/COLOR]</value> -->
+	</variable>
+	<variable name="ListInfo2Release">
+		<value condition="!IsEmpty(ListItem.Property(Addon.Version))">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[24051][/COLOR][/UPPERCASE] $INFO[ListItem.Property(Addon.Version)]</value>
+		<value condition="!IsEmpty(ListItem.Year)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</value>
+		<!-- <value condition="IsEmpty(ListItem.Year) | IsEmpty(ListItem.Property(Addon.Version))">[COLOR=Grey]$LOCALIZE[29915] $LOCALIZE[161][/COLOR]</value> -->
+	</variable>
+	<variable name="ListInfo2_Writer_AddonID">
+		<value condition="!IsEmpty(ListItem.Property(Addon.ID))">[UPPERCASE][COLOR=ThemeColor2]ID:[/COLOR][/UPPERCASE] $INFO[ListItem.Property(Addon.ID)]</value>
+		<value condition="!IsEmpty(ListItem.Writer)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[20417]:[/COLOR][/UPPERCASE] $INFO[ListItem.Writer]</value>
+		<value condition="!IsEmpty(ListItem.Duration) + Window.IsActive(Music)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[2050]:[/COLOR][/UPPERCASE] $INFO[ListItem.Duration]</value>
+		<!-- <value condition="[IsEmpty(ListItem.Duration) | Window.IsActive(Music)] | IsEmpty(ListItem.Property(Addon.ID)) | IsEmpty(ListItem.Writer)">[COLOR=Grey]$LOCALIZE[29915] $LOCALIZE[161][/COLOR]</value> -->
+	</variable>
+	<variable name="ListInfo2_Duration_Status">
+		<value condition="!IsEmpty(ListItem.Property(Addon.Status))">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[126]:[/COLOR][/UPPERCASE] $INFO[ListItem.Property(Addon.Status)]</value>
+		<value condition="!IsEmpty(ListItem.Duration) + Window.IsActive(Videos)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[2050]:[/COLOR][/UPPERCASE] $INFO[ListItem.Duration]</value>
+		<value condition="!IsEmpty(ListItem.Property(Artist_Mood)) + Window.IsActive(Music)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[2050]:[/COLOR][/UPPERCASE] $INFO[ListItem.Property(Artist_Mood)]</value>
+		<!-- <value condition="[IsEmpty(ListItem.Duration) + Window.IsActive(Videos)] | [IsEmpty(ListItem.Property(Artist_Mood)) | Window.IsActive(Music)] | IsEmpty(ListItem.Property(Addon.Status))">[COLOR=Grey]$LOCALIZE[29915] $LOCALIZE[161][/COLOR]</value> -->
+	</variable>
+	<variable name="ListInfo2_Label2">
+		<value condition="!IsEmpty(ListItem.Property(Addon.Summary))">$INFO[ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
+	</variable>
 </includes>
