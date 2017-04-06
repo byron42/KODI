@@ -214,7 +214,7 @@
 	<include name="CoreListView">
 		<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 		<control type="image">
-			<visible>!Skin.HasSetting(EnableClassicUniversalBG) + Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
+			<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 			<width>1280</width>
 			<top>0</top>
 			<height>ScreenHeight</height>
@@ -222,14 +222,15 @@
 			<!--SkinSystemStatReopositonBigger-->
 			<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 		</control>
-		<!-- <control type="image"> -->
-			<!-- <visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> -->
-			<!-- <width>1280</width> -->
-			<!-- <top>0</top> -->
-			<!-- <height>ScreenHeight</height> -->
-			<!-- <texture>listview-background-dim.png</texture> -->
-			<!-- <animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation> -->
-		<!-- </control> -->
+		<control type="image">
+			<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
+			<width>1280</width>
+			<top>0</top>
+			<height>ScreenHeight</height>
+			<texture>listview-background-dim.png</texture>
+			<!--SkinSystemStatReopositonBigger-->
+			<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+		</control>
 		<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 		<control type="scrollbar" id="151">
 			<description>ListViewScrollbar</description>
@@ -295,7 +296,7 @@
 					<height>23</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty( ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIcons)</visible>
+					<visible>IsEmpty(ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIcons)</visible>
 				</control>	
 			<!--LABEL-->	
 				<control type="label">
@@ -332,7 +333,7 @@
 				</control>
 			<!--LABEL_2-->	
 				<control type="label">
-					<left>665</left>
+					<left>515</left>
 					<top>5</top>
 					<width>150</width>
 					<height>36</height>
@@ -426,7 +427,7 @@
 					<height>28</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
-					<visible>IsEmpty( ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIcons)</visible>
+					<visible>IsEmpty(ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIcons)</visible>
 				</control>
 			<!--LABEL-->
 				<control type="label">
@@ -459,7 +460,7 @@
 				</control>
 			<!--LABEL_2-->
 				<control type="label">
-					<left>665</left>
+					<left>515</left>
 					<top>5</top>
 					<width>150</width>
 					<!--ListLabel2-->
@@ -507,6 +508,8 @@
 			<visible>![Container.Content(Movies) + Skin.HasSetting(HideListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideListCover)]
 			+ ![Container.Content(TVShows) + Skin.HasSetting(HideListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideListCover)]</visible>
 			<animation effect="slide" end="10,0" condition="!Control.IsVisible(151)">Conditional</animation>
+			<!-- for extra info (((needs to be revisited))) -->
+			<animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(Listitem.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation>
 			<!--SmallIcons-->
 			<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 			<!--InfoPaneHiddenSlideAnim2-->
@@ -547,7 +550,46 @@
 				<aspectratio aligny="top">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" start="100" end="0" time="150" delay="0" condition="Control.IsVisible(9009)">Conditional</animation>
 			</control>	
+		</control>
+		<control type="group" id="9009">
+			<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+			<animation effect="fade" end="100" time="100" delay="100">Visible</animation>
+			<animation effect="fade" end="0" time="0" delay="0">Hidden</animation>
+			<left>40</left>
+			<top>470</top>
+			
+			<visible>!IsEmpty(Listitem.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)</visible>
+			<!-- <visible>false</visible> -->
+			
+			<control type="image">
+				<description>INFO BACKGROUND FOR PLOT</description>
+				<left>-13</left>
+				<top></top>
+				<width>495</width>
+				<height>168</height>
+				<info>-</info>
+				<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+				<bordersize>9</bordersize>
+			</control>
+			<control type="textbox" id="9010">
+				<description>Plot</description>
+				<left>5</left>
+				<top>11</top>
+				<width>460</width>
+				<height>138</height>
+				<font>font_20</font>
+				<textcolor>ThemeColor2</textcolor>
+				<align>justify</align>
+				<label fallback="161">$INFO[Listitem.Property(Addon.Description)]</label>
+				<autoscroll time="2000" delay="5000" repeat="10000">true</autoscroll>
+				<!--ControlsOpenCloseAnim-->
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+				<visible>!IsEmpty(Listitem.Property(Addon.Description))</visible>
+			</control>
 		</control>
 	</include>
 	

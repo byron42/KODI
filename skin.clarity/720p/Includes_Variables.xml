@@ -416,7 +416,8 @@
 	</variable>
 	<variable name="ListInfo2Release">
 		<value condition="!IsEmpty(ListItem.Property(Addon.Version))">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[24051][/COLOR][/UPPERCASE] $INFO[ListItem.Property(Addon.Version)]</value>
-		<value condition="!IsEmpty(ListItem.Year)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</value>
+		<value condition="!IsEmpty(ListItem.Year) + !Container.Content(TvShows)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</value>
+		<value condition="!IsEmpty(ListItem.Premiered) + Container.Content(TvShows)">[UPPERCASE][COLOR=ThemeColor2]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Premiered]</value>
 		<!-- <value condition="IsEmpty(ListItem.Year) | IsEmpty(ListItem.Property(Addon.Version))">[COLOR=Grey]$LOCALIZE[29915] $LOCALIZE[161][/COLOR]</value> -->
 	</variable>
 	<variable name="ListInfo2_Writer_AddonID">
