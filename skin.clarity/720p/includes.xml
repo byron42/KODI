@@ -7,6 +7,7 @@
 	<include file="includes_Weather.xml"/>
 	<include file="Includes_Buttons.xml"/>
 	<include file="Views_Core.xml"/>
+	<include file="Views_CoverFlow.xml"/>
 	<!---->
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>

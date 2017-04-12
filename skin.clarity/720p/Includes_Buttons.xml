@@ -267,6 +267,7 @@
 	<include name="CustomViewOptionsButton">	
 		<param name="label.2" default="-1"/>
 		<param name="label.3" default="-1"/>
+		<param name="enable" default="true"/>
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<description>$PARAM[ViewOption]</description>
@@ -292,6 +293,7 @@
 				<selected>Skin.HasSetting($PARAM[StringID])</selected>
 				<onclick>Skin.ToggleSetting($PARAM[StringID])</onclick>
 				<visible>$PARAM[visible]</visible>
+				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
 	</include>

@@ -367,19 +367,18 @@
 					<param name="ViewID" value="570"/>
 					<param name="visible" value="Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists) | Window.IsActive(music)"/>
 				</include>
-				<include name="CustomViewModeButton">
-					<param name="id" value="271"/>
-					<param name="ViewType" value="cover flow (videos)"/>
-					<param name="label" value="33031"/>
-					<param name="ViewID" value="571"/>
-					<param name="visible" value="Window.IsActive(videos) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)"/>
-				</include>
+				<!-- <include name="CustomViewModeButton"> -->
+					<!-- <param name="id" value="271"/> -->
+					<!-- <param name="ViewType" value="cover flow (videos)"/> -->
+					<!-- <param name="label" value="33031"/> -->
+					<!-- <param name="ViewID" value="571"/> -->
+					<!-- <param name="visible" value="Window.IsActive(videos) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)"/> -->
+				<!-- </include> -->
 				<include name="CustomViewModeButton">
 					<param name="id" value="2710"/>
 					<param name="ViewType" value="cover flow (other)"/>
 					<param name="label" value="33031"/>
 					<param name="ViewID" value="572"/>
-					<param name="visible" value="Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(AddonBrowser)"/>
 				</include>
 			<!--********************************************* USING THIS ***************************************************-->
 				

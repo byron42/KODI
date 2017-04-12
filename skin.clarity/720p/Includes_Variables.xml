@@ -360,10 +360,13 @@
 		<value condition="!Skin.String(ThemeColorOsdBack,1) + !Skin.String(ThemeColorOsdBack,2)">BBFFFFFF</value>
 	</variable>
 	
+	
+	
+	
 <!--(((COVERFLOW VARS)))======================================-->
 	<variable name="CoverFlowBorder">
-		<value condition="Window.IsActive(VideoLibrary) + !Skin.HasSetting(HideMovieCase)">CoverFlow/CFIB_Case.png</value>
-		<value condition="Window.IsActive(VideoLibrary) + Skin.HasSetting(HideMovieCase)">CoverFlow/CoverFlowBorderF.png</value>
+		<value condition="Window.IsActive(VideoLibrary) + !Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CFIB_Case.png</value>
+		<value condition="Window.IsActive(VideoLibrary) + Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CoverFlowBorderF.png</value>
 	</variable>
 	<variable name="ViewCoverFlowLabel1">
 		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label2]</value>
@@ -373,9 +376,17 @@
 		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label][/B]</value>
 		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label2][/B]</value>
 	</variable>
-	<variable name="ViewCoverFlowLabel2_VL">
-		<value condition="Container.Content(Movies)">$INFO[ListItem.StarRating]</value>
-		<value condition="!Container.Content(Movies)">$INFO[ListItem.Label2]</value>
+	<!-- <variable name="ViewCoverFlowLabel2_VL"> -->
+		<!-- <value condition="Container.Content(Movies)">$INFO[ListItem.StarRating]</value> -->
+		<!-- <value condition="!Container.Content(Movies)">$INFO[ListItem.Label2]</value> -->
+	<!-- </variable> -->
+	<variable name="CoverFlowDescription">
+	<!--plot-->
+		<value condition="!IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideCoverFlowDescription)">$INFO[ListItem.Plot]</value>
+	<!--description-->
+		<value condition="!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideCoverFlowDescription)">$INFO[ListItem.Property(Album_Description)]</value>
+	<!--summary-->
+		<value condition="!IsEmpty(ListItem.Property(Addon.Description)) + !Skin.HasSetting(HideCoverFlowDescription)">$INFO[ListItem.Property(Addon.Description)]</value>
 	</variable>
 <!---->
 	<variable name="ForcastTypeLabel">
