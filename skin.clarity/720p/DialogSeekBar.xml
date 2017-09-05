@@ -29,7 +29,7 @@
 		
 		<!-- <visible>!Window.IsActive(142)</visible> -->
 		<control type="group" id="1111">
-			<visible>Control.IsVisible(6002) | Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]</visible>
+			<visible>Control.IsVisible(6002) | Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused]]</visible>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
@@ -84,12 +84,12 @@
 				<!--progressbar dialog-->
 				<control type="label" id="22">
 					<description>Elapsed Time Label</description>
-					<left>210</left>
+					<left>115</left>
 					<top>0</top>
 					<font>font_23</font>
 					<textcolor>White</textcolor>
 					<shadowcolor>ThemeColor</shadowcolor>
-					<align>right</align>
+					<align>center</align>
 					<info>Player.Time</info>
 					<width>110</width>
 					<height>16</height>
@@ -97,12 +97,12 @@
 				</control>
 				<control type="label" id="22">
 					<description>Seek Time Label</description>
-					<left>210</left>
+					<left>115</left>
 					<top>0</top>
 					<font>font_23</font>
 					<textcolor>White</textcolor>
 					<shadowcolor>ThemeColor</shadowcolor>
-					<align>right</align>
+					<align>center</align>
 					<info>Player.SeekTime</info>
 					<width>110</width>
 					<height>16</height>
@@ -110,14 +110,14 @@
 				</control>
 				<control type="label" id="0">
 					<description>Duration Label</description>
-					<left>525</left>
+					<left>508</left>
 					<top>0</top>
 					<label>$INFO[Player.Duration]</label>
 					<font>font_23</font>
 					<textcolor>White</textcolor>
 					<shadowcolor>ThemeColor</shadowcolor>
-					<align>left</align>
-					<width>130</width>
+					<align>center</align>
+					<width>110</width>
 					<height>16</height>
 				</control>
 			</control>
@@ -228,7 +228,7 @@
 			<top>-65</top>
 			<animation effect="fade" start="0" end="100" time="200" >Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200" >Hidden</animation>
-			<visible>!Player.Paused + ![Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]]</visible>
+			<visible>![Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]]</visible>
 			<control type="progress">
 				<description>Cache Progress</description>
 				<width>1280</width>
