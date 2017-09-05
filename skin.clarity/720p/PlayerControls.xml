@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">404</defaultcontrol>
 	<onload condition="Window.IsActive(ContextMenu)">Dialog.Close(ContextMenu)</onload>
 	<include>FS__OpenClose</include>
+	<include>VisibleFadeEffect</include>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<controls>
 			
