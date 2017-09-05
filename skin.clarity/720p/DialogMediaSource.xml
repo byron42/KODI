@@ -418,7 +418,7 @@
 								<visible>Control.HasFocus(12)</visible>
 							</control>
 						</control>	
-						<control type="button" id="12">
+						<control type="edit" id="12">
 							<description>Name Input</description>
 							<left>-45</left>
 							<top>192</top>
