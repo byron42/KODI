@@ -1,5 +1,5 @@
 <window id="130">
-	<defaultcontrol>1</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
@@ -331,7 +331,7 @@
 							<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						</control>	
-						<control type="sliderex" id="10">
+						<control type="sliderex" id="13">
 							<width>800</width>
 							<height>48</height>
 							<font>font_22_U</font>
