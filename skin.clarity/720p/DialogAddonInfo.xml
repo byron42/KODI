@@ -96,7 +96,7 @@
 				<animation effect="fade" start="100" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
 				<!--BackgroundOpenCloseAnim-->
 				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
-				<animation effect="fade" start="100" end="0" delay="100" time="200">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" delay="0" time="">WindowClose</animation>
 			</control>
 			
 			<!--********************************** BackgroundFanart *********************************************-->
@@ -153,14 +153,12 @@
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditional</animation>
 				<!-- <animation effect="fade" start="100" end="0" delay="2" time="200" condition="Window.IsActive(textviewer)">Conditional</animation> -->
 				<!-- <animation effect="fade" start="0" end="100" time="250" delay="200" condition="![Window.IsActive(FileBrowser) | Window.IsActive(textviewer)]">Conditional</animation> -->
-				<animation type="WindowOpen" condition="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]" reversible="false">
-					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
-					<effect type="fade" start="0" end="100" time="300" />
-				</animation>
-				<animation type="WindowClose" condition="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]" reversible="false">
-					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
-					<effect type="fade" start="100" end="0" time="250" />
-				</animation>
+				
+				<include name="FS_Dialog_Open_Close">
+					<param name="Conditions_Open" value="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]"/>
+					<param name="Conditions_Close" value="![Window.IsActive(FileBrowser) | Window.IsVisible(textviewer)]"/>
+				</include>
+				
 			<!--header,separators-->
 				<control type="group">
 					<left>30</left>
