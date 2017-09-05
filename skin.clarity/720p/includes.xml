@@ -1769,4 +1769,15 @@
 		<animation effect="fade" time="225">Visible</animation>
 		<animation effect="fade" time="225">Hidden</animation>
 	</include>
+	
+	<include name="FS_Dialog_Open_Close">
+		<animation type="WindowOpen" condition="$PARAM[Conditions_Open]" reversible="false">
+			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+			<effect type="fade" start="0" end="100" time="300" />
+		</animation>
+		<animation type="WindowClose" condition="$PARAM[Conditions_Close]" reversible="false">
+			<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+	</include>
 </includes>
