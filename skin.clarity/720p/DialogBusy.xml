@@ -1,5 +1,6 @@
 <window id="138">
 	<include>FS__OpenClose</include>
+	<zorder>1000</zorder>
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
