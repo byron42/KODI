@@ -1696,6 +1696,149 @@
 								<onclick>ActivateWindow(Videos,Playlists,Return)</onclick>
 								<visible>!Skin.HasSetting(HideVideoPlaylistButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandVideosSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandVideosSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3072,return)</onclick>
+								<!-- <visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideVideosAddCustomButton)</visible> -->
+							</item>
+							<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--'''''''''''''''''''''''''''''''''''' CUSTOM VIDEOS SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							
+							
+							<!-- <include name="CustomMenuItem_HomeLink"> -->
+								<!-- <param name="id" value="1"/> -->
+								<!-- <param name="description" value="custom plugin 1"/> -->
+								<!-- <param name="TextColor" value="cc497F49"/> -->
+								<!-- <param name="label" value="system.addontitle(Skin.String(VideosSubMenuBtn1))"/> -->
+								<!-- <param name="label2" value="system.addontitle(Skin.String(VideosSubMenuBtn1))"/> -->
+								<!-- <param name="onclick" value="RunAddon($INFO[Skin.String(VideosSubMenuBtn1)])"/> -->
+								<!-- <param name="visible" value="Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + !String.IsEmpty(VideosSubMenuBtn1) + Skin.HasSetting(EditVideosSubMenuBtn1)"/> -->
+							<!-- </include> -->
+							<!-- <item id="1"> -->
+								<!-- <description>Custom Plugin Button 1</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn1-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn1-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[system.addontitle(Skin.String(VideosSubMenuBtn1))][/COLOR]</label> -->
+								<!-- <label2>$INFO[system.addontitle(Skin.String(VideosSubMenuBtn1))]</label2> -->
+								<!-- <onclick>RunAddon($INFO[Skin.String(VideosSubMenuBtn1)])</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + !String.IsEmpty(VideosSubMenuBtn1) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="1"> -->
+								<!-- <description>Custom Favourite Button 1</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn1-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn1-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn1Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn1-NAME) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible> -->
+							<!-- </item> -->
+						<!--Button2-->
+							<!-- <item id="2"> -->
+								<!-- <description>Custom Plugin Button 2</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn2-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn2-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn2-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn2-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn2-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn2-label) + Skin.String(VideosSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="2"> -->
+								<!-- <description>Custom Favourite Button 2</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn2-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn2-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn2Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn2-NAME) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible> -->
+							<!-- </item> -->
+						<!--Button3-->
+							<!-- <item id="3"> -->
+								<!-- <description>Custom Plugin Button 3</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn3-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn3-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn3-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn3-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn3-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn3-label) + Skin.String(VideosSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="3"> -->
+								<!-- <description>Custom Favourite Button 3</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn3-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn3-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn3Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn3-NAME) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible> -->
+							<!-- </item> -->
+						<!--Button4-->
+							<!-- <item id="4"> -->
+								<!-- <description>Custom Plugin Button 4</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn4-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn4-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn4-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn4-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn4-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn4-label) + Skin.String(VideosSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="4"> -->
+								<!-- <description>Custom Favourite Button 4</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn4-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn4-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn4Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn4-NAME) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible> -->
+							<!-- </item> -->
+						<!--Button5-->
+							<!-- <item id="5"> -->
+								<!-- <description>Custom Plugin Button 5</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn6-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn6-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn6-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn6-label) + Skin.String(VideosSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="5"> -->
+								<!-- <description>Custom Favourite Button 5</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn6-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn6-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible> -->
+							<!-- </item> -->
+						<!--Button6-->
+							<!-- <item id="6"> -->
+								<!-- <description>Custom Plugin Button 6</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn6-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn6-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn6-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn6-label) + Skin.String(VideosSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="6"> -->
+								<!-- <description>Custom Favourite Button 6</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn6-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn6-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible> -->
+							<!-- </item> -->
+						<!--Button7-->
+							<!-- <item id="7"> -->
+								<!-- <description>Custom Plugin Button 7</description> -->
+								<!-- <icon>$INFO[Skin.String(VideosSubMenuBtn7-pluginicon)]</icon> -->
+								<!-- <thumb>$INFO[Skin.String(VideosSubMenuBtn7-pluginicon)]</thumb> -->
+								<!-- <label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn7-label)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn7-label)]</label2> -->
+								<!-- <onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn7-pluginfolder)]/)</onclick> -->
+								<!-- <visible>Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn7-label) + Skin.String(VideosSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible> -->
+							<!-- </item> -->
+							<!-- <item id="7"> -->
+								<!-- <description>Custom Favourite Button 7</description> -->
+								<!-- <label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn7-NAME)][/COLOR]</label> -->
+								<!-- <label2>$INFO[Skin.String(VideosSubMenuBtn7-NAME)]</label2> -->
+								<!-- <onclick>$INFO[Skin.String(VideosSubMenuBtn7Param)]</onclick> -->
+								<!-- <visible>Skin.string(VideosSubMenuBtn7-NAME) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible> -->
+							<!-- </item> -->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 			
