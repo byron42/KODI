@@ -208,236 +208,61 @@
 						<ondown>931</ondown>
 						<onleft>1931</onleft>
 						<onright>920</onright>
-						<!--<include>ControlsOpenCloseAnim</include>-->
-						<control type="radiobutton" id="2301">
-							<description>Edit Button 1</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 1</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn1)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn1)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,1)</onfocus>
-						</control>
-						<control type="radiobutton" id="2302">
-							<description>Edit Button 2</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 2</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn2)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn2)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,2)</onfocus>
-						</control>
-						<control type="radiobutton" id="2303">
-							<description>Edit Button 3</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 3</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn3)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn3)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,3)</onfocus>
-						</control>
-						<control type="radiobutton" id="2304">
-							<description>Edit Button 4</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 4</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn4)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn4)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,4)</onfocus>
-						</control>
-						<control type="radiobutton" id="2305">
-							<description>Edit Button 5</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 5</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn5)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn5)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,5)</onfocus>
-						</control>
-						<control type="radiobutton" id="2306">
-							<description>Edit Button 6</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 6</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn6)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn6)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,6)</onfocus>
-						</control>
-						<control type="radiobutton" id="2307">
-							<description>Edit Button 7</description>
-							<width>345</width>
-							<height>55</height>
-							<font>font_28_B</font>
-							<textcolor>Grey</textcolor>
-							<focusedcolor>ThemeColor</focusedcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<align>left</align>
-							<textoffsetx>10</textoffsetx>
-							<textoffsety>7</textoffsety>
-							<textwidth>215</textwidth>
-							<aligny>top</aligny>
-							<radioposx>248</radioposx>
-							<radioposy>-8</radioposy>
-							<radiowidth>90</radiowidth>
-							<radioheight>68</radioheight>
-							<textureradioonfocus>PowerButtonOn.png</textureradioonfocus>
-							<textureradioonnofocus>PowerButtonOn.png</textureradioonnofocus>
-							<textureradioofffocus>PowerButtonOff.png</textureradioofffocus>
-							<textureradiooffnofocus>PowerButtonOff.png</textureradiooffnofocus>
-							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
-							<texturenofocus border="0,10,2,10">ListViewItemBack.png</texturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
-							<pulseonselect>false</pulseonselect>
-							<label>$LOCALIZE[31001] 7</label>
-							<colordiffuse>BFFFFFFF</colordiffuse>
-							<selected>Skin.HasSetting(EditMoviesSubMenuBtn7)</selected>
-							<onclick>Skin.ToggleSetting(EditMoviesSubMenuBtn7)</onclick>
-							<onfocus>Skin.SetString(SelectedExpandedBtn,7)</onfocus>
-						</control>
+				<!--CATEGORY BUTTONS-->
+						<include name="Main_Button_Switch">
+							<param name="id" value="2301"/>
+							<param name="description" value="Main Button 1"/>
+							<param name="label" value="$LOCALIZE[31001] 1"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn1"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,1"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2302"/>
+							<param name="description" value="Main Button 2"/>
+							<param name="label" value="$LOCALIZE[31001] 2"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn2"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,2"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2303"/>
+							<param name="description" value="Main Button 3"/>
+							<param name="label" value="$LOCALIZE[31001] 3"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn3"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,3"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2304"/>
+							<param name="description" value="Main Button 4"/>
+							<param name="label" value="$LOCALIZE[31001] 4"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn4"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,4"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2305"/>
+							<param name="description" value="Main Button 5"/>
+							<param name="label" value="$LOCALIZE[31001] 5"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn5"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,5"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2306"/>
+							<param name="description" value="Main Button 6"/>
+							<param name="label" value="$LOCALIZE[31001] 6"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn6"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,6"/>
+						</include>
+						<include name="Main_Button_Switch">
+							<param name="id" value="2307"/>
+							<param name="description" value="Main Button 7"/>
+							<param name="label" value="$LOCALIZE[31001] 7"/>
+							<param name="Button_StringID" value="EditMoviesSubMenuBtn7"/>
+							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,7"/>
+						</include>
 					</control>
 				<!--BUTTON PARAMS. =======================================================================-->		
 					<control type="group" id="920">  <!--Movies BTN(1)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 1 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,1)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn1)</enable>
@@ -496,111 +321,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn1-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn1-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn1)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn1-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn1Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn1-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn1-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -671,149 +415,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn1))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn1-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn1)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn1Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn1Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn1-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn1)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn1Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn1Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn1-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn1)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn1-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn1)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn1,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn1Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn1Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn1-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn1)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn1-Plugin)"/>
+							</include>
 						</control>
 					</control>
 					
 					<control type="group" id="920">  <!--Movies BTN(2)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 2 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,2)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn2)</enable>
@@ -829,7 +470,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx><!--150-->
+							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
@@ -859,7 +500,7 @@
 							<enable>false</enable>
 							<label>( 2 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -872,111 +513,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn2-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn2-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn2)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn2-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn2Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn2-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn2-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -986,7 +546,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx><!--80-->
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -997,7 +557,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -1005,7 +565,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx><!--120-->
+							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -1034,7 +594,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -1047,149 +607,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn2))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn2-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331"> 
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn2)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn2Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn2Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn2-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn2)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn2Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn2Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn2-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn2)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn2-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn2)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn2,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn2Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn2Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn2-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn2)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn2-Plugin)"/>
+							</include>
 						</control>
 					</control>
 					
 					<control type="group" id="920">  <!--Movies BTN(3)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 3 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,3)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn3)</enable>
@@ -1227,7 +684,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<align>left</align>
@@ -1235,7 +692,7 @@
 							<enable>false</enable>
 							<label>( 3 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -1248,111 +705,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn3-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn3-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn3)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn3-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn3Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn3-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn3-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -1362,7 +738,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -1373,7 +749,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -1410,7 +786,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -1423,149 +799,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn3))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn3-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn3)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn3Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn3Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn3-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn3)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn3Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn3Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn3-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn3)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn3-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn3)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn3,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn3Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn3Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn3-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn3)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn3-Plugin)"/>
+							</include>
 						</control>
 					</control>
-
+					
 					<control type="group" id="920">  <!--Movies BTN(4)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 4 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,4)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn4)</enable>
@@ -1603,7 +876,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<align>left</align>
@@ -1611,7 +884,7 @@
 							<enable>false</enable>
 							<label>( 4 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -1624,111 +897,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn4-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn4-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn4)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn4-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn4Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn4-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn4-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -1738,7 +930,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -1749,7 +941,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -1786,7 +978,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -1799,149 +991,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn4))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn4-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn4)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn4Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn4Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn4-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn4)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn4Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn4Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn4-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn4)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn4-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn4)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn4,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn4Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn4Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn4-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn4)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn4-Plugin)"/>
+							</include>
 						</control>
 					</control>
-
+					
 					<control type="group" id="920">  <!--Movies BTN(5)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 5 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,5)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn5)</enable>
@@ -1979,7 +1068,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<align>left</align>
@@ -1987,7 +1076,7 @@
 							<enable>false</enable>
 							<label>( 5 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->			
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -2000,111 +1089,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn5-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn5-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn5)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn5-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn5Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn5-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn5-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -2114,7 +1122,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -2125,7 +1133,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -2162,7 +1170,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -2175,149 +1183,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn5))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn5-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn5)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn5Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn5Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn5-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn5)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn5Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn5Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn5-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn5)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn5-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn5)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn5,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn5Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn5Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn5-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn5)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn5-Plugin)"/>
+							</include>
 						</control>
 					</control>
-
+					
 					<control type="group" id="920">  <!--Movies BTN(6)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 6 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,6)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn6)</enable>
@@ -2355,7 +1260,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<align>left</align>
@@ -2363,7 +1268,7 @@
 							<enable>false</enable>
 							<label>( 6 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -2376,111 +1281,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn6-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn6-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn6)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn6-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn6Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn6-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn6-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -2490,7 +1314,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -2501,7 +1325,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -2538,7 +1362,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -2551,149 +1375,46 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn6))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn6-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn6)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn6Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn6Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn6-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn6)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn6Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn6Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn6-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn6)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn6-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn6)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn6,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn6Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn6Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn6-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn6)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn6-Plugin)"/>
+							</include>
 						</control>
 					</control>
-
+					
 					<control type="group" id="920">  <!--Movies BTN(7)-->
-						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
-						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation> -->
+						<!-- <animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation> -->
 						<description>Edit Button 7 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,7)</visible>
 						<enable>Skin.HasSetting(EditMoviesSubMenuBtn7)</enable>
@@ -2731,7 +1452,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<align>left</align>
@@ -2739,7 +1460,7 @@
 							<enable>false</enable>
 							<label>( 7 )</label>
 						</control>
-					<!--BUTTON TYPE *********************************************************-->			
+					<!--BUTTON TYPE *********************************************************-->	
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<left>250</left>
@@ -2752,112 +1473,30 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<control type="radiobutton" id="2320">
-								<description>Script Type</description>
-								<width>234</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff7C4849</textcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="10">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31601]</label>
-								<selected>Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-scriptloc)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-scriptlabel)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-Script,SCRIPT)</onclick>
-							</control>
-							<control type="radiobutton" id="2321">
-								<description>Plugin Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<disabledcolor>Grey</disabledcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>114</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<colordiffuse>-</colordiffuse>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31602]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN)</selected>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Favourite,FAVOURITE)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Pluginname)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Pluginfolder)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-label)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-Plugin,PLUGIN)</onclick>
-							</control>
-							<control type="radiobutton" id="2322">
-								<description>Favourite Type</description>
-								<width>230</width>
-								<height>50</height>
-								<font>font_28_B</font>
-								<textcolor>ff4B4C7F</textcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>4</textoffsety>
-								<aligny>top</aligny>
-								<textwidth>210</textwidth>
-								<radioposx>190</radioposx>
-								<radioposy>-</radioposy>
-								<radiowidth>22</radiowidth>
-								<radioheight>22</radioheight>
-								<textureradioonfocus>radio-button-focus.png</textureradioonfocus>
-								<textureradioonnofocus>radio-button-focus.png</textureradioonnofocus>
-								<textureradioofffocus>radio-button-nofocus.png</textureradioofffocus>
-								<textureradiooffnofocus>radio-button-nofocus.png</textureradiooffnofocus>
-								<texturefocus border="5">search-focus.png</texturefocus>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>$LOCALIZE[31603]</label>				
-								<selected>Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE)</selected>	
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Script,SCRIPT)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-Plugin,PLUGIN)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7Param)</onclick>
-								<onclick>Skin.Reset(MoviesSubMenuBtn7-NAME)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-Favourite,FAVOURITE)</onclick>
-							</control>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2321"/>
+								<param name="description" value="Plugin Type"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="label" value="$LOCALIZE[31602]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn7-Favourite,FAVOURITE)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn7)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn7-label)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Type">
+								<param name="id" value="2322"/>
+								<param name="description" value="FAV Type"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="label" value="$LOCALIZE[31603]"/>
+								<param name="selected" value="Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE)"/>
+								<param name="onclick.1" value="Skin.Reset(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+								<param name="onclick.2" value="Skin.Reset(MoviesSubMenuBtn7Param)"/>
+								<param name="onclick.3" value="Skin.Reset(MoviesSubMenuBtn7-NAME)"/>
+								<param name="onclick.4" value="Skin.SetString(MoviesSubMenuBtn7-Favourite,FAVOURITE)"/>
+							</include>
 						</control>
-						
+			<!--INSTRUCTIONS-->
 						<control type="button">
 							<description>Button Properties Label</description>
 							<left>238</left>
@@ -2867,7 +1506,7 @@
 							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
@@ -2878,7 +1517,7 @@
 							<label>$LOCALIZE[31447]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions</description>
+							<description>Button Favourites Instructions</description>
 							<left>238</left>
 							<top>415</top>
 							<width>760</width>
@@ -2915,7 +1554,7 @@
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
 						</control>
-					<!--BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<left>258</left>
@@ -2928,143 +1567,40 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<control type="button" id="2330">
-								<description>SCRIPT Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7-scriptlabel)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-scriptlabel)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2335">
-								<description>PLUGIN Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7-label)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-label)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2334">
-								<description>FAV Label</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7-NAME)]</label>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7-NAME)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2335"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="description" value="plugin label"/>
+								<param name="StringLabel" value="system.addontitle(Skin.String(MoviesSubMenuBtn7))"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Label">
+								<param name="id" value="2334"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="description" value="FAV Label"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn7-NAME)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+							</include>
 						<!--paths-->
-							<control type="button" id="2331">
-								<description>Script Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff7C4849</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7-Scriptloc)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,MoviesSubMenuBtn7)</onclick>
-								<onclick>Skin.SetString(MoviesSubMenuBtn7Param,RunScript($INFO[Skin.String(MoviesSubMenuBtn7Path)]))</onclick>-->
-								<visible>!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2332">
-								<description>Plugin Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>cc497F49</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7-Pluginfolder),,/]$INFO[Skin.String(MoviesSubMenuBtn7-Pluginname)]</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,MoviesSubMenuBtn7)</onclick>
-								<visible>!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
-							<control type="button" id="2333">
-								<description>Favourite Path</description>
-								<width>720</width>
-								<height>50</height>
-								<font>font_26_B</font>
-								<aligny>top</aligny>
-								<textoffsety>6</textoffsety>
-								<textcolor>ff4B4C7F</textcolor>
-								<focusedcolor>ThemeColor</focusedcolor>
-								<shadowcolor>ShadowColor</shadowcolor>
-								<align>left</align>
-								<textoffsetx>10</textoffsetx>
-								<textwidth>700</textwidth>
-								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
-								<texturenofocus border="10">button-nofocus.png</texturenofocus>
-								<pulseonselect>false</pulseonselect>
-								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(MoviesSubMenuBtn7Param)]</label>
-								<onclick>Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn7Param)</onclick>
-								<onclick>Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn7-NAME)</onclick>
-								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn7)</onclick>
-								<onclick>ActivateWindow(3080)</onclick>
-								<visible>Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(MoviesSubMenuBtn7-Script,SCRIPT)</visible>
-							</control>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2332"/>
+								<param name="description" value="Plugin Path"/>
+								<param name="TextColor" value="cc497F49"/>
+								<param name="StringLabel" value="skin.string(MoviesSubMenuBtn7)"/>
+								<param name="onclick.1" value="Skin.SetAddon(MoviesSubMenuBtn7,xbmc.addon.video)"/>
+								<param name="visible" value="!Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN)"/>
+							</include>
+							<include name="CustomMenuItem_Path">
+								<param name="id" value="2333"/>
+								<param name="description" value="FAV Path"/>
+								<param name="TextColor" value="ff4B4C7F"/>
+								<param name="StringLabel" value="Skin.String(MoviesSubMenuBtn7Param)"/>
+								<param name="onclick.1" value="Skin.SetString(CustomBtnFavouritesParam,MoviesSubMenuBtn7Param)"/>
+								<param name="onclick.2" value="Skin.SetString(CustomBtnFavouritesName,MoviesSubMenuBtn7-NAME)"/>
+								<param name="onclick.3" value="XBMC.RunScript(special://skin/scripts/favourites.py,MoviesSubMenuBtn7)"/>
+								<param name="onclick.4" value="ActivateWindow(3080)"/>
+								<param name="visible" value="Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(MoviesSubMenuBtn7-Plugin)"/>
+							</include>
 						</control>
 					</control>
 				</control>
@@ -3110,13 +1646,6 @@
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 						<label>$LOCALIZE[192] $LOCALIZE[535] </label>
-						<onclick>Skin.Reset(MoviesSubMenuBtn1-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn2-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn3-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn4-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn5-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn6-Script,SCRIPT)</onclick>
-						<onclick>Skin.Reset(MoviesSubMenuBtn7-Script,SCRIPT)</onclick>
 						<onclick>Skin.Reset(MoviesSubMenuBtn1-Plugin,PLUGIN)</onclick>
 						<onclick>Skin.Reset(MoviesSubMenuBtn2-Plugin,PLUGIN)</onclick>
 						<onclick>Skin.Reset(MoviesSubMenuBtn3-Plugin,PLUGIN)</onclick>
