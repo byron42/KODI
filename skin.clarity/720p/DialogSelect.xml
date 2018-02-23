@@ -11,8 +11,8 @@
 <!--||| NORMAL ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 <!--=============================================================================================================================================-->
 		<control type="group">
-			<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible>
-			<animation effect="fade" start="0" end="100" time="300" delay="0">VisibleChange</animation>
+			<!-- <visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible> -->
+			<!-- <animation effect="fade" start="0" end="100" time="300" delay="0">VisibleChange</animation> -->
 			<!---->
 			<animation effect="fade" start="100" end="100" delay="400" condition="Window.IsActive(Home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
@@ -28,7 +28,10 @@
 				-->
 
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->			
-				<control type="group">	
+				<control type="group">
+					<!-- <animation effect="fade" start="0" end="100" delay="300" time="250" condition="[Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]">WindowOpen</animation> -->
+					<!-- <animation effect="fade" start="100" end="0" delay="0" time="150" condition="[Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]">WindowClose</animation> -->
+					<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible>
 					<!--*********************************** Custom/Universal *********************************************-->
 					<include>UniversalClassicBackground</include>
 					<include>UniversalCustomBackground</include>
@@ -93,6 +96,7 @@
 				
 	<!--(((TOP BAR)))=============================================================================================================================-->			
 				<control type="group" id="505">	
+					<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible>
 					<description>Top Bar Area</description>
 					<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 					<include>TopBarImage</include>
@@ -118,11 +122,15 @@
 			
 	<!--(((CONTROLS)))============================================================================================================================-->				
 				<control type="group">	
-					<animation type="WindowOpen" reversible="false">
+					<animation effect="fade" start="0" end="100" delay="250" time="250" condition="[Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" delay="0" time="150" condition="[Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]">WindowClose</animation>
+					<!-- ![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)] -->
+					
+					<animation type="WindowOpen" condition="![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]" reversible="false">
 						<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
 						<effect type="fade" start="0" end="100" time="300" />
 					</animation>
-					<animation type="WindowClose" reversible="false">
+					<animation type="WindowClose" condition="![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]" reversible="false">
 						<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
 						<effect type="fade" start="100" end="0" time="250" />
 					</animation>
@@ -413,7 +421,8 @@
 <!--||| CUSTOM_SUBS_ONLY ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 <!--=============================================================================================================================================-->		
 		<control type="group">	
-			<visible>Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)</visible>
+			<!-- <visible>Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)</visible> -->
+			<visible>false</visible>
 			<animation effect="fade" start="0" end="100" time="300" delay="0">VisibleChange</animation>
 			<!--BackgroundOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" delay="200" time="400" >WindowOpen</animation> 
