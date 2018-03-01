@@ -212,7 +212,8 @@
 		<control type="group" id="456">
 			<left>950</left>
 			<top>4</top>
-			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+			<!-- <animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation> -->
+			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar)">Conditional</animation>
 			<animation effect="slide" end="-275,0" time="0" condition="Player.HasMedia">Conditional</animation>
 			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
 			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
@@ -255,7 +256,8 @@
 	
 	<include name="TopBarMediaNotification">
 		<control type="group">
-			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+			<!-- <animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation> -->
+			<animation effect="slide" end="-130,0" time="0" condition="Window.IsActive(VolumeBar)">Conditional</animation>
 			<animation effect="slide" end="0,0" time="0" condition="[Skin.HasSetting(HideGlobalSearchIcon) | !System.HasAddon(script.globalsearch)] + !System.HasMediadvd">Conditional</animation>
 			<animation effect="slide" end="-30,0" time="0" condition="[[!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + !System.HasMediadvd] | [[Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch)] + System.HasMediadvd]">Conditional</animation>
 			<animation effect="slide" end="-60,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + System.HasAddon(script.globalsearch) + System.HasMediadvd">Conditional</animation>
@@ -266,7 +268,8 @@
 			<animation effect="fade" end="100" time="200">Visible</animation>
 			<animation effect="fade" end="0" time="200">Hidden</animation>
 			<!--MediaPlayingNotificationShiftAnim3-->
-			<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+			<!-- <animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation> -->
+			<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar)">Conditional</animation>
 			<control type="image">
 				<width>270</width>
 				<height>35</height>

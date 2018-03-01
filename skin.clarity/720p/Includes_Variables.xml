@@ -365,16 +365,16 @@
 	
 <!--(((COVERFLOW VARS)))======================================-->
 	<variable name="CoverFlowBorder">
-		<value condition="Window.IsActive(VideoLibrary) + !Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CFIB_Case.png</value>
-		<value condition="Window.IsActive(VideoLibrary) + Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CoverFlowBorderF.png</value>
+		<value condition="Window.IsActive(Videos) + !Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CFIB_Case.png</value>
+		<value condition="Window.IsActive(Videos) + Skin.HasSetting(HideCoverFlowCase)">CoverFlow/CoverFlowBorderF.png</value>
 	</variable>
 	<variable name="ViewCoverFlowLabel1">
-		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label2]</value>
-		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label]</value>
+		<value condition="Container.Content(Albums) + !Window.IsVisible(Music)">$INFO[ListItem.Label2]</value>
+		<value condition="Container.Content(Songs) + !Window.IsVisible(Music)">$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="ViewCoverFlowLabel2">
-		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label][/B]</value>
-		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label2][/B]</value>
+		<value condition="Container.Content(Albums) + !Window.IsVisible(Music)">[B]$INFO[ListItem.Label][/B]</value>
+		<value condition="Container.Content(Songs) + !Window.IsVisible(Music)">[B]$INFO[ListItem.Label2][/B]</value>
 	</variable>
 	<!-- <variable name="ViewCoverFlowLabel2_VL"> -->
 		<!-- <value condition="Container.Content(Movies)">$INFO[ListItem.StarRating]</value> -->
@@ -399,10 +399,10 @@
 	</variable>
 <!---->
 	<variable name="ListViewExtraInfo">
-		<value condition="!IsEmpty(ListItem.PlotOutline) + [Window.IsVisible(videos) | Window.IsVisible(MusicFiles)]">$INFO[ListItem.PlotOutline]</value>
-		<value condition="IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot) + [Window.IsVisible(videos) | Window.IsVisible(MusicFiles)]">$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.PlotOutline) + [Window.IsVisible(videos) | Window.IsVisible(Music)]">$INFO[ListItem.PlotOutline]</value>
+		<value condition="IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot) + [Window.IsVisible(videos) | Window.IsVisible(Music)]">$INFO[ListItem.Plot]</value>
 		<!--((( These will need to be figured out!!! )))-->
-		<!-- <value condition="!IsEmpty(ListItem.Property(Album_Description)) + Window.IsVisible(MusicFiles)">$INFO[ListItem.Property(Album_Description)]</value> -->
+		<!-- <value condition="!IsEmpty(ListItem.Property(Album_Description)) + Window.IsVisible(Music)">$INFO[ListItem.Property(Album_Description)]</value> -->
 		<!-- <value condition="!IsEmpty(ListItem.Property(Addon.Summary) + Window.IsVisible(Programs)">$INFO[ListItem.Property(Addon.Summary)]</value> -->
 	</variable>
 <!--(((LI2 VARS)))======================================-->	

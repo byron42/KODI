@@ -462,7 +462,7 @@
 					<left>90</left>
 					<top>150</top>
 					<usecontrolcoords>true</usecontrolcoords>	
-					<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
+					<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(Music)] + Skin.HasSetting(HideMusicListCover)]
 					+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
 					<animation effect="slide" end="10,0" condition="!Control.IsVisible(151)">Conditional</animation>
 					<!--SmallIcons-->

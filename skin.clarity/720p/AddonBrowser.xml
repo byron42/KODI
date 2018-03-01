@@ -726,7 +726,7 @@
 					<animation effect="fade" start="0" end="100" time="400" delay="300" reversible="false" >Visible</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<control type="group">
-						<visible>!Window.IsActive(VideoLibrary) + !Window.IsActive(MusicFiles) + !Window.IsActive(MusicLibrary)</visible>
+						<visible>!Window.IsActive(Videos) + !Window.IsActive(Music)</visible>
 						<control type="image">
 							<description>InfoPaneIcon</description>
 							<animation effect="slide" start="0,0" end="0,-30" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
@@ -794,7 +794,7 @@
 				<!--**********************************************************************************-->
 				<control type="grouplist" id="3003">
 					<!-- <visible>ControlGroup(3003).HasFocus</visible> -->
-					<!-- <animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary) | Window.IsActive(musiclibrary)">Conditional</animation> -->
+					<!-- <animation effect="slide" end="-10,0" condition="Window.IsActive(Videos) | Window.IsActive(Music)">Conditional</animation> -->
 					<description>Sort By Menu</description>
 					<left>370</left>
 					<top>75</top>
@@ -902,7 +902,7 @@
 				
 				<control type="grouplist" id="3004">
 					<!-- <visible>ControlGroup(3004).HasFocus</visible> -->
-					<!-- <animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary) | Window.IsActive(musiclibrary)">Conditional</animation> -->
+					<!-- <animation effect="slide" end="-10,0" condition="Window.IsActive(Videos) | Window.IsActive(Music)">Conditional</animation> -->
 					<description>other options menu</description>
 					<left>620</left>
 					<top>75</top>

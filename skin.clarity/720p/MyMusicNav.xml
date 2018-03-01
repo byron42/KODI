@@ -260,7 +260,7 @@
 						<onleft>850</onleft>
 						<onright>150</onright>
 						<!--<scrolltime>250</scrolltime>-->
-						<visible>Window.IsActive(MusicLibrary) + [Container.Content(Albums) | Container.Content(Songs)]</visible>
+						<visible>Window.IsActive(Music) + [Container.Content(Albums) | Container.Content(Songs)]</visible>
 						<itemlayout height="185" width="605">				
 							<control type="image">
 								<description>BUTTON BG</description>
@@ -880,7 +880,7 @@
 						<ondown>63</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<visible>Window.IsActive(MusicFiles) | Container.Content(Songs) | Container.Content(Albums)</visible>
+						<visible>Container.Content(Songs) | Container.Content(Albums)</visible>
 						<itemlayout height="270" width="240">				
 							<control type="image">
 								<description>Cover</description>
@@ -1381,7 +1381,7 @@
 						<ondown>68</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>			
-						<visible>Window.IsActive(MusicLibrary)</visible>
+						<visible>Window.IsActive(Music)</visible>
 						<itemlayout height="36">
 							<control type="image">
 								<width>1240</width>
@@ -1653,7 +1653,7 @@
 							<preloaditems>2</preloaditems>
 							<onup>850</onup>
 							<ondown>150</ondown>
-							<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+							<visible>Window.IsActive(Music) + Container.Content(Albums)</visible>
 							<itemlayout width="142">
 								<control type="image">
 									<description>Background</description>
@@ -2259,7 +2259,7 @@
 						<control type="group">      				
 						<!--MenuBarOptions-->
 							<control type="grouplist" id="212">
-								<visible>Window.IsVisible(MusicLibrary)</visible>
+								<visible>Window.IsVisible(Music)</visible>
 								<left>80</left>
 								<top>-3</top>
 								<width>ScreenWidth</width>
@@ -2354,7 +2354,7 @@
 									<width>4</width>
 									<height>34</height>
 									<texture>menu-bar-separator.png</texture><!---->
-									<visible>Window.IsVisible(MusicLibrary)</visible>
+									<visible>Window.IsVisible(Music)</visible>
 								</control>
 								<control type="button" id="403">			
 									<description>Search</description>
@@ -2446,7 +2446,7 @@
 						<control type="group">   			
 						<!--MenuBar Extra Options-->
 							<control type="grouplist" id="212">
-								<visible>Window.IsVisible(MusicLibrary)</visible>
+								<visible>Window.IsVisible(Music)</visible>
 								<left>80</left>
 								<top>-3</top>
 								<width>ScreenWidth</width>
@@ -2484,9 +2484,9 @@
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>-</colordiffuse>
 									<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
-									<onclick>ReplaceWindow(MusicFiles)</onclick>
-									<selected>Window.IsVisible(MusicLibrary)</selected>
-									<visible>Window.IsVisible(MusicLibrary)</visible>
+									<onclick>ReplaceWindow(Music)</onclick>
+									<selected>Window.IsVisible(Music)</selected>
+									<visible>Window.IsVisible(Music)</visible>
 								</control>
 								<control type="image" id="247">
 									<description>MenuBarSeparator</description>
@@ -2688,7 +2688,7 @@
 					<animation effect="fade" start="0" end="100" time="400" delay="300" reversible="false" >Visible</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<control type="group">
-						<visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible>
+						<visible>Window.IsActive(Music)</visible>
 						<control type="image">
 							<description>InfoPaneIcon</description>
 							<animation effect="slide" start="0,0" end="0,-30" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>

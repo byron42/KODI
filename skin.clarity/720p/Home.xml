@@ -31,7 +31,7 @@
 					<!-- <usealttexture>Skin.HasSetting(UseHighResBG)</usealttexture> -->
 					<!-- <visible>Container(850).HasFocus(1) + IsEmpty(Container(850).ListItem.Thumb)</visible> -->
 				<!-- </control> -->
-				<!-- <include name="HomeBackgroundImage"> -->
+				<!-- <include content="HomeBackgroundImage"> -->
 					<!-- <param name="ContainerImage" value="background-programs-home"/> -->
 					<!-- <param name="ContainerPosition" value="1"/> -->
 				<!-- </include> -->
@@ -1711,7 +1711,7 @@
 						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 							
 							
-							<!-- <include name="CustomMenuItem_HomeLink"> -->
+							<!-- <include content="CustomMenuItem_HomeLink"> -->
 								<!-- <param name="id" value="1"/> -->
 								<!-- <param name="description" value="custom plugin 1"/> -->
 								<!-- <param name="TextColor" value="cc497F49"/> -->

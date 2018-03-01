@@ -23,7 +23,7 @@
 			</control>
 			<!--******************************************************************************************-->
 			<control type="grouplist" id="200">
-				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary)">Conditional</animation>
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(Videos)">Conditional</animation>
 				<description>Video Library Search</description>
 				<left>782</left>
 				<top>75</top>
@@ -32,7 +32,7 @@
 				<onleft>Dialog.Close(3005)</onleft>
 				<onright>Dialog.Close(3005)</onright>
 				<orientation>vertical</orientation>
-				<visible>Window.IsActive(VideoLibrary)</visible>
+				<visible>Window.IsActive(Videos)</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -65,7 +65,7 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[14022]...</label>
 					<onclick>Dialog.Close(3005)</onclick>
-					<onclick>SendClick(VideoLibrary,8)</onclick>
+					<onclick>SendClick(Videos,8)</onclick>
 				</control>
 				<control type="button" id="2">
 					<description>IMDB</description>
@@ -83,7 +83,7 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[368]...</label>
 					<onclick>Dialog.Close(3005)</onclick>
-					<onclick>SendClick(VideoLibrary,9)</onclick>
+					<onclick>SendClick(Videos,9)</onclick>
 				</control>
 				<control type="image">
 					<!--MenuBarItemBottomBorder-->
@@ -95,13 +95,13 @@
 			</control>
 			<control type="grouplist" id="200">
 				<description>Music Library Search</description>
-				<animation effect="slide" end="-10,0" condition="Window.IsActive(musiclibrary)">Conditional</animation>
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(Music)">Conditional</animation>
 				<left>782</left>
 				<top>75</top>
 				<width>350</width>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
-				<visible>Window.IsActive(MusicLibrary)</visible>
+				<visible>Window.IsActive(Music)</visible>
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
@@ -134,7 +134,7 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[14022]...</label>
 					<onclick>Dialog.Close(3005)</onclick>
-					<onclick>SendClick(MusicLibrary,8)</onclick>
+					<onclick>SendClick(Music,8)</onclick>
 				</control>
 				<control type="button" id="2">
 					<description>CDDB</description>
@@ -152,7 +152,7 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[255]...</label>
 					<onclick>Dialog.Close(3005)</onclick>
-					<onclick>SendClick(MusicLibrary,17)</onclick>
+					<onclick>SendClick(Music,17)</onclick>
 				</control>
 				<control type="image">
 					<!--MenuBarItemBottomBorder-->

@@ -42,6 +42,13 @@
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
 				</animation>
+				<animation type="Visible">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="Hidden">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
 				<control type="image">
 					<description>MenuBarBigItemTopBorder</description>
 					<width>400</width>
@@ -170,7 +177,7 @@
 					<label>$LOCALIZE[31108]</label>
 					<onclick>Container.SetViewMode(55)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+					<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 				</control>
 			 -->	
 				
@@ -249,7 +256,7 @@
 					<label>$LOCALIZE[31107]</label>
 					<onclick>Container.SetViewMode(54)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos)]</visible>
+					<visible>Window.IsActive(Videos) + [Container.Content(Movies) | Container.Content(MusicVideos)]</visible>
 				</control>
 			 -->	
 				
@@ -274,7 +281,7 @@
 					<label>$LOCALIZE[31107]</label>
 					<onclick>Container.SetViewMode(63)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(MusicFiles) | Container.Content(Songs) | Container.Content(Albums)</visible>
+					<visible>Window.IsActive(Music) | Container.Content(Songs) | Container.Content(Albums)</visible>
 				</control>
 			 -->	
 				
@@ -323,7 +330,7 @@
 					<label>$LOCALIZE[31111]</label>
 					<onclick>Container.SetViewMode(58)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+					<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 				</control>
 			 -->	
 				
@@ -356,7 +363,7 @@
 					<label>$LOCALIZE[31110]</label>
 					<onclick>Container.SetViewMode(59)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+					<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 				</control>
 			 -->	
 				
@@ -413,7 +420,7 @@
 					<label>$LOCALIZE[31118]</label>
 					<onclick>Container.SetViewMode(78)</onclick>
 					<onclick>Dialog.Close(3060)</onclick>
-					<visible>Window.IsActive(MusicLibrary)</visible>
+					<visible>Window.IsActive(Music)</visible>
 				</control>
 			 -->
 			 

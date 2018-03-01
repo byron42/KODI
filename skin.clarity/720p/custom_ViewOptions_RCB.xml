@@ -36,7 +36,7 @@
 				<onup>900</onup>
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
-				<!-- <visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible> -->
+				<!-- <visible>Window.IsActive(Music) | Window.IsActive(Music)</visible> -->
 				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>

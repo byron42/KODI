@@ -265,7 +265,7 @@
 				<description>Menu Bar Area</description>
 				<height>34</height>
 				<top>44</top>
-				<visible>!Window.Previous(Programs) + !Window.Previous(Pictures) + !Window.Previous(MusicLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(videos) + !Window.Previous(Weather) + !Window.Previous(3001)</visible>
+				<visible>!Window.Previous(Programs) + !Window.Previous(Pictures) + !Window.Previous(Music) + !Window.Previous(Videos) + !Window.Previous(videos) + !Window.Previous(Weather) + !Window.Previous(3001)</visible>
 				<control type="image">
 					<description>Menu Bar Image</description>
 					<width>ScreenWidth</width>

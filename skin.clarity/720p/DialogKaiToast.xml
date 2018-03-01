@@ -1,9 +1,9 @@
 <window id="107">
 	<!-- <defaultcontrol always="true"></defaultcontrol> -->
 	<allowoverlay>no</allowoverlay>
-	<animation effect="fade"  end="100" delay="" time="500" condition="Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)">Conditional</animation>
+	<animation effect="fade"  end="100" delay="" time="500" condition="Window.IsActive(Videos) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)">Conditional</animation>
 	<!--DialogOpenCloseAnim-->
-	<animation type="WindowOpen" condition="![Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]" reversible="false">
+	<animation type="WindowOpen" condition="![Window.IsActive(Videos) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]" reversible="false">
 		<effect type="zoom" start="30" end="100" center="225,667" easing="out" tween="back" time="600" />
 		<effect type="fade" start="0" end="100" time="300" />
 	</animation>
@@ -14,8 +14,8 @@
 	<coordinates>
 		<system>1</system>
 		<origin x="50" y="627">Window.IsActive(Home)</origin>
-		<origin x="90" y="627">!Window.IsActive(Home) + ![Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]</origin>
-		<origin x="865" y="630">!Window.IsActive(Home) + [Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]</origin>
+		<origin x="90" y="627">!Window.IsActive(Home) + ![Window.IsActive(Videos) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]</origin>
+		<origin x="865" y="630">!Window.IsActive(Home) + [Window.IsActive(Videos) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]</origin>
 	</coordinates>
 	<controls>
 		<control type="group">

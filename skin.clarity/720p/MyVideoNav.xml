@@ -15,7 +15,7 @@
 			<control type="group"> <!--BG's-->
 				<visible>!IntegerGreaterThan(system.memory(used.percent),85)</visible>
 				<control type="group"> <!--If Fanart is Visible then fade...-->
-					<animation effect="fade" start="100" end="0" time="500" delay="0" condition="!IsEmpty(Listitem.Property(Fanart_Image)) + [Window.IsActive(VideoLibrary) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)]]">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="500" delay="0" condition="!IsEmpty(Listitem.Property(Fanart_Image)) + [Window.IsActive(Videos) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)]]">Conditional</animation>
 					<!--*********************************** Custom/Universal *********************************************-->
 					<include>UniversalClassicBackground</include>
 					<include>UniversalCustomBackground</include>
@@ -121,7 +121,7 @@
 				<control type="group">
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="group">
-						<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos)] + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)] | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
+						<visible>Window.IsActive(Videos) + [Container.Content(Movies) | Container.Content(MusicVideos)] + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)] | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
 							<top>0</top>
@@ -147,7 +147,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]
+						<visible>Window.IsActive(Videos) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]
 						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideTVShowsListFanart)] 
 						| [Control.IsVisible(60) + !Skin.HasSetting(HideTVShowsEpisodeViewFanart)]
 						| [Control.IsVisible(61) + !Skin.HasSetting(HideTVShowsListInfoFanart)]
@@ -575,7 +575,7 @@
 						<onleft>850</onleft>
 						<onright>150</onright>
 						<!--<scrolltime>250</scrolltime>-->
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 						<itemlayout height="185" width="605">				
 							<control type="image">
 								<description>BUTTON BG</description>
@@ -1152,7 +1152,7 @@
 						<onleft>850</onleft>
 						<onright>150</onright>
 						<itemgap></itemgap>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 						<itemlayout height="30" width="500">
 							<control type="image">
 								<width>520</width>
@@ -1302,7 +1302,7 @@
 					</control>	
 				<!--FAKE LIST FOR MEDIA INFO BG-->
 					<control type="group">	
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 						<!--ControlsOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -1507,7 +1507,7 @@
 					<control type="group">					
 						<left>516</left>
 						<top>342</top>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 						<control type="image">
 							<description>Cover</description>
 							<width>203</width>
@@ -1586,7 +1586,7 @@
 						<preloaditems>2</preloaditems>
 						<onup>505</onup>
 						<ondown>150</ondown>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies) + !Skin.HasSetting(ChangeMoviesFanartViewFocusPos)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies) + !Skin.HasSetting(ChangeMoviesFanartViewFocusPos)</visible>
 						<animation effect="slide" end="0,-51" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
 						<itemlayout width="116">
 							<control type="image">
@@ -2231,7 +2231,7 @@
 							<itemgap></itemgap>
 							<onup>505</onup>
 							<ondown>150</ondown>
-							<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
+							<visible>Window.IsActive(Videos) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
 							<itemlayout width="200">
 								<control type="image">
 									<description>Cover</description>
@@ -3941,7 +3941,7 @@
 							<left>5</left>
 							<top>78</top>
 							<visible>!Container.OnNext + !Container.OnPrevious</visible>
-							<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+							<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 							<!--ControlsOpenCloseAnim-->
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
@@ -4250,7 +4250,7 @@
 						<scrolltime>100</scrolltime>
 						<orientation>horizontal</orientation>
 						<preloaditems>2</preloaditems>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 						<itemlayout height="214" width="143" condition="Skin.HasSetting(HideMenuBar)">
 						<!--MenuBarVizItemLayout-->
 							<control type="image">
@@ -4796,7 +4796,7 @@
 						<ondown>56</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(TVShows)</visible>
 						<itemlayout height="185" width="605">
 					
 					<!--(((BANNERS)))======================================================================-->
@@ -4808,7 +4808,7 @@
 								<aspectratio>stretch</aspectratio>
 								<!--WideIconViewItemBackgroundFadeAnim-->
 								<animation effect="fade" end="50" condition="true">Conditional</animation>
-								<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+								<visible>Window.IsActive(Videos) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
 							</control>	
 							<control type="image">
 								<description>Cover</description>
@@ -5479,7 +5479,7 @@
 						<ondown>57</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Episodes)</visible>
 						<itemlayout height="185" width="605">				
 							<control type="image">
 								<description>BUTTON BG</description>
@@ -5909,7 +5909,7 @@
 						<ondown>60</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>			
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>			
+						<visible>Window.IsActive(Videos) + Container.Content(Episodes)</visible>			
 						<itemlayout height="36">
 							<control type="image">
 								<width>400</width>
@@ -6218,7 +6218,7 @@
 						<onleft>850</onleft>
 						<onright>150</onright>
 						<itemgap></itemgap>
-						<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes)| Container.Content(Seasons)]</visible>
+						<visible>Window.IsActive(Videos) + [Container.Content(TVShows) | Container.Content(Episodes)| Container.Content(Seasons)]</visible>
 						<itemlayout height="30" width="500">
 							<control type="image">
 								<width>520</width>
@@ -6368,7 +6368,7 @@
 					</control>
 				<!--INFO/PLOT/ICONS ======= (TVShows_POSTERS) ========================================================-->
 					<control type="group">	
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
 						<!--ControlsOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -6577,7 +6577,7 @@
 					
 				<!--INFO/PLOT/ICONS ======= (TVShows_BANNERS) ========================================================-->
 					<control type="group">	
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
 						<!--ControlsOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -6784,7 +6784,7 @@
 					
 				<!--INFO/PLOT/ICONS ======= (Seasons) ================================================================-->
 					<control type="group">	
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Seasons)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Seasons)</visible>
 						<!--ControlsOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -6972,7 +6972,7 @@
 
 				<!--INFO/PLOT/ICONS ======= (Episodes) ===============================================================-->
 					<control type="group">	
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+						<visible>Window.IsActive(Videos) + Container.Content(Episodes)</visible>
 						<!--ControlsOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -7124,7 +7124,7 @@
 								<width>383</width>
 								<height>5</height>
 								<texture>separator3.png</texture>	
-								<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+								<visible>Window.IsActive(Videos) + Container.Content(Episodes)</visible>
 							</control>
 							<control type="textbox">
 								<description>Plot</description>
@@ -7137,7 +7137,7 @@
 								<align>justify</align>
 								<label>[B]$INFO[ListItem.Plot][/B]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
-								<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(VideoLibrary) + Container.Content(Episodes) + !Skin.HasSetting(HideEpisodesListInfoPlot)</visible>
+								<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(Videos) + Container.Content(Episodes) + !Skin.HasSetting(HideEpisodesListInfoPlot)</visible>
 								<!--ControlsOpenCloseAnim-->
 								<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 								<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -7376,7 +7376,7 @@
 						<ondown>62</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>			
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>		
+						<visible>Window.IsActive(Videos) + Container.Content(Episodes)</visible>		
 						<itemlayout height="200">
 							<control type="image">
 								<width>ScreenWidth</width>
@@ -7699,7 +7699,7 @@
 								<onleft>184</onleft>
 								<onright>-</onright>
 								<orientation>horizontal</orientation>
-								<visible>Window.IsVisible(VideoLibrary)</visible>
+								<visible>Window.IsVisible(Videos)</visible>
 								<control type="image" id="350">
 									<description>MenuBarSeparator</description>
 									<width>4</width>
@@ -7885,7 +7885,7 @@
 								<onleft>184</onleft>
 								<onright>-</onright>
 								<orientation>horizontal</orientation>
-								<visible>Window.IsVisible(VideoLibrary)</visible>
+								<visible>Window.IsVisible(Videos)</visible>
 								<control type="image" id="99">
 									<description>MenuBarSeparator</description>
 									<width>4</width>
@@ -7914,7 +7914,7 @@
 									<texturenofocus>-</texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
 									<onclick>ReplaceWindow(videos)</onclick>
-									<selected>Window.IsVisible(VideoLibrary)</selected>
+									<selected>Window.IsVisible(Videos)</selected>
 								</control>
 								<control type="image" id="247">
 									<!--MenuBarSeparator-->
@@ -7971,14 +7971,14 @@
 									<colordiffuse>-</colordiffuse>
 									<texturenofocus>-</texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[20367][/UPPERCASE]</label>
-									<visible>Window.IsVisible(VideoLibrary)</visible>
+									<visible>Window.IsVisible(Videos)</visible>
 								</control>
 								<control type="image" id="104">
 									<description>MenuBarSeparator</description>
 									<width>4</width>
 									<height>34</height>
 									<texture>menu-bar-separator.png</texture><!---->
-									<visible>Window.IsVisible(VideoLibrary)</visible>
+									<visible>Window.IsVisible(Videos)</visible>
 								</control>
 								<control type="radiobutton" id="16">
 									<description>Party Mode</description>
@@ -8069,7 +8069,7 @@
 				<include>SystemTray</include>
 				<!--*************************************************************************************************-->
 				
-				<!--******************************** (BreadCrumbVideoLibrary) ***************************************-->
+				<!--******************************** (BreadCrumbVideos) ***************************************-->
 				<include>BreadCrumbButtonLeft</include>
 				<include>BreadCrumbHome</include>
 				<!--*************************************************************************************************-->
@@ -8203,7 +8203,7 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<!--NOT LIBRARY ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
 					<control type="group">
-						<visible>!Window.IsActive(VideoLibrary) + !Window.IsActive(MusicFiles) + !Window.IsActive(MusicLibrary)</visible>
+						<visible>!Window.IsActive(Videos) + !Window.IsActive(Music)</visible>
 						<control type="image"> <!--InfoPaneIcon-->	
 							<animation effect="slide" start="0,0" end="0,-30" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 							<left>10</left>
@@ -8236,7 +8236,7 @@
 					</control>
 				<!--VIDEO LIBRARY ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="group">
-						<visible>Window.IsActive(VideoLibrary)</visible>
+						<visible>Window.IsActive(Videos)</visible>
 					<!--label positioning bg
 						<control type="image"> 
 							<left>76</left>

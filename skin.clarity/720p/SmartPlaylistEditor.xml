@@ -42,7 +42,7 @@
 			<!--************************************************************************************************************-->
 			
 			<control type="group">
-				<animation effect="fade" start="0" end="100" time="250" delay="300" condition="Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(MusicLibrary) | Window.IsActive(VideoLibrary) | Window.IsActive(smartplaylistrule) | Window.IsActive(NumericInput) | Window.IsActive(VirtualKeyboard)">WindowOpen</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="300" condition="Window.IsActive(28) | Window.IsActive(500) | Window.IsActive(Music) | Window.IsActive(Videos) | Window.IsActive(smartplaylistrule) | Window.IsActive(NumericInput) | Window.IsActive(VirtualKeyboard)">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="250" delay="0" >WindowClose</animation>
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(NumericInput) | Window.IsActive(VirtualKeyboard) | Window.IsActive(smartplaylistrule)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="300" condition="!Window.IsActive(smartplaylistrule)">Conditional</animation>
