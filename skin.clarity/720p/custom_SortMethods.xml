@@ -25,7 +25,7 @@
 			</control>
 			<!--**********************************************************************************-->
 			<control type="grouplist" id="200">
-				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary) | Window.IsActive(musiclibrary)">Conditional</animation>
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(Videos) | Window.IsActive(Music)">Conditional</animation>
 				<description>Sort By Menu</description>
 				<left>370</left>
 				<top>75</top>
@@ -69,7 +69,7 @@
 					<label>$LOCALIZE[551]</label>
 					<onclick>Container.SetSortMethod(1)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>!Container.Content(Albums) + ![Window.IsActive(VideoLibrary) + Container.Content(Movies)] + !IsEmpty(Container.FolderPath)</visible>
+					<visible>!Container.Content(Albums) + ![Window.IsActive(Videos) + Container.Content(Movies)] + !IsEmpty(Container.FolderPath)</visible>
 				</control>
 				<control type="togglebutton" id="17">
 					<description>Name</description>
@@ -91,7 +91,7 @@
 					<label>$LOCALIZE[551]</label>
 					<onclick>Container.SetSortMethod(24)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+					<visible>Window.IsActive(Videos) + Container.Content(Movies)</visible>
 				</control>
 				<control type="togglebutton" id="2">
 					<description>Type</description>
@@ -157,10 +157,10 @@
 					<label>$LOCALIZE[563]</label>
 					<onclick>Container.SetSortMethod(27)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>Window.IsActive(MusicLibrary) + Container.Content(Songs)</visible>
+					<visible>Window.IsActive(Music) + Container.Content(Songs)</visible>
 				</control>
 				<control type="togglebutton" id="20">
-					<description>Rating (VideoLibrary)</description>
+					<description>Rating (Videos)</description>
 					<width>350</width>
 					<height>38</height>
 					<font>font_24_B</font>
@@ -179,7 +179,7 @@
 					<label>$LOCALIZE[563]</label>
 					<onclick>Container.SetSortMethod(18)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Episodes)]</visible>
+					<visible>Window.IsActive(Videos) + [Container.Content(Movies) | Container.Content(Episodes)]</visible>
 				</control>
 				
 				<control type="togglebutton" id="4">
@@ -268,7 +268,7 @@
 					<label>$LOCALIZE[552]</label>
 					<onclick>Container.SetSortMethod(3)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(videos) | Window.IsActive(Scripts) | Container.Content(Episodes)] + !IsEmpty(Container.FolderPath)</visible>
+					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(Music) | Window.IsActive(videos) | Window.IsActive(Scripts) | Container.Content(Episodes)] + !IsEmpty(Container.FolderPath)</visible>
 				</control>
 				<control type="togglebutton" id="8">
 					<description>Size</description>
@@ -290,7 +290,7 @@
 					<label>$LOCALIZE[553]</label>
 					<onclick>Container.SetSortMethod(4)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(videos) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
+					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(Music) | Window.IsActive(videos) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
 				</control>
 				<control type="togglebutton" id="9">
 					<description>File</description>
@@ -312,7 +312,7 @@
 					<label>$LOCALIZE[561]</label>
 					<onclick>Container.SetSortMethod(5)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(videos) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
+					<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(Music) | Window.IsActive(videos) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
 				</control>
 				<control type="togglebutton" id="10">
 					<description>Album</description>
@@ -378,7 +378,7 @@
 					<label>$LOCALIZE[562]</label>
 					<onclick>Container.SetSortMethod(17)</onclick>
 					<onclick>Dialog.Close(3003)</onclick>
-					<visible>[Window.IsActive(MusicLibrary) | Window.IsActive(VideoLibrary)] + [Container.Content(Albums) | Container.Content(Movies) | Container.Content(TVShows)]</visible>
+					<visible>[Window.IsActive(Music) | Window.IsActive(Videos)] + [Container.Content(Albums) | Container.Content(Movies) | Container.Content(TVShows)]</visible>
 				</control>
 				<control type="togglebutton" id="13">
 					<description>Track</description>

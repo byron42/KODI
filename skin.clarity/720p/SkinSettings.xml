@@ -4386,30 +4386,30 @@
 					-->
 						
 				<!--UNIVERSAL-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="1500"/>
 							<param name="label" value="31937"/>
 							<param name="category" value="Universal"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="1501"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Universal"/>
 							<param name="enable" value="false"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="1502"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Universal"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="1503"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Universal"/>
 							<param name="enable" value="false"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="1504"/>
 							<param name="label" value="31052"/>
 							<param name="label.3" value="31061"/>
@@ -4417,41 +4417,41 @@
 							<param name="category" value="Universal"/>
 							<param name="enable" value="false"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="1505"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Universal"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="2505"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Universal"/>
 						</include>
 				<!--PROGRAMS-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="100"/>
 							<param name="label" value="0"/>
 							<param name="category" value="Programs"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="101"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Programs"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="102"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Programs"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="103"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Programs"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="104"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="0"/>
@@ -4460,41 +4460,41 @@
 							<param name="category" value="Programs"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="105"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Programs"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="205"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Programs"/>
 						</include>
 				<!--PICTURES-->		
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="106"/>
 							<param name="label" value="1"/>
 							<param name="category" value="Pictures"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="107"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Pictures"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="108"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Pictures"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="109"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Pictures"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="110"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="1"/>
@@ -4503,41 +4503,41 @@
 							<param name="category" value="Pictures"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="111"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Pictures"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="211"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Pictures"/>
 						</include>
 				<!--MUSIC-->		
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="112"/>
 							<param name="label" value="2"/>
 							<param name="category" value="Music"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="113"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Music"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="114"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Music"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="115"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Music"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="116"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="2"/>
@@ -4546,41 +4546,41 @@
 							<param name="category" value="Music"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="117"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Music"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="217"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Music"/>
 						</include>
 				<!--VIDEOS-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="118"/>
 							<param name="label" value="3"/>
 							<param name="category" value="Videos"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="119"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Videos"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="120"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Videos"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="121"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Videos"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="122"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="3"/>
@@ -4589,41 +4589,41 @@
 							<param name="category" value="Videos"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="123"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Videos"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="223"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Videos"/>
 						</include>
 				<!--MOVIES-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="142"/>
 							<param name="label" value="342"/>
 							<param name="category" value="Movies"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="143"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Movies"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="144"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Movies"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="145"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Movies"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="146"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="342"/>
@@ -4632,41 +4632,41 @@
 							<param name="category" value="Movies"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="147"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Movies"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="247"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Movies"/>
 						</include>
 				<!--TV SHOWS-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="136"/>
 							<param name="label" value="20343"/>
 							<param name="category" value="TVShows"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="137"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="TVShows"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="138"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="TVShows"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="139"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="TVShows"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="140"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="20343"/>
@@ -4675,41 +4675,41 @@
 							<param name="category" value="TVShows"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="141"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="TVShows"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="241"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="TVShows"/>
 						</include>
 				<!--GENERAL-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="124"/>
 							<param name="label" value="128"/>
 							<param name="category" value="General"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="125"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="General"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="126"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="General"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="127"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="General"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="128"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="128"/>
@@ -4718,42 +4718,42 @@
 							<param name="category" value="General"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="129"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="General"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="229"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="General"/>
 						</include>
 				<!--SCRIPTS (gone)-->
 				<!--SYSTEM-->
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="130"/>
 							<param name="label" value="13000"/>
 							<param name="category" value="System"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="131"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="System"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="132"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="System"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="133"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="System"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="134"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="13000"/>
@@ -4762,12 +4762,12 @@
 							<param name="category" value="System"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="135"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="System"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="235"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="System"/>
@@ -4976,30 +4976,30 @@
 							</animation>
 						</control>
 				<!--ADD-ONS-->	
-						<include name="BackgroundCategoryButton">
+						<include content="BackgroundCategoryButton">
 							<param name="id" value="170"/>
 							<param name="label" value="24001"/>
 							<param name="category" value="Addons"/>
 						</include>
-						<include name="BackgroundImageTypeButton">
+						<include content="BackgroundImageTypeButton">
 							<param name="id" value="171"/>
 							<param name="label" value="31057"/>
 							<param name="altlabel" value="31056"/>
 							<param name="category" value="Addons"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundImagePathButton">
+						<include content="BackgroundImagePathButton">
 							<param name="id" value="172"/>
 							<param name="label" value="31054"/>
 							<param name="category" value="Addons"/>
 						</include>
-						<include name="BackgroundMultiImagePathButton">
+						<include content="BackgroundMultiImagePathButton">
 							<param name="id" value="173"/>
 							<param name="label" value="31055"/>
 							<param name="category" value="Addons"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundApplyAllWindows">
+						<include content="BackgroundApplyAllWindows">
 							<param name="id" value="174"/>
 							<param name="label" value="31052"/>
 							<param name="label.2" value="24001"/>
@@ -5008,12 +5008,12 @@
 							<param name="category" value="Addons"/>
 							<param name="enable" value="true"/>
 						</include>
-						<include name="BackgroundDimButton">
+						<include content="BackgroundDimButton">
 							<param name="id" value="175"/>
 							<param name="label" value="31060"/>
 							<param name="category" value="Addons"/>
 						</include>
-						<include name="BackgroundCategoryDefault">
+						<include content="BackgroundCategoryDefault">
 							<param name="id" value="275"/>
 							<param name="label" value="13278"/>
 							<param name="category" value="Addons"/>

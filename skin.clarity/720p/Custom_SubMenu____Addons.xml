@@ -209,49 +209,49 @@
 						<onleft>1931</onleft>
 						<onright>920</onright>
 				<!--CATEGORY BUTTONS-->
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2301"/>
 							<param name="description" value="Main Button 1"/>
 							<param name="label" value="$LOCALIZE[31001] 1"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn1"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,1"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2302"/>
 							<param name="description" value="Main Button 2"/>
 							<param name="label" value="$LOCALIZE[31001] 2"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn2"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,2"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2303"/>
 							<param name="description" value="Main Button 3"/>
 							<param name="label" value="$LOCALIZE[31001] 3"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn3"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,3"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2304"/>
 							<param name="description" value="Main Button 4"/>
 							<param name="label" value="$LOCALIZE[31001] 4"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn4"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,4"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2305"/>
 							<param name="description" value="Main Button 5"/>
 							<param name="label" value="$LOCALIZE[31001] 5"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn5"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,5"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2306"/>
 							<param name="description" value="Main Button 6"/>
 							<param name="label" value="$LOCALIZE[31001] 6"/>
 							<param name="Button_StringID" value="EditAdd_onsSubMenuBtn6"/>
 							<param name="Expanded_Button_StringID" value="SelectedExpandedBtn,6"/>
 						</include>
-						<include name="Main_Button_Switch">
+						<include content="Main_Button_Switch">
 							<param name="id" value="2307"/>
 							<param name="description" value="Main Button 7"/>
 							<param name="label" value="$LOCALIZE[31001] 7"/>
@@ -321,7 +321,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -332,7 +332,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn1-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn1-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -415,14 +415,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn1))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -430,7 +430,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -438,7 +438,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn1,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -513,7 +513,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -524,7 +524,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn2-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn2-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -607,14 +607,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn2))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -622,7 +622,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -630,7 +630,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn2,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -705,7 +705,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -716,7 +716,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn3-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn3-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -799,14 +799,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn3))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -814,7 +814,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -822,7 +822,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn3,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -897,7 +897,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -908,7 +908,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn4-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn4-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -991,14 +991,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn4))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -1006,7 +1006,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1014,7 +1014,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn4,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1089,7 +1089,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1100,7 +1100,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn5-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn5-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1183,14 +1183,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn5))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -1198,7 +1198,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1206,7 +1206,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn5,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1281,7 +1281,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1292,7 +1292,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn6-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn6-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1375,14 +1375,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn6))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -1390,7 +1390,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1398,7 +1398,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn6,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1473,7 +1473,7 @@
 							<ondown>2331</ondown>
 							<onleft>931</onleft>
 							<onright>-</onright>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2321"/>
 								<param name="description" value="Plugin Type"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1484,7 +1484,7 @@
 								<param name="onclick.3" value="Skin.Reset(Add_onsSubMenuBtn7-label)"/>
 								<param name="onclick.4" value="Skin.SetString(Add_onsSubMenuBtn7-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Type">
+							<include content="CustomMenuItem_Type">
 								<param name="id" value="2322"/>
 								<param name="description" value="FAV Type"/>
 								<param name="TextColor" value="ff4B4C7F"/>
@@ -1567,14 +1567,14 @@
 							<onleft>2301</onleft>
 							<onright>-</onright>
 						<!--labels-->
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2335"/>
 								<param name="TextColor" value="cc497F49"/>
 								<param name="description" value="plugin label"/>
 								<param name="StringLabel" value="system.addontitle(Skin.String(Add_onsSubMenuBtn7))"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Label">
+							<include content="CustomMenuItem_Label">
 								<param name="id" value="2334"/>
 								<param name="TextColor" value="ff4B4C7F"/>
 								<param name="description" value="FAV Label"/>
@@ -1582,7 +1582,7 @@
 								<param name="visible" value="Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN)"/>
 							</include>
 						<!--paths-->
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2332"/>
 								<param name="description" value="Plugin Path"/>
 								<param name="TextColor" value="cc497F49"/>
@@ -1590,7 +1590,7 @@
 								<param name="onclick.1" value="Skin.SetAddon(Add_onsSubMenuBtn7,xbmc.addon.video)"/>
 								<param name="visible" value="!Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN)"/>
 							</include>
-							<include name="CustomMenuItem_Path">
+							<include content="CustomMenuItem_Path">
 								<param name="id" value="2333"/>
 								<param name="description" value="FAV Path"/>
 								<param name="TextColor" value="ff4B4C7F"/>

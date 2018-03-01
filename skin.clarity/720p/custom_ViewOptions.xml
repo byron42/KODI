@@ -55,28 +55,28 @@
 				
 				
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1003"/>
 					<param name="ViewOption" value="Thumbnail Hide Label (music)"/>
 					<param name="label.1" value="31042"/>
 					<param name="StringID" value="HideMusicThumbnailLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,63) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]"/>
 				</include>
-				<!-- <include name="CustomViewOptionsButton"> -->
+				<!-- <include content="CustomViewOptionsButton"> -->
 					<!-- <param name="id" value="1004"/> -->
 					<!-- <param name="ViewOption" value="List Hide Cover (music)"/> -->
 					<!-- <param name="label.1" value="31045"/> -->
 					<!-- <param name="StringID" value="HideMusicListCover"/> -->
 					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52)"/> -->
 				<!-- </include> -->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1005"/>
 					<param name="ViewOption" value="List Hide Fanart (music)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideMusicListFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1032"/>
 					<param name="ViewOption" value="Music Wide Slim List Hide Fanart (music)"/>
 					<param name="label.1" value="31043"/>
@@ -158,38 +158,38 @@
 					<onclick>Container.SetViewMode(67)</onclick>
 					<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1011"/>
 					<param name="ViewOption" value="List Info Hide Fanart (music)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideMusicListInfoFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,62) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10273"/>
 					<param name="ViewOption" value="List View Hide Star Rating  (music)"/>
 					<param name="label.1" value="31015"/>
 					<param name="label.2" value="33067"/>
 					<param name="StringID" value="ListViewHideStarsMusicLibrary"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(MusicLibrary)"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(Music)"/>
 				</include>
-				<!-- <include name="CustomViewOptionsButton"> -->
+				<!-- <include content="CustomViewOptionsButton"> -->
 					<!-- <param name="id" value="10274"/> -->
 					<!-- <param name="ViewOption" value="List View Hide Colored Selector  (music)"/> -->
 					<!-- <param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31015][/COLOR] | "/> -->
 					<!-- <param name="label.1" value="31001"/> -->
 					<!-- <param name="label.2" value="737"/> -->
 					<!-- <param name="StringID" value="ListViewHideThemeColoredSelectorMusicLibrary"/> -->
-					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(MusicLibrary)"/> -->
+					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(Music)"/> -->
 				<!-- </include> -->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10275"/>
 					<param name="ViewOption" value="List View Hide Small Icons  (music)"/>
 					<param name="label.1" value="31015"/>
 					<param name="label.2" value="535"/>
 					<param name="label.3" value="536"/>
 					<param name="StringID" value="ListViewHideSmallIconsMusicLibrary"/>
-					<param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(MusicLibrary)"/>
+					<param name="visible" value="Skin.String(CurrentViewMode,52) + Window.IsActive(Music)"/>
 				</include>
 				<!--<control type="radiobutton" id="1012">
 					<param name="ViewOption" value="Wrap List Info Use Wrap Style 1 (Albums)"/>
@@ -267,49 +267,49 @@
 					<onclick>ReloadSkin()</onclick>
 					<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1015"/>
 					<param name="ViewOption" value="Wrap List Info Hide Media Info Dialog (Albums)"/>
 					<param name="label.1" value="31414"/>
 					<param name="StringID" value="HideMusicWrapListMediaInfoDialog"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1016"/>
 					<param name="ViewOption" value="Wrap List Info Hide Album Case (Albums)"/>
 					<param name="label.1" value="31415"/>
 					<param name="StringID" value="HideMusicWrapListInfoCase"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1017"/>
 					<param name="ViewOption" value="Wrap List Info Hide Description (Albums)"/>
 					<param name="label.1" value="31041"/>
 					<param name="StringID" value="HideMusicWrapListInfoDescription"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1018"/>
 					<param name="ViewOption" value="Wrap List Info Do Not Auto Scroll Description (Albums)"/>
 					<param name="label.1" value="31416"/>
 					<param name="StringID" value="DoNotAutoScrollMusicWrapListInfoDescription"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1019"/>
 					<param name="ViewOption" value="Wrap List Info Hide Wrap List Shadow (Albums)"/>
 					<param name="label.1" value="31421"/>
 					<param name="StringID" value="HideMusicWrapListInfoShadow"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1020"/>
 					<param name="ViewOption" value="Wrap List Info Hide Fanart (Albums)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideMusicWrapListInfoFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,64) + Container.Content(Albums)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1021"/>
 					<param name="ViewOption" value="Do Not Dim Fanart (Global) (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -318,7 +318,7 @@
 					<param name="visible" value="[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,64) | Skin.String(CurrentViewMode,78)]
 					+ [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1022"/>
 					<param name="ViewOption" value="Animate Fanart (Global) (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -327,7 +327,7 @@
 					<param name="visible" value="[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,64) | Skin.String(CurrentViewMode,78)]
 					+ [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1025"/>
 					<param name="ViewOption" value="Wide Icon Hide Scrollbar (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -335,7 +335,7 @@
 					<param name="StringID" value="HideWideIconViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,68)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1026"/>
 					<param name="ViewOption" value="Thumbnail Hide Scrollbar (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -343,7 +343,7 @@
 					<param name="StringID" value="HideThumbnailViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,63)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1028"/>
 					<param name="ViewOption" value="List Info Hide Scrollbar (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -351,7 +351,7 @@
 					<param name="StringID" value="HideListInfoViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,62)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1030"/>
 					<param name="ViewOption" value="List Info 2 Hide Scrollbar (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -359,7 +359,7 @@
 					<param name="StringID" value="HideListInfo2ViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1031"/>
 					<param name="ViewOption" value="Wrap Info Hide Scrollbar (music)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -457,42 +457,42 @@
 				</control>-->
 				
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2002"/>
 					<param name="ViewOption" value="Wide Icon Hide Overlay (movies)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideMoviesWideIconOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,55) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="21039"/>
 					<param name="ViewOption" value="Thumbnail Hide Label (MusicVideos)"/>
 					<param name="label.1" value="31042"/>
 					<param name="StringID" value="HideMoviesThumbnailLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,54) + [Container.Content(Movies) | Container.Content(MusicVideos)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2003"/>
 					<param name="ViewOption" value="Thumbnail Hide Overlay (movies)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideMoviesThumbnailOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,54) + [Container.Content(Movies) | Container.Content(MusicVideos)]"/>
 				</include>
-				<!-- <include name="CustomViewOptionsButton"> -->
+				<!-- <include content="CustomViewOptionsButton"> -->
 					<!-- <param name="id" value="2004"/> -->
 					<!-- <param name="ViewOption" value="List Hide Cover (movies)"/> -->
 					<!-- <param name="label.1" value="31045"/> -->
 					<!-- <param name="StringID" value="HideMoviesListCover"/> -->
 					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52) + Container.Content(Movies)"/> -->
 				<!-- </include> -->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2005"/>
 					<param name="ViewOption" value="List Hide Fanart (movies)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideMoviesListFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2006"/>
 					<param name="ViewOption" value="List Info Hide Plot (movies)"/>
 					<param name="label.1" value="31044"/>
@@ -526,14 +526,14 @@
 					<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
 				</control>
 			-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2008"/>
 					<param name="ViewOption" value="List Info Do Not Auto Scroll Plot (movies)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollMoviesListInfoPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,58) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2009"/>
 					<param name="ViewOption" value="List Info Hide Fanart (movies)"/>
 					<param name="label.1" value="31043"/>
@@ -945,28 +945,28 @@
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
 				</control>-->
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2069"/>
 					<param name="ViewOption" value="Large Poster Hide Plot (movies)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideMoviesLargePosterPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2070"/>
 					<param name="ViewOption" value="Large Poster Use Full Plot (movies)"/>
 					<param name="label.1" value="31420"/>
 					<param name="StringID" value="UseMoviesLargePosterFullPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2071"/>
 					<param name="ViewOption" value="Large Poster Do Not Auto Scroll Plot (movies)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollMoviesLargePosterPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20691"/>
 					<param name="ViewOption" value="Large Poster Hide Media Info (movies)"/>
 					<param name="label.1" value="31015"/>
@@ -974,21 +974,21 @@
 					<param name="StringID" value="HideMoviesLargePosterInfo"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2094"/>
 					<param name="ViewOption" value="Large Poster Hide Plot (TvShows)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideTVShowsLargePosterPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2096"/>
 					<param name="ViewOption" value="Large Poster Do Not Auto Scroll Plot (TvShows)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollTVShowsLargePosterPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20961"/>
 					<param name="ViewOption" value="Large Poster Hide Media Info (TvShows)"/>
 					<param name="label.1" value="31015"/>
@@ -996,7 +996,7 @@
 					<param name="StringID" value="HideSeasonsLargePosterInfo"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20791"/>
 					<param name="ViewOption" value="Large Poster Hide Media Info (TvShows)"/>
 					<param name="label.1" value="31015"/>
@@ -1004,14 +1004,14 @@
 					<param name="StringID" value="HideSeasonsLargePosterInfo"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2100"/>
 					<param name="ViewOption" value="Episode View Hide Plot (TvShows)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideTVShowsEpisodeViewPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,60) + Container.Content(Episodes)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2102"/>
 					<param name="ViewOption" value="Episode View Do Not Auto Scroll Plot (TvShows)"/>
 					<param name="label.1" value="31401"/>
@@ -1141,21 +1141,21 @@
 					<onclick>Skin.ToggleSetting(HideMovies3DWrapViewFanart)</onclick>
 					<visible>Skin.String(CurrentViewMode,74) + Container.Content(Movies)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2082"/>
 					<param name="ViewOption" value="Movies Showcase Split View Hide Plot (Movies)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideMoviesShowcaseSplitViewPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,75) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2083"/>
 					<param name="ViewOption" value="Movies Showcase Split View Use Full Plot (Movies)"/>
 					<param name="label.1" value="31420"/>
 					<param name="StringID" value="UseMoviesShowcaseSplitViewFullPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,75) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2084"/>
 					<param name="ViewOption" value="Movies Showcase Split View Do Not Auto Scroll Plot (Movies)"/>
 					<param name="label.1" value="31401"/>
@@ -1208,7 +1208,7 @@
 					<onclick>Skin.ToggleSetting(DoNotAutoScrollTVShowsBannerListViewPlot)</onclick>
 					<visible>Skin.String(CurrentViewMode,63) + Container.Content(TVShows)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2085"/>
 					<param name="ViewOption" value="Showcase Split View Hide Fanart (Movies)"/>
 					<param name="label.1" value="31043"/>
@@ -1216,21 +1216,21 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,75) + Container.Content(Movies)"/>
 				</include>
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2081"/>
 					<param name="ViewOption" value="Large Poster Hide Overlay (Movies)"/>
 					<param name="label.1" value="31402"/>
 					<param name="StringID" value="HideMoviesLargePosterViewGlossOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2028"/>
 					<param name="ViewOption" value="Large Poster Hide Overlay (Movies)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideMoviesLargePosterViewOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2068"/>
 					<param name="ViewOption" value="Large Poster Hide Fanart (Movies)"/>
 					<param name="label.1" value="31043"/>
@@ -1241,14 +1241,14 @@
 				
 				
 			<!--MOVIES_FANART-->	
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2029"/>
 					<param name="ViewOption" value="Fanart Hide Overlay (Movies)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideMoviesFanartViewOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,59) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20291"/>
 					<param name="ViewOption" value="Fanart Hide WRAPLIST/INFO (Movies)"/>
 					<param name="label.1" value="31015"/>
@@ -1256,35 +1256,35 @@
 					<param name="StringID" value="HideMoviesFanartViewWraplist"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,59) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20292"/>
 					<param name="ViewOption" value="Fanart View Hide Plot (Movies)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideMoviesFanartPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,59) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20971"/>
 					<param name="ViewOption" value="Large Poster Hide Overlay (TVShows)"/>
 					<param name="label.1" value="31402"/>
 					<param name="StringID" value="HideSeasonsLargePosterViewGlossOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2097"/>
 					<param name="ViewOption" value="Large Poster Hide Fanart (TVShows)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideTVShowsLargePosterViewOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2098"/>
 					<param name="ViewOption" value="Large Poster Hide Overlay (TVShows)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideTVShowsLargePosterFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2103"/>
 					<param name="ViewOption" value="Episode View Hide Fanart (TVShows)"/>
 					<param name="label.1" value="31043"/>
@@ -1295,7 +1295,7 @@
 				
 				
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2104"/>
 					<param name="ViewOption" value="Wide List View Hide Fanart (TVShows)"/>
 					<param name="label.1" value="31043"/>
@@ -1327,7 +1327,7 @@
 					<onclick>Skin.ToggleSetting(HideTVShowsEpisodeShowcaseFanart)</onclick>
 					<visible>Skin.String(CurrentViewMode,65) + Container.Content(Episodes)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2130"/>
 					<param name="ViewOption" value="Do Not Dim Fanart (Movies) (Global)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1335,7 +1335,7 @@
 					<param name="StringID" value="DoNotDimMoviesFanart"/>
 					<param name="visible" value="[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,59) | Skin.String(CurrentViewMode,64) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,75)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2031"/>
 					<param name="ViewOption" value="Animate Fanart (Movies) (Global)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1344,70 +1344,70 @@
 					<param name="visible" value="[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,59) | Skin.String(CurrentViewMode,64) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,75)]"/>
 				</include>
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2034"/>
 					<param name="ViewOption" value="Wide Icon Hide Overlay (Episodes)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideEpisodesWideIconOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,57) + Container.Content(Episodes)"/>
 				</include>
-				<!-- <include name="CustomViewOptionsButton"> -->
+				<!-- <include content="CustomViewOptionsButton"> -->
 					<!-- <param name="id" value="2035"/> -->
 					<!-- <param name="ViewOption" value="List Hide Cover (TVShows)"/> -->
 					<!-- <param name="label.1" value="31045"/> -->
 					<!-- <param name="StringID" value="HideTVShowsListCover"/> -->
 					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52) + Container.Content(TVShows)"/> -->
 				<!-- </include> -->
-				<!-- <include name="CustomViewOptionsButton"> -->
+				<!-- <include content="CustomViewOptionsButton"> -->
 					<!-- <param name="id" value="2036"/> -->
 					<!-- <param name="ViewOption" value="List Hide Cover (Episodes)"/> -->
 					<!-- <param name="label.1" value="31045"/> -->
 					<!-- <param name="StringID" value="HideEpisodesListCover"/> -->
 					<!-- <param name="visible" value="Skin.String(CurrentViewMode,52) + Container.Content(Episodes)"/> -->
 				<!-- </include> -->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2037"/>
 					<param name="ViewOption" value="List Hide Fanart (TV Shows)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideTVShowsListFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2038"/>
 					<param name="ViewOption" value="List Info Hide Cover (Episodes)"/>
 					<param name="label.1" value="31045"/>
 					<param name="StringID" value="HideEpisodesListInfoCover"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,61) + Container.Content(Episodes)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2039"/>
 					<param name="ViewOption" value="List Info Hide Plot (TV Shows)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideTVShowsListInfoPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,61) + Container.Content(TVShows)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2040"/>
 					<param name="ViewOption" value="List Info Do Not Auto Scroll Plot (TV Shows)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollTVShowsListInfoPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,61) + Container.Content(TVShows)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2041"/>
 					<param name="ViewOption" value="List Info Hide Plot (Episodes)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideEpisodesListInfoPlot"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,61) + Container.Content(Episodes)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2042"/>
 					<param name="ViewOption" value="List Info Do Not Auto Scroll Plot (Episodes)"/>
 					<param name="label.1" value="31401"/>
 					<param name="StringID" value="DoNotAutoScrollEpisodesListInfoPlot"/>
 					<param name="visible" value="[Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,69)] + Container.Content(Episodes)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2043"/>
 					<param name="ViewOption" value="List Info Hide Fanart (TV Shows)"/>
 					<param name="label.1" value="31043"/>
@@ -1596,7 +1596,7 @@
 					<visible>Skin.String(CurrentViewMode,80) + Container.Content(Episodes)</visible>
 				</control>-->
 				
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2056"/>
 					<param name="ViewOption" value="Do Not Dim Fanart (TV Shows)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1605,7 +1605,7 @@
 					<param name="visible" value="[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)] 
 					+ [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2057"/>
 					<param name="ViewOption" value="Animate Fanart (TV Shows)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1614,7 +1614,7 @@
 					<param name="visible" value="[Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)] 
 					+ [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20611"/>
 					<param name="ViewOption" value="Show Wide Icon Banner Label"/>
 					<param name="label.1" value="31015"/>
@@ -1622,21 +1622,21 @@
 					<param name="StringID" value="ShowWideIconBannerLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,56) + !Skin.HasSetting(UseTVShowsPosterCover)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2061"/>
 					<param name="ViewOption" value="Wide Icon Hide Scrollbar"/>
 					<param name="label.1" value="31025"/>
 					<param name="StringID" value="HideWideIconViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,55) | Skin.String(CurrentViewMode,56) | Skin.String(CurrentViewMode,57)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2062"/>
 					<param name="ViewOption" value="Thumbnail Hide Scrollbar (Movies) (MusicVids)"/>
 					<param name="label.1" value="31025"/>
 					<param name="StringID" value="HideMoviesThumbnailViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,54) + [Container.Content(Movies)| Container.Content(MusicVideos)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2064"/>
 					<param name="ViewOption" value="List Info Hide Scrollbar"/>
 					<param name="label.1" value="31025"/>
@@ -1669,28 +1669,28 @@
 					<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,53)</visible>
 				</control>-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2067"/>
 					<param name="ViewOption" value="Fanart Hide Scrollbar"/>
 					<param name="label.1" value="31025"/>
 					<param name="StringID" value="HideFanartViewScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,59)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20651"/>
 					<param name="ViewOption" value="Large Poster Hide Scrollbar (Movies)"/>
 					<param name="label.1" value="31025"/>
 					<param name="StringID" value="HideLargePosterMoviesScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Movies)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20652"/>
 					<param name="ViewOption" value="Large Poster Hide Scrollbar (seasons)"/>
 					<param name="label.1" value="31025"/>
 					<param name="StringID" value="HideLargePosterSeasonsScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,66) + Container.Content(Seasons)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2087"/>
 					<param name="ViewOption" value="Use Numbers For Ratings (Movies) (Global)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1698,7 +1698,7 @@
 					<param name="StringID" value="NoStars"/>
 					<param name="visible" value="[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,67) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)]"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2058"/>
 					<param name="ViewOption" value="Use Poster For Covers (TV Shows) (Global)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1742,21 +1742,21 @@
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
 				</control>
 		<!--PROGRAMS LARGE POSTER-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="202811"/>
 					<param name="ViewOption" value="Large Poster Hide Overlay (PROGRAMS)"/>
 					<param name="label.1" value="31402"/>
 					<param name="StringID" value="HideGamesLargePosterViewGlossOverlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,100)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="207911"/>
 					<param name="ViewOption" value="Large Poster Hide Wraplist Shadow (PROGRAMS)"/>
 					<param name="label.1" value="31421"/>
 					<param name="StringID" value="HideLargePosterShadow"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,100)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20790"/>
 					<param name="ViewOption" value="Large Poster Use Dark Background (PROGRAMS)"/>
 					<param name="label.1" value="31015"/>
@@ -1765,7 +1765,7 @@
 					<param name="StringID" value="RemovePosterLighterBackgound"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,100)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="206511"/>
 					<param name="ViewOption" value="Large Poster Hide Scrollbar (PROGRAMS)"/>
 					<param name="label.1" value="31025"/>
@@ -1777,7 +1777,7 @@
 				
 				
 	<!-- WIDE ICON GAMES EXPERIMENT **********************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20690"/>
 					<param name="ViewOption" value="Show Wide Icon Banner Label"/>
 					<param name="label.1" value="31015"/>
@@ -1785,7 +1785,7 @@
 					<param name="StringID" value="ShowWideIconBannerLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,560)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20691"/>
 					<param name="ViewOption" value="Wide Icon Hide Scrollbar"/>
 					<param name="label.1" value="31025"/>
@@ -1830,21 +1830,21 @@
 				</control>
 				<description>THESE SHOULD ALL BE GLOBAL</description>
 <!-- ICON **********************************************************************************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1000"/>
 					<param name="ViewOption" value="Icon Hide Label (GLOBAL ICON)"/>
 					<param name="label.1" value="31042"/>
 					<param name="StringID" value="HideIconViewLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,50)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2086"/>
 					<param name="ViewOption" value="Icon View Hide Fanart (GLOBAL ICON)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideIconViewFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,50)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1023"/>
 					<param name="ViewOption" value="Icon Hide Scrollbar (GLOBAL ICON)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1853,21 +1853,21 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,50)"/>
 				</include>
 <!-- BIG ICON ******************************************************************************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1001"/>
 					<param name="ViewOption" value="BigIcon Hide Label (GLOBAL BIG ICON)"/>
 					<param name="label.1" value="31042"/>
 					<param name="StringID" value="HideBigIconViewLabel"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,51)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2089"/>
 					<param name="ViewOption" value="Big Icon View Hide Fanart (GLOBAL BIG ICON)"/>
 					<param name="label.1" value="31043"/>
 					<param name="StringID" value="HideBigIconViewFanart"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,51)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1024"/>
 					<param name="ViewOption" value="Big Icon Hide Scrollbar (GLOBAL BIG ICON)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1876,14 +1876,14 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,51)"/>
 				</include>
 <!-- LIST ***********************************************************************************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2004"/>
 					<param name="ViewOption" value="List Hide Cover (GLOBAL LIST)"/>
 					<param name="label.1" value="31045"/>
 					<param name="StringID" value="HideListCover"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10270"/>
 					<param name="ViewOption" value="List View Hide Star Rating (GLOBAL LIST)"/>
 					<param name="label.1" value="31015"/>
@@ -1891,7 +1891,7 @@
 					<param name="StringID" value="ListViewHideStars"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10271"/>
 					<param name="ViewOption" value="List View Hide Colored Selector (GLOBAL LIST)"/>
 					<param name="label.global" value="$LOCALIZE[31015] - "/>
@@ -1900,7 +1900,7 @@
 					<param name="StringID" value="ListViewHideThemeColoredSelector"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10272"/>
 					<param name="ViewOption" value="List View Hide Small Icons (GLOBAL LIST)"/>
 					<param name="label.global" value="$LOCALIZE[31015] - "/>
@@ -1909,7 +1909,7 @@
 					<param name="StringID" value="ListViewHideSmallIcons"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10277"/>
 					<param name="ViewOption" value="List View Show Extra Info (GLOBAL LIST)"/>
 					<param name="label.global" value="$LOCALIZE[31015] - "/>
@@ -1917,7 +1917,7 @@
 					<param name="StringID" value="ListViewHideExtraInfo"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,52)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10276"/>
 					<param name="ViewOption" value="List Hide Scrollbar (GLOBAL LIST)"/>
 					<param name="label.1" value="31025"/>
@@ -1927,7 +1927,7 @@
 				
 				
 <!-- LIST INFO 2 ****************************************************************************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2014"/>
 					<param name="ViewOption" value="List Info 2 Use Full Plot (GLOBAL LI2)"/>
 					<param name="label.1" value="31420"/>
@@ -1935,7 +1935,7 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
 		<!--check this-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1010"/>
 					<param name="ViewOption" value="List Info 2 Do Not Auto Scroll Description (GLOBAL LI2)"/>
 					<param name="label.1" value="31416"/>
@@ -1943,21 +1943,21 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
 		<!--check this-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2013"/>
 					<param name="ViewOption" value="List Info 2 Hide Description (GLOBAL LI2)"/>
 					<param name="label.1" value="31044"/>
 					<param name="StringID" value="HideListInfo2Description"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2016"/>
 					<param name="ViewOption" value="List Info 2 Hide Overlay (GLOBAL LI2)"/>
 					<param name="label.1" value="31046"/>
 					<param name="StringID" value="HideListInfo2Overlay"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="2020"/>
 					<param name="ViewOption" value="List Info 2 View Hide Star Rating (GLOBAL LI2)"/>
 					<param name="label.1" value="31015"/>
@@ -1965,7 +1965,7 @@
 					<param name="StringID" value="ListInfo2ViewHideStars"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,67)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="1030"/>
 					<param name="ViewOption" value="List Info 2 Hide Scrollbar (GLOBAL LI2)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -1975,7 +1975,7 @@
 				</include>
 				
 <!-- COVER FLOW ************************************************************************************-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10317"/>
 					<param name="ViewOption" value="CoverFlow Hide Plot (GLOBAL)"/>
 					<param name="label.1" value="31044"/>
@@ -1984,7 +1984,7 @@
 					<param name="enable" value="true"/>
 				</include>
 				<!--*********-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10313"/>
 					<param name="ViewOption" value="CoverFlow Hide Case (GLOBAL)"/>
 					<param name="label.1" value="31402"/>
@@ -1993,7 +1993,7 @@
 					<param name="enable" value="false"/>
 				</include>
 				<!--*********-->
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10416"/>
 					<param name="ViewOption" value="CoverFlow Use Taller Icons(Global)"/>
 					<param name="label.1" value="21480"/>
@@ -2003,7 +2003,7 @@
 					<param name="enable" value="true"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,572)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10415"/>
 					<param name="ViewOption" value="CoverFlow (Global)"/>
 					<param name="label.global" value="[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | "/>
@@ -2011,7 +2011,7 @@
 					<param name="StringID" value="HideCoverFlowScrollbar"/>
 					<param name="visible" value="Skin.String(CurrentViewMode,572)"/>
 				</include>
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="10314"/>
 					<param name="ViewOption" value="CoverFlow Hide Hi-lite for reflections (GLOBAL)"/>
 					<param name="label.1" value="31015"/>
@@ -2021,7 +2021,7 @@
 					<param name="visible" value="Skin.String(CurrentViewMode,572)"/>
 				</include>
 <!-- POSTER WRAP ************************************************************************************-->			
-				<include name="CustomViewOptionsButton">
+				<include content="CustomViewOptionsButton">
 					<param name="id" value="20791"/>
 					<param name="ViewOption" value="Large Poster Hide Wraplist Shadow (GLOBAL)"/>
 					<param name="label.1" value="31421"/>
