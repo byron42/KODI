@@ -66,7 +66,7 @@
 			<control type="textbox" id="9">
 				<description>?</description>
 				<left>20</left>
-				<!-- <top>67</top> -->
+				<top>67</top>
 				<width>560</width>
 				<height>140</height>
 				<align>left</align>

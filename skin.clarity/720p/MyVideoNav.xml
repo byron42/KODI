@@ -14,8 +14,11 @@
 	<!--(((BACKGROUNDS)))=============================================================================================================================-->		
 			<control type="group"> <!--BG's-->
 				<visible>!IntegerGreaterThan(system.memory(used.percent),85)</visible>
-				<control type="group"> <!--If Fanart is Visible then fade...-->
-					<animation effect="fade" start="100" end="0" time="500" delay="0" condition="!IsEmpty(Listitem.Property(Fanart_Image)) + [Window.IsActive(Videos) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)]]">Conditional</animation>
+				<control type="group"> 
+					<!--(FanartFadeOut)-->
+					<animation effect="fade" start="20" end="200" time="200">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<visible>!Control.IsVisible(1121)</visible>
 					<!--*********************************** Custom/Universal *********************************************-->
 					<include>UniversalClassicBackground</include>
 					<include>UniversalCustomBackground</include>
@@ -118,83 +121,9 @@
 				</control>		
 				
 				<!--********************************** BackgroundFanart ***********************************************-->
-				<control type="group">
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="group">
-						<visible>Window.IsActive(Videos) + [Container.Content(Movies) | Container.Content(MusicVideos)] + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideBigIconViewFanart)] | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>300</fadetime>
-							<!--KenBurnsAnim-->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-						</control>	
-						<control type="image">
-							<description>Dim Background</description>
-							<top>0</top>
-							<width>ScreenWidth</width>
-							<height>ScreenHeight</height>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMoviesFanart)</visible>
-							<!--BackgroundFanartDimAnim-->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-						</control>
-					</control>
-					<control type="group">
-						<visible>Window.IsActive(Videos) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]
-						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideTVShowsListFanart)] 
-						| [Control.IsVisible(60) + !Skin.HasSetting(HideTVShowsEpisodeViewFanart)]
-						| [Control.IsVisible(61) + !Skin.HasSetting(HideTVShowsListInfoFanart)]
-						| [Control.IsVisible(62) + !Skin.HasSetting(HideTVShowsWideListViewFanart)]
-						| [Control.IsVisible(65) + !Skin.HasSetting(HideTVShowsEpisodeShowcaseFanart)]
-						| [Control.IsVisible(66) + !Skin.HasSetting(HideTVShowsLargePosterFanart)]
-						| [Control.IsVisible(68) + !Skin.HasSetting(HideTVShowsWideSlimListFanart)]
-						| [Control.IsVisible(50) + !Skin.HasSetting(HideIconViewFanart)]]</visible>
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture>$INFO[Fanart.Image]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>Container.Content(Episodes)</visible>
-							<!--KenBurnsAnim-->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-						</control>	
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!Container.Content(Episodes)</visible>
-							<!--KenBurnsAnim-->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-						</control>	
-						<control type="image">
-							<description>Dim Background</description>
-							<top>0</top>
-							<width>ScreenWidth</width>
-							<height>ScreenHeight</height>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!Skin.HasSetting(DoNotDimTVShowsFanart)</visible>
-							<!--BackgroundFanartDimAnim-->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-						</control>
-					</control>
-				</control>
+				<include content="Fanart_Background">
+					<param name="visible" value="!Skin.HasSetting(HideFanart) + !Skin.HasSetting(HideFanart) + !IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]"/>
+				</include>
 				<!--***************************************************************************************************-->
 				
 				<!--*********************************** Background_FS_Media *******************************************-->

@@ -9,7 +9,11 @@
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 	<!--(((BACKGROUNDS)))===========================================================================================================================-->		
-			<control type="group">	
+			<control type="group">
+				<!--(FanartFadeOut)-->
+				<animation effect="fade" start="20" end="200" time="200">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<visible>!Control.IsVisible(1121)</visible>
 				<!--*********************************** Custom/Universal *********************************************-->
 				<include>UniversalClassicBackground</include>
 				<include>UniversalCustomBackground</include>
@@ -55,34 +59,9 @@
 
 				
 				<!--********************************** BackgroundFanart ***********************************************-->
-				<control type="group">
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="group">
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<top>0</top>
-							<width>1280</width>
-							<height>ScreenHeight</height>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<!--KenBurnsAnim-->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-						</control>
-						<control type="image">
-							<description>Dim Background</description>
-							<top>0</top>
-							<width>ScreenWidth</width>
-							<height>ScreenHeight</height>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
-							<!--BackgroundFanartDimAnim-->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-						</control>
-					</control>
-				</control>
+				<include content="Fanart_Background">
+					<param name="visible" value="!Skin.HasSetting(HideFanart) + !IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]"/>
+				</include>
 				<!--***************************************************************************************************-->
 				
 				<!--******************************* FullControlAreaBackground *****************************************-->

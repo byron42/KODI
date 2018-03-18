@@ -222,6 +222,10 @@
 		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.5.Path),PlayMedia(,)]</value> <!--music vids-->
 	</variable>
 	<!--fanart-->
+	<variable name="TV_Shows_Fanart_Var">
+		<value condition="Container.Content(Episodes)">$INFO[Fanart.Image]</value>
+		<value condition="!Container.Content(Episodes)">$INFO[Listitem.Art(Fanart)]</value>
+	</variable>
 	<variable name="RecentItem.1.Thumb">
 		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.1.Fanart)]</value> <!--movies-->
 		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.1.Fanart)]</value> <!--TvShows-->

@@ -292,14 +292,28 @@
 				<label>$PARAM[label.global]$LOCALIZE[$PARAM[label.1]] $LOCALIZE[$PARAM[label.2]] $LOCALIZE[$PARAM[label.3]]</label>
 				<selected>Skin.HasSetting($PARAM[StringID])</selected>
 				<onclick>Skin.ToggleSetting($PARAM[StringID])</onclick>
-				<visible>$PARAM[visible]</visible>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
+				<visible allowhiddenfocus="false">$PARAM[visible]</visible>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
 	</include>
-		
+	
+	<include name="Hidden_Button">	
+		<control type="button" id="$PARAM[id]">
+			<width>300</width>
+			<height>3</height>
+			<description>hidden button</description>
+			<texturefocus border="10,10,10,10"></texturefocus>
+			<texturenofocus border="10"></texturenofocus>
+			<label></label>
+			<onfocus>$PARAM[SetFocusFunction]</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+	</include>
+	
 <!--(((CustomMenuItemsParams)))=========================================================-->		
-
 	<include name="Main_Button_Switch">	
 		<control type="radiobutton" id="$PARAM[id]">
 			<description>$PARAM[description]</description>

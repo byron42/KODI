@@ -6,6 +6,8 @@
 	<include file="Includes_Backgrounds.xml"/>
 	<include file="includes_Weather.xml"/>
 	<include file="Includes_Buttons.xml"/>
+	<include file="Includes_Animations.xml"/>
+	<!-- <include file="Includes_ViewOptions.xml"/> -->
 	<include file="Views_Core.xml"/>
 	<include file="Views_CoverFlow.xml"/>
 	<!---->
@@ -22,7 +24,11 @@
 	<constant name="MediaFlagsCrossfadeTime">400</constant>
 	<constant name="SortLetterOffsetY">280</constant>
 	
-	
+	<!-- <expression name="MusicLibraryViewOptions">[IsEmpty(Skin.String(CurrentViewMode,50)) | IsEmpty(Skin.String(CurrentViewMode,51)) | IsEmpty(Skin.String(CurrentViewMode,52)) | IsEmpty(Skin.String(CurrentViewMode,67)) | IsEmpty(Skin.String(CurrentViewMode,572))] + Window.IsActive(Music)</expression> -->
+	<!-- <expression name="VideoLibraryViewOptions">[IsEmpty(Skin.String(CurrentViewMode,50)) | IsEmpty(Skin.String(CurrentViewMode,51)) | IsEmpty(Skin.String(CurrentViewMode,52)) | IsEmpty(Skin.String(CurrentViewMode,67)) | IsEmpty(Skin.String(CurrentViewMode,572))] + Window.IsActive(Videos)</expression> -->
+	<!-- <expression name="NormalViewOptions">[IsEmpty(Skin.String(CurrentViewMode,50)) | IsEmpty(Skin.String(CurrentViewMode,51)) | IsEmpty(Skin.String(CurrentViewMode,52)) | IsEmpty(Skin.String(CurrentViewMode,67))] + [Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(VideoPlaylist) | Window.IsActive(MusicPlaylist) | Window.IsActive(134) | Window.IsActive(3080)]</expression> -->
+	<!-- <expression name="OtherViewOptions">!IsEmpty(Skin.String(CurrentViewMode,50)) | !IsEmpty(Skin.String(CurrentViewMode,51)) | !IsEmpty(Skin.String(CurrentViewMode,52)) | !IsEmpty(Skin.String(CurrentViewMode,67)) | !IsEmpty(Skin.String(CurrentViewMode,572))</expression> -->
+
 <!--(((TOP BAR)))=========================================================-->	
 	<include name="TopBarImage">
 		<control type="group">	

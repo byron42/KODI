@@ -13,9 +13,10 @@
 			<top>-50</top>
 			<width>1300</width>
 			<height>800</height>
-			<texture>background-dim.png</texture>
-			<animation effect="fade" start="0" end="80" time="250" condition="true">WindowOpen</animation>
-			<animation effect="fade" start="80" end="0" time="250" condition="true">WindowClose</animation>
+			<texture>black.png</texture>
+			<colordiffuse></colordiffuse>
+			<animation effect="fade" end="80" time="250" condition="true">WindowOpen</animation>
+			<animation effect="fade" end="0" time="250" condition="true">WindowClose</animation>
 		</control>
 		<!--*******************************-->
 		<include>BusyAnimationGroup</include>

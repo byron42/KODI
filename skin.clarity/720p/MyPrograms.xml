@@ -81,22 +81,9 @@
 			</control>
 			
 			<!--********************************** BackgroundFanart *********************************************-->
-			<control type="group" id="1121">
-				<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-				<!--(VisibleFadeEffect)-->
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="0">Hidden</animation>
-				<control type="image">
-					<description>Fanart Background</description>
-					<top>0</top>
-					<width>1280</width>
-					<height>ScreenHeight</height>
-					<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>600</fadetime>
-					<animation effect="fade" end="25" condition="true">Conditional</animation>
-				</control>	
-			</control>
+			<include content="Fanart_Background">
+				<param name="visible" value="!Skin.HasSetting(HideFanart) + !IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]"/>
+			</include>
 			<!--*************************************************************************************************-->
 			
 			

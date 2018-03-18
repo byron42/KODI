@@ -73,6 +73,27 @@
 			</control>	
 		</control>
 	</include>
-
+	
+	<include name="Fanart_Background">
+		<control type="group" id="1121">
+			<visible>$PARAM[visible]</visible>
+			<animation effect="fade" time="200">Visible</animation>
+			<animation effect="fade" time="100">Hidden</animation>
+			<control type="image">
+				<description>Fanart Background</description>
+				<top>0</top>
+				<width>1280</width>
+				<height>ScreenHeight</height>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>300</fadetime>
+				<!--KenBurnsAnim-->
+				<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimateFanart)">Conditional</animation> 
+				<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimateFanart)">Conditional</animation>
+				<animation effect="fade" start="100" end="100" condition="Skin.HasSetting(DoNotDimFanart)">Conditional</animation>
+				<animation effect="fade" start="100" end="25" condition="!Skin.HasSetting(DoNotDimFanart)">Conditional</animation>
+			</control>	
+		</control>
+	</include>
 
 </includes>
