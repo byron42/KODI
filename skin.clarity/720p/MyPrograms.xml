@@ -498,7 +498,7 @@
 						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 						<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
 						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
-						<visible>!Skin.HasSetting(HideLargePosterGamesScrollbar)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar)</visible>
 						<onup>500</onup>
 						<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane) | Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					</control>
@@ -541,7 +541,7 @@
 						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 						<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
 						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
-						<visible>!Skin.HasSetting(HideCoverFlowScrollbar)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar)</visible>
 						<onup>500</onup>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->
@@ -566,7 +566,7 @@
 						<left>1255</left>
 						<top>78</top>
 						<height>544</height>
-						<visible>!Skin.HasSetting(HideWideIconViewScrollbar) + [Control.IsVisible(55) | Control.IsVisible(560) | Control.IsVisible(57) | Control.IsVisible(60)]</visible>
+						<visible>!Skin.HasSetting(HideScrollbar) + [Control.IsVisible(55) | Control.IsVisible(560) | Control.IsVisible(57) | Control.IsVisible(60)]</visible>
 						<onleft>500</onleft>
 					</control>
 					<control type="panel" id="560">

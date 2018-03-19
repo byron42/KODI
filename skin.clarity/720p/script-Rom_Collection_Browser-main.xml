@@ -188,7 +188,7 @@
 							<left>1250</left>
 							<top>97</top>
 							<height>542</height>
-							<visible>!Skin.HasSetting(HideListInfo2ViewScrollbar) + [Control.IsVisible(52) | Control.IsVisible(79) | Control.IsVisible(80) | Control.IsVisible(67)]</visible>
+							<visible>!Skin.HasSetting(HideScrollbar) + [Control.IsVisible(52) | Control.IsVisible(79) | Control.IsVisible(80) | Control.IsVisible(67)]</visible>
 							<onleft>5000</onleft>
 						</control>
 						<control type="group">

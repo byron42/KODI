@@ -6,7 +6,7 @@
 			<left>1250</left>
 			<top>42</top>
 			<height>538</height>
-			<visible>!Skin.HasSetting(HideIconViewScrollbar) + Control.IsVisible(50)</visible>
+			<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(50)</visible>
 			<onleft>500</onleft>
 			<animation effect="slide" end="75,0" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
 			<animation effect="slide" end="45,0" time="0" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
@@ -98,7 +98,7 @@
 			<left>1250</left>
 			<top>92</top>
 			<height>538</height>
-			<visible>!Skin.HasSetting(HideBigIconViewScrollbar) + Control.IsVisible(51)</visible>
+			<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(51)</visible>
 			<onleft>500</onleft>
 		</control>
 		<control type="panel" id="51">
@@ -237,7 +237,7 @@
 			<left>1240</left>
 			<top>92</top>
 			<height>538</height>
-			<visible>!Skin.HasSetting(HideListViewScrollbar) + Control.IsVisible(52)</visible>
+			<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(52)</visible>
 			<onleft>500</onleft>
 		</control>
 		<control type="list" id="52">	
@@ -397,7 +397,7 @@
 					<height>39</height>
 					<colordiffuse></colordiffuse>
 					<texture border="10">scrollbar-background.png</texture>
-					<visible>Skin.HasSetting(ListViewHideSmallIcons) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
+					<visible>Skin.HasSetting(HideScrollbar) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
 				</control>
 				<control type="image">
 					<left></left>
@@ -406,7 +406,7 @@
 					<height>39</height>
 					<colordiffuse></colordiffuse>
 					<texture border="10">scrollbar-background.png</texture>
-					<visible>!Skin.HasSetting(ListViewHideSmallIcons) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
+					<visible>!Skin.HasSetting(HideScrollbar) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
 				</control>
 			<!--ICONS/THUMBS-->
 				<control type="image">
@@ -599,7 +599,7 @@
 			<left>1255</left>
 			<top>77</top>
 			<height>557</height>
-			<visible>!Skin.HasSetting(HideListInfo2ViewScrollbar) + Control.IsVisible(67)</visible>
+			<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(67)</visible>
 			<onleft>500</onleft>
 		</control>
 		<control type="group">

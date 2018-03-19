@@ -76,7 +76,7 @@
 						<left>1250</left>
 						<top>92</top>
 						<height>538</height>
-						<visible>!Skin.HasSetting(HideBigIconViewScrollbar) + Control.IsVisible(11)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(11)</visible>
 						<onleft>11</onleft>
 					</control>
 					<control type="panel" id="11">

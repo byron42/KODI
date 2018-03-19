@@ -218,7 +218,7 @@
 						<left>1255</left>
 						<top>78</top>
 						<height>544</height>
-						<visible>!Skin.HasSetting(HideWideIconViewScrollbar) + Control.IsVisible(68)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(68)</visible>
 						<onleft>500</onleft>
 					</control>
 					<control type="panel" id="68">
@@ -839,7 +839,7 @@
 						<left>1250</left>
 						<top>92</top>
 						<height>538</height>
-						<visible>!Skin.HasSetting(HideThumbnailViewScrollbar) + [Control.IsVisible(54) | Control.IsVisible(63)]</visible>
+						<visible>!Skin.HasSetting(HideScrollbar) + [Control.IsVisible(54) | Control.IsVisible(63)]</visible>
 						<onleft>500</onleft>
 					</control>
 					<control type="panel" id="63">
@@ -1009,7 +1009,7 @@
 						<top>350</top>
 						<width>5</width>
 						<height>289</height>
-						<visible>!Skin.HasSetting(HideListInfoViewScrollbar) + [Control.IsVisible(58) | Control.IsVisible(61) | Control.IsVisible(62)]</visible>
+						<visible>!Skin.HasSetting(HideScrollbar) + [Control.IsVisible(58) | Control.IsVisible(61) | Control.IsVisible(62)]</visible>
 						<onleft>500</onleft>
 					</control>
 					<control type="list" id="62">	
@@ -2100,7 +2100,7 @@
 							<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 							<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
 							<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
-							<visible>Skin.HasSetting(ShowWrapInfoViewScrollbar) + Control.IsVisible(64)</visible>
+							<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(64)</visible>
 							<animation effect="fade" end="50" condition="true">Conditional</animation>
 							<onup>500</onup>
 							<ondown>-</ondown>
@@ -2157,7 +2157,7 @@
 						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 						<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
 						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
-						<visible>!Skin.HasSetting(HideCoverFlowScrollbar)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar)</visible>
 						<onup>500</onup>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->

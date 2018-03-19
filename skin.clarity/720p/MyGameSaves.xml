@@ -449,7 +449,7 @@
 						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 						<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
 						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
-						<visible>!Skin.HasSetting(HideLargePosterGamesScrollbar)</visible>
+						<visible>!Skin.HasSetting(HideScrollbar)</visible>
 						<onup>500</onup>
 						<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					</control>

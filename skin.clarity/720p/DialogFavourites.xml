@@ -110,7 +110,7 @@
 					<left>1240</left>
 					<top>92</top>
 					<height>575</height>
-					<visible>!Skin.HasSetting(HideListViewScrollbar) + Control.IsVisible(450)</visible>
+					<visible>!Skin.HasSetting(HideScrollbar) + Control.IsVisible(450)</visible>
 					<onleft>450</onleft>
 				</control>
 			<!--(ZOOM list with several options)-->
