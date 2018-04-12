@@ -140,9 +140,12 @@
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
-					<left>150</left>
+					<left>25</left>
 					<top>237</top>
 					<width>250</width>
+				
+				
+					
 					<font>font_22_B</font>
 					<textcolor>DefaultColor</textcolor>
 					<selectedcolor>SelectedColor2</selectedcolor>
@@ -166,7 +169,7 @@
 					<bordersize>10</bordersize>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
 					<!--AlbumThumbViewItemFocusAnim-->
-					<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" end="107" center="auto" time="0">Focus</animation>
 					<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 				</control>
 				<control type="image">
@@ -179,7 +182,7 @@
 					<colordiffuse>BBFFFFFF</colordiffuse>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<!--MoviesThumbViewItemFocusAnim-->
-					<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" end="107" center="auto" time="0">Focus</animation>
 					<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 				</control>
 				<control type="image">
@@ -191,11 +194,11 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 					<!--MoviesThumbViewItemFocusAnim-->
-					<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" end="107" center="auto" time="0">Focus</animation>
 					<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 				</control>
 				<control type="label">
-					<left>150</left>
+					<left>25</left>
 					<top>237</top>
 					<width>250</width>
 					<font>font_25_B</font>
@@ -397,7 +400,7 @@
 					<height>39</height>
 					<colordiffuse></colordiffuse>
 					<texture border="10">scrollbar-background.png</texture>
-					<visible>Skin.HasSetting(HideScrollbar) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
+					<visible>Skin.HasSetting(ListViewHideSmallIcons) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
 				</control>
 				<control type="image">
 					<left></left>
@@ -406,7 +409,7 @@
 					<height>39</height>
 					<colordiffuse></colordiffuse>
 					<texture border="10">scrollbar-background.png</texture>
-					<visible>!Skin.HasSetting(HideScrollbar) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
+					<visible>!Skin.HasSetting(ListViewHideSmallIcons) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelector)]</visible>
 				</control>
 			<!--ICONS/THUMBS-->
 				<control type="image">
