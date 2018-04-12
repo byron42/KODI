@@ -10,15 +10,19 @@
 			<description>Top Left</description>
 			<left>0</left>
 			<top>0</top>
-			<texturefocus border="6">calibrate-topleft-focus.png</texturefocus>
-			<texturenofocus border="6">calibrate-topleft-nofocus.png</texturenofocus>
+			<width>256</width>
+			<height>256</height>
+			<texturefocus>calibrate-topleft-focus.png</texturefocus>
+			<texturenofocus>calibrate-topleft-nofocus.png</texturenofocus>
 		</control>
 		<control type="mover" id="9">
 			<description>Bottom Right</description>
 			<left>700</left>
 			<top>500</top>
-			<texturefocus border="6">calibrate-bottomright-focus.png</texturefocus>
-			<texturenofocus border="6">calibrate-bottomright-nofocus.png</texturenofocus>
+			<width>256</width>
+			<height>256</height>
+			<texturefocus>calibrate-bottomright-focus.png</texturefocus>
+			<texturenofocus>calibrate-bottomright-nofocus.png</texturenofocus>
 		</control>
 		<control type="mover" id="10">
 			<description>Subtitle</description>
