@@ -1,5 +1,5 @@
 <window id="12">
-	<defaultcontrol>3</defaultcontrol>
+	<defaultcontrol always="false">3</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
@@ -99,6 +99,38 @@
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+				
+				
+				<control type="group">
+					<left>30</left>
+					<top>90</top>
+					<control type="label" id="2">
+						<description></description>
+						<left></left>
+						<top></top><!--NewLabelPos!-->
+						<font>font_32_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label></label>
+						<height>28</height>
+						<width>600</width>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--******************************* separators ******************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<top>34</top>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--*************************************************************************-->
+				</control>
+				
+				
+				
+				
 				<control type="group"> 
 					<left>8</left>
 					<top>20</top>
@@ -125,19 +157,94 @@
 						<visible>Container(3).HasNext</visible>
 					</control>
 				</control>
-				<control type="grouplist" id="3">
-					<description>Category Area</description>
+				
+				<control type="grouplist"> <!-- categories -->
 					<left>50</left>
 					<top>140</top>
 					<width>307</width>
-					<height>485</height>
-					<itemgap>12</itemgap>
-					<orientation>vertical</orientation>
+					<height>550</height>
 					<onup>3</onup>
-					<ondown>3</ondown>
-					<onleft>850</onleft>
-					<onright>5</onright>	
+				<!--main-->
+					<control type="grouplist" id="3">
+						<description>Category Area</description>
+						<left></left>
+						<top></top>
+						<width>307</width>
+						<height>485</height>
+						<itemgap>4</itemgap>
+						<orientation>vertical</orientation>
+						<onup>3</onup>
+						<ondown>20</ondown>
+						<onleft>850</onleft>
+						<onright>5</onright>	
+						<animation effect="fade" start="100" end="50" time="200" condition="Control.HasFocus(20)">Conditional</animation>
+					</control>	
+				<!---->
+					<control type="button" id="123">
+						<left></left>
+						<top></top>
+						<height>14</height>
+						<width>307</width>
+						<label>$LOCALIZE[5] $LOCALIZE[456]</label> <!--BREADCRUMB-->
+						<font>font_12_UB</font>
+						<disabledcolor>aa555555</disabledcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsety></textoffsety>
+						<textoffsetx>2</textoffsetx>
+						<texturenofocus border="2">search-focus2.png</texturenofocus>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+						<enable>false</enable>
+						<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
+					</control>
+				<!---->
+					<control type="grouplist" id="21"> <!--Group_Label-->
+						<onup>3</onup>
+						<onleft>850</onleft>
+						<onright>5</onright>
+						<left></left>
+						<top></top>
+						<height>50</height>	
+						<width>350</width>
+						<itemgap>4</itemgap>
+						<height>150</height>
+						<orientation>horizontal</orientation>
+						<usecontrolcoords>true</usecontrolcoords>	
+						<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
+						<control type="button" id="20">
+							<description>Settings Level Change</description>
+							<onup>3</onup>
+							<onleft>850</onleft>
+							<onright>5</onright>
+							<ondown>-</ondown>
+							<left></left>
+							<top></top>
+							<width>307</width>
+							<height>50</height>
+							<font>font_26_CB</font>
+							<shadowcolor>-</shadowcolor>
+							<onclick>SettingsLevelChange</onclick>
+							<textcolor>Grey</textcolor>
+							<align>left</align>
+							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+							<pulseonselect>false</pulseonselect>
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="5">-</texturenofocus>
+						</control>
+						<control type="button" id="124">
+							<description></description>
+							<left>-57</left>
+							<top>7</top>
+							<width>40</width>
+							<height>40</height>
+							<texturenofocus colordiffuse="Grey">view-options-nofocus.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
+							<pulseonselect>false</pulseonselect>
+							<enable>false</enable>
+						</control>
+					</control>
 				</control>	
+				
 				<control type="grouplist" id="5">
 					<description>Content Area</description>
 					<left>385</left>
@@ -161,12 +268,14 @@
 				<shadowcolor>-</shadowcolor>
 				<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 				<textcolor>Grey</textcolor> <!--GREY-->
+				<focusedcolor>$VAR[SettingsCategoryFocusedColor]</focusedcolor>
 				<align>left</align>
 				<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 				<pulseonselect>false</pulseonselect>
 				<colordiffuse>-</colordiffuse>
 				<texturenofocus border="5">-</texturenofocus>
 			</control>
+			
 			<control type="button" id="7">
 				<description>Default Button</description>
 				<width>800</width>
@@ -219,6 +328,8 @@
 				<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
 				<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 			</control>	
+			
+			
 			<control type="group"><!--arrows-->
 				<!--ControlsOpenCloseAnim-->
 				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
@@ -304,9 +415,9 @@
 					<onup>348</onup>
 					<ondown>9001</ondown>
 					<orientation>horizontal</orientation>
-				<!--APPREARANCE-->
+				<!--PLAYER-->
 					<control type="button" id="101">
-						<description>Appearance</description>
+						<description>PLAYER</description>
 						<width>180</width>
 						<height>36</height>	
 						<font>font_21_UB</font>
@@ -318,8 +429,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
-						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14200][/UPPERCASE]</label>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
 					</control>	
 					<control type="image" id="116">
 						<description>MenuBarSeparator</description>
@@ -327,9 +438,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--PROGRAMS-->
+				<!--MEDIA-->
 					<control type="button" id="1070">
-						<description>Programs</description>
+						<description>MEDIA</description>
 						<width>175</width>
 						<height>36</height>	
 						<font>font_21_UB</font>	
@@ -341,8 +452,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
-						<onclick>ActivateWindow(ProgramsSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[14211][/UPPERCASE]</label>
+						<onclick>ActivateWindow(MediaSettings)</onclick>	
 					</control>
 					<control type="image" id="119">
 						<description>MenuBarSeparator</description>
@@ -350,9 +461,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--VIDEOS-->
+				<!--PVR-->
 					<control type="button" id="105">
-						<description>Videos</description>
+						<description>PRV</description>
 						<width>175</width>
 						<height>36</height>	
 						<font>font_21_UB</font>	
@@ -364,8 +475,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[10006][/UPPERCASE]</label>
-						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14204][/UPPERCASE]</label>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
 					</control>
 					<control type="image" id="120">
 						<description>MenuBarSeparator</description>
@@ -373,9 +484,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--PICTURES-->
+				<!--SERVICES-->
 					<control type="button" id="103">
-						<description>Pictures</description>
+						<description>SERVICES</description>
 						<width>180</width>
 						<height>36</height>	
 						<font>font_21_UB</font>
@@ -387,8 +498,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
-						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14036][/UPPERCASE]</label>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
 					</control>
 					<control type="image" id="118">
 						<description>MenuBarSeparator</description>
@@ -396,9 +507,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--WEATHER-->
+				<!--INTERFACE-->
 					<control type="button" id="106">
-						<description>Weather</description>
+						<description>INTERFACE</description>
 						<width>180</width>
 						<height>36</height>	
 						<font>font_21_UB</font>
@@ -410,8 +521,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[14206][/UPPERCASE]</label>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>	
 					</control>
 					<control type="image" id="121">
 						<description>MenuBarSeparator</description>
@@ -434,7 +545,7 @@
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
-						<onclick>ActivateWindow(NetworkSettings)</onclick>	
+						<onclick>ActivateWindow(NetworkSetup)</onclick>	
 					</control>
 					<control type="image" id="122">
 						<description>MenuBarSeparator</description>
@@ -442,9 +553,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--MUSIC-->
+				<!--PROFILES-->
 					<control type="button" id="104">
-						<description>Music</description>
+						<description>PROFILES</description>
 						<width>175</width>
 						<height>36</height>	
 						<font>font_21_UB</font>	
@@ -456,8 +567,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
-						<onclick>ActivateWindow(MusicSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+						<onclick>ActivateWindow(Profiles)</onclick>	
 					</control>
 					<control type="image" id="1222">
 						<description>MenuBarSeparator</description>
@@ -508,7 +619,7 @@
 				</control>
 				<!--****************************************************************************************************-->
 				<!--MenuBarSettingsOpenCloseAnim-->
-				<!--<animation effect="slide" start="0,-86" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>-->
+				<!--<animation effect="slide" start="0,-86" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSetup) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>-->
 				<!--MenuBarOpenCloseAnim-->
 				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
@@ -681,7 +792,7 @@
 					<font>font_20</font>
 					<label>$LOCALIZE[31208]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
-					<visible>Window.IsActive(NetworkSettings)</visible>
+					<visible>Window.IsActive(NetworkSetup)</visible>
 				</control>	
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>

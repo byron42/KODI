@@ -6,6 +6,13 @@
 			<filename>XBMC.ttf</filename>
 			<size>23</size>
 		</font>
+	<!--12 -->
+		<font>
+			<name>font_12_UB</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase bold</style>
+			<size>12</size>
+		</font>
 	<!--16 -->
 		<font>
 			<name>font_16</name>

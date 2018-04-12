@@ -119,23 +119,26 @@
 					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Settings Menu Bar</description>
 					<left>390</left>
-					<top>75</top>
+					<top>0</top>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
 					<itemgap>8</itemgap>
 					<onup>850</onup>
 					<ondown>850</ondown>
 					<onleft>600</onleft>
 					<onright>600</onright>
 					<orientation>vertical</orientation>
-				<!--APPREARANCE-->
+				<!--PLAYER-->
 					<control type="button" id="102">
-						<description>APPEARANCE</description>
+						<description>PLAYER</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<!--deleted ContextMenuBtnFocus-->
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
-						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14200][/UPPERCASE]</label>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -146,15 +149,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
-				<!--PROGRAMS-->
+				<!--MEDIA-->
 					<control type="button" id="1100">
-						<description>PROGRAMS</description>
+						<description>MEDIA</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
-						<onclick>ActivateWindow(ProgramsSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[14211][/UPPERCASE]</label>
+						<onclick>ActivateWindow(MediaSettings)</onclick>	
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -166,15 +169,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
-				<!--VIDEOS-->
+				<!--PVR-->
 					<control type="button" id="104">
-						<description>VIDEOS</description>
+						<description>PVR Live TV</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[10006][/UPPERCASE]</label>
-						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14204][/UPPERCASE]</label>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -185,15 +188,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>	
-				<!--PICTURES-->
+				<!--SERVICES-->
 					<control type="button" id="106">
-						<description>PICTURES</description>
+						<description>SERVICES</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
-						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[14036][/UPPERCASE]</label>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -205,15 +208,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>	
-				<!--WEATHER-->
+				<!--INTERFACE-->
 					<control type="button" id="109">
-						<description>WEATHER</description>
+						<description>INTERFACE</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[14206][/UPPERCASE]</label>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>	
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -233,7 +236,7 @@
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
 						<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
-						<onclick>ActivateWindow(NetworkSettings)</onclick>	
+						<onclick>ActivateWindow(NetworkSetup)</onclick>	
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -245,53 +248,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
-				<!--MUSIC-->
+				<!--PROFILES-->
 					<control type="button" id="103">
-						<description>MUSIC</description>
+						<description>PROFILES</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
-						<onclick>ActivateWindow(MusicSettings)</onclick>	
-						<align>center</align>
-						<aligny>center</aligny>
-						<textoffsetx></textoffsetx>
-						<textoffsety></textoffsety> <!--SDM-->
-						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
-						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
-						<colordiffuse>FFFFFFFF</colordiffuse>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-					</control>
-				<!--ADDONS-->
-					<control type="button" id="1101">
-						<description>SERVICES</description>
-						<width>500</width>
-						<height>44</height>
-						<textwidth>480</textwidth>
-						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE]</label>
-						<onclick>ActivateWindow(AddonBrowser)</onclick>	
-						<align>center</align>
-						<aligny>center</aligny>
-						<textoffsetx></textoffsetx>
-						<textoffsety></textoffsety> <!--SDM-->
-						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
-						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
-						<colordiffuse>FFFFFFFF</colordiffuse>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-					</control>
-				<!--SERVICES-->
-					<control type="button" id="1102">
-						<description>SERVICES</description>
-						<width>500</width>
-						<height>44</height>
-						<textwidth>480</textwidth>
-						<font>font_24_WCB</font>
-						<label>[UPPERCASE]$LOCALIZE[14036][/UPPERCASE]</label>
-						<onclick>ActivateWindow(ServiceSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+						<onclick>ActivateWindow(Profiles)</onclick>	
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -303,14 +268,14 @@
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 				<!--SYSTEM-->
-					<control type="button" id="111">
+					<control type="button" id="1101">
 						<description>SYSTEM</description>
 						<width>500</width>
 						<height>44</height>
 						<textwidth>480</textwidth>
 						<font>font_24_WCB</font>
 						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<onclick>ActivateWindow(SystemSettings)</onclick>	
 						<align>center</align>
 						<aligny>center</aligny>
 						<textoffsetx></textoffsetx>
@@ -321,6 +286,7 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
+				
 				<!--SKIN SETTINGS-->
 					<control type="button" id="112">
 						<description>SKIN SETTINGS</description>
