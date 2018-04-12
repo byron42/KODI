@@ -1481,7 +1481,7 @@
 						</item>
 						<item id="11">
 							<description>Addons Category</description>
-							<label>31919</label>
+							<label>24001</label>
 							<icon>-</icon>
 							<thumb>$INFO[Skin.String(AddonsCustomBG)]</thumb>
 							<onclick>ActivateWindow(AddonBrowser)</onclick>		
