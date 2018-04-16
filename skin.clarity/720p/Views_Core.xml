@@ -512,7 +512,7 @@
 			+ ![Container.Content(TVShows) + Skin.HasSetting(HideListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideListCover)]</visible>
 			<animation effect="slide" end="10,0" condition="!Control.IsVisible(151)">Conditional</animation>
 			<!-- for extra info (((needs to be revisited))) -->
-			<animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(Listitem.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation>
+			<animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(ListItem.AddonDescription) + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation>
 			<!--SmallIcons-->
 			<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 			<!--InfoPaneHiddenSlideAnim2-->
@@ -563,7 +563,7 @@
 			<left>40</left>
 			<top>470</top>
 			
-			<visible>!IsEmpty(Listitem.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)</visible>
+			<visible>!IsEmpty(ListItem.AddonDescription) + !Skin.HasSetting(ListViewHideExtraInfo)</visible>
 			<!-- <visible>false</visible> -->
 			
 			<control type="image">
@@ -585,13 +585,13 @@
 				<font>font_20</font>
 				<textcolor>ThemeColor2</textcolor>
 				<align>justify</align>
-				<label fallback="161">$INFO[Listitem.Property(Addon.Description)]</label>
+				<label fallback="161">$INFO[ListItem.AddonDescription]</label>
 				<autoscroll time="2000" delay="5000" repeat="10000">true</autoscroll>
 				<!--ControlsOpenCloseAnim-->
 				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-				<visible>!IsEmpty(Listitem.Property(Addon.Description))</visible>
+				<visible>!IsEmpty(ListItem.AddonDescription)</visible>
 			</control>
 		</control>
 	</include>
@@ -642,7 +642,7 @@
 				<!-- <aligny>center</aligny>	 -->
 				<!-- <align>left</align>	 -->
 				<!-- <label>$VAR[ListInfo2ItemType]</label> -->
-				<!-- <visible>[!IsEmpty(ListItem.Genre) | !IsEmpty(ListItem.Property(Addon.Type))] + !IsEmpty(ListItem.Property(Fanart_Image))</visible> -->
+				<!-- <visible>[!IsEmpty(ListItem.Genre) | !IsEmpty(ListItem.AddonType)] + !IsEmpty(ListItem.Property(Fanart_Image))</visible> -->
 				<!-- <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation> -->
 			<!-- </control> -->
 			<control type="image">

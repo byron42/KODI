@@ -552,7 +552,7 @@
 				<control type="group" id="7031">
 					<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200">Visible</animation>
 					<animation effect="zoom" start="0,0,1280,720" end="640,0,1,720" time="200">Hidden</animation>
-					<visible>Control.IsVisible(572) + !Skin.HasSetting(HideInfoPane) + ![IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Property(Album_Description)) + IsEmpty(ListItem.Property(Addon.Description))] + !stringcompare(ListItem.Label,..) + !Control.IsVisible(7001) + !Control.IsVisible(7002) + [System.IdleTime(3) + ControlGroup(500).HasFocus + !Skin.HasSetting(HideCoverFlowDescription)]</visible>
+					<visible>Control.IsVisible(572) + !Skin.HasSetting(HideInfoPane) + ![IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Property(Album_Description)) + IsEmpty(ListItem.AddonDescription)] + !stringcompare(ListItem.Label,..) + !Control.IsVisible(7001) + !Control.IsVisible(7002) + [System.IdleTime(3) + ControlGroup(500).HasFocus + !Skin.HasSetting(HideCoverFlowDescription)]</visible>
 					<control type="image">
 						<left>-60</left>
 						<top>125</top>
